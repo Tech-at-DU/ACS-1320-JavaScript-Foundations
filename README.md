@@ -39,26 +39,28 @@ By the end of the course will be able to:
 
 ## Schedule
 
-**Course Dates:** Monday, May 31 – Wednesday, July 14, 2021 (7 weeks)
+**Course Dates:** Tuesday and Thrusday, October 19 – December 9, 2021
 
-**Class Times:** Monday, Wednesday at 4:00pm–5:30pm (12 class sessions)
+**Class Times:** Tuesday, Thursday at 4:00pm – 5:30pm
 
-| Class |          Date          |                 Topics                  |
-|:-----:|:----------------------:|:---------------------------------------:|
-|  1 |  Tue, June 1         | [JavaScript Basics](Lessons/Lesson-01.md) | [Break Out: Tutorial](Assignments/Assignment-1-Break-Out.md) | 
-|  2 |  Thu, June 3         | [JavaScript Professional Best Practice](Lessons/Lesson-02.md) | [Break Out: EsLint](Assignments/Assignment-2-EsLint.md) |
-|  3 |  Tue, June 8         | [JavaScript OOP](Lessons/Lesson-03.md) | [Break Out: OOP](Assignments/Assignment-3-OOP.md) |
-|  4 |  Thu, June 10        | [OOP and Classes](Lessons/Lesson-04.md) | [Break Out: OOP Inheritance](Assignments/Assignment-4-Inheritance.md) |
-|  5 |  Tue, June 15        | [JS OOP Inheritence](Lessons/Lesson-05.md) | Lab |
-|  6 |  Thu, June 17        | [Bundling JS](Lessons/Lesson-06.md) | [Break out: Bundling JavaScript](Assignments/Assignment-5-bundling.md) |
-|  7 |  Tue, June 22        | [Single Page Applications](Lessons/Lesson-07.md) | [React: Fundamentals Tutorial](Assignments/Assignment-6-react-fundamentals.md) |
-|  8 |  Thu, June 24        | [Component Architecture](Lessons/Lesson-08.md) | [Final Project: Getting started](./Assignments/Assignment-7-fina-project.md) |
-|  9 |  Tue, June 29        | [Components and State](Lessons/Lesson-09.md) | - |
-| 10 |  Thu, July 1         | [Forms and user input](Lessons/Lesson-10.md) | - | 
-| 11 |  Tue, July 6         | [Building and Publishing](Lessons/Lesson-11.md) | - |
-| 12 |  Thu, July 8         | [Show Your Work](Lessons/Lesson-12.md) | - |
-| 13 |  Tue, July 13        | Lab and Review | - |
-| 14 |  Thu, July 15        | [Final Assessment: Test your Knowledge](Lessons/Lesson-13.md) | - |
+| Class | Date | Topics |
+|:-----:|:----:|:------:|
+|  1 | Tue, Oct 19 | [JavaScript Basics](Lessons/Lesson-01.md) | [Break Out: Tutorial](Assignments/Assignment-1-Break-Out.md) | 
+|  2 | Thu, Oct 21 | [JavaScript Professional Best Practice](Lessons/Lesson-02.md) | [Break Out: EsLint](Assignments/Assignment-2-EsLint.md) |
+|  3 | Tue, Oct 26 | [JavaScript OOP](Lessons/Lesson-03.md) | [Break Out: OOP](Assignments/Assignment-3-OOP.md) |
+|  4 | Thu, Oct 28 | [OOP and Classes](Lessons/Lesson-04.md) | [Break Out: OOP Inheritance](Assignments/Assignment-4-Inheritance.md) |
+|  5 | Tue, Nov  2 | [JS OOP Inheritence](Lessons/Lesson-05.md) | Lab |
+|  6 | Thu, Nov  4 | [Bundling JS](Lessons/Lesson-06.md) | [Break out: Bundling JavaScript](Assignments/Assignment-5-bundling.md) |
+|  7 | Tue, Nov  9 | [Single Page Applications](Lessons/Lesson-07.md) | [React: Fundamentals Tutorial](Assignments/Assignment-6-react-fundamentals.md) |
+|  8 | Thu, Nov 11 | [Component Architecture](Lessons/Lesson-08.md) | [Final Project: Getting started](./Assignments/Assignment-7-fina-project.md) |
+|  9 | Tue, Nov 16 | [Components and State](Lessons/Lesson-09.md) | - |
+| 10 | Thu, Nov 18 | [Forms and user input](Lessons/Lesson-10.md) | - | 
+| 11 | Tue, Nov 23 | [Building and Publishing](Lessons/Lesson-11.md) | - |
+| 12 | Thu, Nov 25 | Thanksgiving No Class | - |
+| 13 | Tue, Nov 30 | [Show Your Work](Lessons/Lesson-12.md) | - |
+| 14 | Thu, Dec  2 | Lab and Review | - |
+| 15 | Tue, Dec  7 | - | - |
+| 16 | Thu, Dec  9 | [Final Assessment: Test your Knowledge](Lessons/Lesson-13.md) | - |
 
 
 ## Assignments
