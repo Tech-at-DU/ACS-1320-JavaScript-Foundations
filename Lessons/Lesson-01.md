@@ -239,7 +239,7 @@ Take a 10-minute break and measure the world in pixels.
 
 ## Lab 60 mins
 
-Your goal is to complete the tutorial: https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript
+Start working on assignment 1 [here](../Assignments/Assignment-1-Break-Out.md).
 
 This tutorial is 10 pages. At the end of every page is the completed source code. If you run into any problems you can check your code against the source.
 
