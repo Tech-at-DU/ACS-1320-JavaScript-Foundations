@@ -1,5 +1,5 @@
 <!-- .slide: data-background="./Images/header.svg" data-background-repeat="none" data-background-size="40% 40%" data-background-position="center 10%" class="header" -->
-# FEW 1.2 - Lesson 14 - Present your work
+# ACS 1320 - Lesson 13 - Present your work
 
 <!-- Put a link to the slides so that students can find them -->
 

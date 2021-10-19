@@ -1,8 +1,4 @@
-# FEW 1.2 - Foundation JavaScript
-
-| Course Section | Instructor | Slack Channel | Course Website | Instructor 1-on-1 |
-| :---: | :---: | :---: | :---: | :---: |
-| A | **@Jay** | `#few-1_2` | [make.sc/few1.2](https://join.slack.com/share/zt-lbncudk5-BDpt5WqMBlcULpOf1f4IuQ) | [Virtual Office](https://make.sc/jay-zoom) |
+# ACS 1320 - Foundation JavaScript
 
 ## Course Description
 
@@ -18,13 +14,7 @@ JavaScript is one of the most important languages in use today. You work with it
 
 ## Prerequisites:  
 
-[WEB 1.0](https://github.com/Make-School-Courses/WEB-1.0-Web-Foundations) or equivalent
-
-## Course Specifics
-
-**Course Delivery**: online | 7 weeks | 14 sessions
-
-**Course Credits**: 3 units | 37.5 Seat Hours | 75 Total Hours
+[ACS 1700](https://github.com/Tech-at-DU/ACS-1700-Web-Foundations) or equivalent
 
 ## Learning Outcomes
 
@@ -104,19 +94,11 @@ Assignments **must be turned in via [Gradescope](https://gradescope.com) for cre
 
 | Topic | Date Made Available | Assignment |
 | :---: | :-----------------: | :--------: |
-| 1 |  Tue, June 1 |  [Break Out: Tutorial](Assignments/Assignment-1-Break-Out.md) | 
-| 2 |  Thu, June 3  | [Break Out: EsLint](Assignments/Assignment-2-EsLint.md) |
-| 3 |  Tue, June 8  | [Break Out: OOP](Assignments/Assignment-3-OOP.md) |
-| 4 |  Thu, June 10   | [Break Out: OOP Inheritance](Assignments/Assignment-4-Inheritance.md) |
-| 5 |  Thu, June 17  | [Break out: Bundling JavaScript](Assignments/Assignment-5-bundling.md) |
-| 6 |  Tue, June 22  | [React: Fundamentals Tutorial](Assignments/Assignment-6-react-fundamentals.md) |
-| 7 |  Thu, June 24  | [Final Project: Getting started](./Assignments/Assignment-7-fina-project.md) |
-
-
-
-## Class Recordings
-
-All class recordings will be available [here](https://drive.google.com/drive/folders/15gooeULA5qDnf6icbConWJTzNl5xPPPj?usp=sharing) no later than 24 hours after the class session. For privacy reasons, please do not share the recordings outside of the Make School student body.
+| 1 |  Tue, June  1 | [Break Out: Tutorial](Assignments/Assignment-1-Break-Out.md) Your completed breakout game linted! | 
+| 2 |  Thu, June 10 | [Break Out: OOP Inheritance](Assignments/Assignment-4-Inheritance.md) Your completed breakout game updated with OOP and inheritence |
+| 3 |  Thu, June 17 | [Break out: Bundling JavaScript](Assignments/Assignment-5-bundling.md) |
+| 4 |  Tue, June 22 | [React: Fundamentals Tutorial](Assignments/Assignment-6-react-fundamentals.md) |
+| 5 |  Thu, June 24 | [Final Project: Getting started](./Assignments/Assignment-7-fina-project.md) |
 
 ### Projects
 
@@ -130,12 +112,15 @@ To pass this course you must meet the following requirements:
 
 - Achieve a passing score according to the rubric on each of the three [projects](#projects).
 
+<!-- 
 ##  Information Resources
 
 Any additional resources you may need (online books, etc.) can be found here. You can also find additional resources through the library linked below:
 
-- [make.sc/library](http://make.sc/library)
+- [make.sc/library](http://make.sc/library) 
+-->
 
+<!-- 
 ## Make School Course Policies
 
 - [Program Learning Outcomes](https://make.sc/program-learning-outcomes) - What you will achieve after finishing Make School, all courses are designed around these outcomes.
@@ -147,4 +132,4 @@ Any additional resources you may need (online books, etc.) can be found here. Yo
 - [Disability Services (Academic Accommodations)](https://make.sc/disability-services) - Services and accommodations we provide for students
 - [Online Learning Tutorial](https://make.sc/online-learning-tutorial) - How to succeed in online learning at Make School
 - [Student Handbook](https://make.sc/student-handbook) - Guidelines, policies, and resources for all Make School students
-
+ -->
