@@ -158,8 +158,8 @@ Like the `<img>` tag you should give `<canvas>` width and height.
 To draw on canvas you need to get a canvas context.
 
 ```js
-var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
+const canvas = document.getElementById("myCanvas");
+const ctx = canvas.getContext("2d");
 ```
 
 `ctx` is the convas context. You'll call on methods of this object to draw on the canvas. 
@@ -186,11 +186,11 @@ Here are a few examples...
 **Draw a rectangle**
 
 ```js 
-ctx.beginPath() // begins a new path
+ctx.beginPath()               // begins a new path
 ctx.rect(x, y, width, height) // draws a rectangular path
-ctx.fillStyle = "#0095DD" // sets the fill color
-ctx.closePath() // closes the path
-ctx.fill() // fills the current path
+ctx.fillStyle = "#0095DD"     // sets the fill color
+ctx.closePath()               // closes the path
+ctx.fill()                    // fills the current path
 ```
 
 - **Q:** How big is the rectangle? 
