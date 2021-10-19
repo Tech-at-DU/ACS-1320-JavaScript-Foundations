@@ -92,13 +92,13 @@ Assignments will be made available at the date listed and **must be turned in on
 
 Assignments **must be turned in via [Gradescope](https://gradescope.com) for credit!**
 
-| Topic | Date Made Available | Assignment |
-| :---: | :-----------------: | :--------: |
-| 1 |  Tue, June  1 | [Break Out: Tutorial](Assignments/Assignment-1-Break-Out.md) Your completed breakout game linted! | 
-| 2 |  Thu, June 10 | [Break Out: OOP Inheritance](Assignments/Assignment-4-Inheritance.md) Your completed breakout game updated with OOP and inheritence |
-| 3 |  Thu, June 17 | [Break out: Bundling JavaScript](Assignments/Assignment-5-bundling.md) |
-| 4 |  Tue, June 22 | [React: Fundamentals Tutorial](Assignments/Assignment-6-react-fundamentals.md) |
-| 5 |  Thu, June 24 | [Final Project: Getting started](./Assignments/Assignment-7-fina-project.md) |
+| Topic | Due Date | Assignment |
+| :---: | :------: | :--------: |
+| 1 | Tue, Oct 26| [Break Out: Tutorial](Assignments/Assignment-1-Break-Out.md) Your completed breakout game linted! | 
+| 2 | Thu, Nov  4 | [Break Out: OOP Inheritance](Assignments/Assignment-4-Inheritance.md) Your completed breakout game updated with OOP and inheritence |
+| 3 | Tue, Nov  9 | [Break out: Bundling JavaScript](Assignments/Assignment-5-bundling.md) |
+| 4 | Tue, Nov 23 | [React: Fundamentals Tutorial](Assignments/Assignment-6-react-fundamentals.md) |
+| 5 | Thu, Dec  9 | [Final Project: Getting started](Assignments/Assignment-7-fina-project.md) |
 
 ### Projects
 
