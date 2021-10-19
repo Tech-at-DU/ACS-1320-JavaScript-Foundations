@@ -34,7 +34,7 @@ By the end of the course will be able to:
 **Class Times:** Tuesday, Thursday at 4:00pm – 5:30pm
 
 | Class | Date | Topics | Assignment |
-|:-----:|:----:|:------:|:----------:|
+|:-----:|:-----|:-------|:-----------|
 |  1 | Tue, Oct 19 | [JavaScript Basics] | [Break Out: Tutorial] | 
 |  2 | Thu, Oct 21 | [JavaScript Professional Best Practice] | [Break Out: EsLint] |
 |  3 | Tue, Oct 26 | [JavaScript OOP] | [Break Out: OOP] |
