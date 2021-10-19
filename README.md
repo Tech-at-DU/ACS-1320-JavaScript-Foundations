@@ -93,7 +93,7 @@ Assignments will be made available at the date listed and **must be turned in on
 Assignments **must be turned in via [Gradescope](https://gradescope.com) for credit!**
 
 | Topic | Due Date | Assignment |
-| :---: | :------: | :--------: |
+|:-----:|:---------|:-----------|
 | 1 | Tue, Oct 26| [Break Out: Tutorial](Assignments/Assignment-1-Break-Out.md) Your completed breakout game linted! | 
 | 2 | Thu, Nov  4 | [Break Out: OOP Inheritance](Assignments/Assignment-4-Inheritance.md) Your completed breakout game updated with OOP and inheritence |
 | 3 | Tue, Nov  9 | [Break out: Bundling JavaScript](Assignments/Assignment-5-bundling.md) |
