@@ -25,19 +25,25 @@ Follow these steps:
 - Create a new GitHub repo
 - Follow the tutorial here: https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript
 - Create a commit at the end of each step of the tutorial
- - There are 10 steps to the tutorial you should have a commit for each step. 
-- After completing the tutorial try the stretch challenges below. 
+	- There are 10 steps to the tutorial you should have a commit for each step. 
+- After completing the tutorial try the [stretch challenges](#stretch-challenges) below. 
+
+You can follow the me building the tutorial in video here: 
+
+https://www.youtube.com/playlist?list=PLoN_ejT35AEiSYr-OhYV-C6uWZgPLBMZM
+
+This video playlist covers the basic tutorial and goes into the following assignments also. 
 
 ### Deliverable
 
-Submit your work on [GradeScope](https://www.gradescope.com/courses/202953). 
+Submit your work on [GradeScope](https://www.gradescope.com/).
 
 ## Assessing the assignment
 
 Use this rubric to measure the success of your work against the expectations of the assignment. You should be striving for an average score of 1 or greater.
 
 | Aspect | Does not meet (0) | Meets (1) | Exceeds (2) |
-|:-------------|:--------------|:-----|:---------|
+|:-------|:------------------|:----------|:------------|
 | **Completion** | The tutorial is not been completed | Tutorial completed (all 10 steps) | You have tried the stretch challenges |
 | **Functionality** | The game is not functioning or partially functional | The game is functional | You have successfully implemented some or all of the stretch challenges |
 | **Work Ethic** | < 3 commits. | Commits show consistent work| commits show full 3 hours of work |
@@ -67,7 +73,7 @@ Everything is currently blue and gray. Choose some new colors to customize the g
 - Paddle
 - Background
 
-**Make each row a different color**
+**Make each row of bricks a different color**
 
 A single color is not very interesting. Make each row a different color. Bricks are managed with a two-dimensional array. 
 
@@ -111,16 +117,20 @@ Make sure the space between the bricks stays the same.
 
 **Make colored bricks worth points**
 
-Make each row of bricks worth a different number of points. The first row is worth 10. The second row is worth 100 and the top row is worth 100 for each brick.
+Make each row of bricks worth a different number of points. The first row is worth 10. The second row is worth 20 and the top row is worth 30 for each brick.
 
-**Custom Background** Write a function to draw the background for the game. Currently the `draw()` function clears the canvas on it's first line with: 
+**Custom Background** 
 
-`ctx.clearRect(0, 0, canvas.width, canvas.height);`JS
+Write a function to draw the background for the game. Currently the `draw()` function clears the canvas on it's first line with: 
 
-Add a function called `drawBackground()`. Call this on the first line of `draw()`. 
+`ctx.clearRect(0, 0, canvas.width, canvas.height);`
+
+Add a function called `drawBackground()`. Call this on the first line of `draw()`.
 
 Try these challenges: 
 
 - Fill the background with a color other than the default color. Do this by drawing a rectangle that starts at x 0, y 0 with a width and height that match your canvas. Do all of this in the `drawBackground()` function. 
+- Draw some concetric circles each larger than the last. You could autmate this with a loop. Give each circle a different color. These circles will be the new background to the game. 
+- Draw a gradient to fill the background. Read up on using gradients with canvas [here](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createLinearGradient).
 
 
