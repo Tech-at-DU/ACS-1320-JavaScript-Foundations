@@ -117,20 +117,17 @@ The Custom/Constractor project will be built with React. Here you will put all o
 
 - What is Breakout?
 - How does the tutorial game work? 
- - draws all of the game elements with canvas
- - What are cartesian coordinates? 
-
-<!-- > -->
-
+	- draws all of the game elements with canvas
+	- What are cartesian coordinates? 
 - Draw Break game with Sketch
- - How big is the desktop: 1440 x 1024
- - How big is the game: 480 x 320
- - Draw game elements
- - bricks: 75 x 20
- - rows: 3
- - columns: 5
- - ball: 10 radius
- - paddle: 75 x 10
+	- How big is the desktop: 1440 x 1024
+	- How big is the game: 480 x 320
+	- Draw game elements
+	- bricks: 75 x 20
+	- rows: 3
+	- columns: 5
+	- ball: 10 radius
+	- paddle: 75 x 10
 
 **Exercise 1:** Open sketch and draw Breakout 
 
