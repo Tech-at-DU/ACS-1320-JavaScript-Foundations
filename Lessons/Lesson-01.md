@@ -7,7 +7,7 @@
 
 <!-- > -->
 
-## Minute-by-Minute
+<!-- ## Minute-by-Minute
 
 | **Elapsed** | **Time** | **Activity** |
 | ----------- | --------- | ------------ |
@@ -18,7 +18,7 @@
 | 1:50 | 0:10 | [Break](#break) |
 | 2:20 | 0:30 | Review progress on Tutorial |
 | 2:40 | 0:10 | Review Homework |
-| 2:45 | 0:05 | Review objectives |
+| 2:45 | 0:05 | Review objectives | -->
 
 <!-- > -->
 
