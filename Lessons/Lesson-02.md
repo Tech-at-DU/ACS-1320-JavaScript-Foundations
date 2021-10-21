@@ -3,11 +3,11 @@
 
 <!-- Put a link to the slides so that students can find them -->
 
-➡️ [**Slides**](https://docs.google.com/presentation/d/1rPysF_OH56K4KWP5-coqoreRpVyDm8iYPXsOwhM9ods/edit?usp=sharing)
+➡️ [**Slides**](https://docs.google.com/presentation/d/1ex_YOuuPXkCClYfjfQmmxK5Ur9X8cJzFfmDDNCQqBNM/edit?usp=sharing)
 
 <!-- > -->
 
-## Minute-by-Minute
+<!-- ## Minute-by-Minute
 
 | **Elapsed** | **Time** | **Activity** |
 | ----------- | --------- | ----------- |
@@ -19,7 +19,7 @@
 | 1:50 | 0:10 | Break |
 | 2:00 | 0:10 | [JS Best Practice](#js-est-practice) |
 | 2:40 | 0:40 | Code Review/Lab Time |
-| 2:45 | 0:05 | [Homework](#homework) |
+| 2:45 | 0:05 | [Homework](#homework) | -->
 
 <!-- > -->
 

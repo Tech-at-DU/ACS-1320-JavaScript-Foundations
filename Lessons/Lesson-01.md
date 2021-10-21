@@ -3,7 +3,9 @@
 
 <!-- Put a link to the slides so that students can find them -->
 
-➡️ [**Slides**](../Slides/Lesson-01.html#/)
+<!-- ➡️ [**Slides**](../Slides/Lesson-01.html#/) -->
+
+<!-- https://docs.google.com/presentation/d/11uxo6bwj0HB4B7qKp5SNLfmL4LgZLB0BxDh6UB7dPfs/edit?usp=sharing -->
 
 <!-- > -->
 
