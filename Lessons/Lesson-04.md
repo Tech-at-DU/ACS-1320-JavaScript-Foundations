@@ -7,24 +7,6 @@
 
 <!-- > -->
 
-## Minute-by-Minute
-
-| **Elapsed** | **Time** | **Activity** |
-| ----------- | --------- | ----------- |
-| 0:05 | 0:05 | Admin |
-| 0:05 | 0:10 | [Overview](#overview) |
-| 0:05 | 0:15 | [Learning Objectives](#learning-objectives) |
-| 0:15 | 0:05 | [Refactoring](#refactoring-code) |
-| 0:30 | 0:15 | [OOP and JS](#oop) |
-| 0:45 | 0:15 | [Defining Classes](#js-classes) |
-| 0:55 | 0:10 | [BREAK](#break) |
-| 1:55 | 0:60 | [Lab - OOP](#lab) |
-| 2:10 | 0:15 | [Post Lab Q & A](#after-lab) |
-| 2:35 | 0:15 | [Dependency Injection](#dependency-injection) |
-| 2:45 | 0:10 | Review Homework |
-
-<!-- > -->
-
 ## Overview
 
 Class Objects and OOP. Use Object Oriented programming techniques to make your code modular and organized. 
@@ -53,6 +35,111 @@ Refactoring is not about adding new features. Instead, you want to have the **sa
 <!-- > -->
 
 ## Creating classes
+
+In JavaScript a Class is really a function and a function is really an object. No really! All functions are just objects. Seriously try this: 
+
+```JS
+function FunkyTown() {
+  console.log("Won't you take me to")
+}
+
+FunkyTown.band = 'Lipps Inc'
+
+console.log(FunkyTown.band) // Lipps Inc
+console.log(FunkyTown())   // "Won't you take me to"
+```
+
+A function is also a class! Yep, it sure is. Try this: 
+
+```JS
+const myTown = new FunkyTown()
+```
+
+Wait we need to add some properties to our object. Let's make a dog!
+
+```JS 
+function Dog(name) {
+  this.name = name
+}
+
+const myDog = new Dog('Spot')
+console.log(myDog.name) // Spot
+```
+
+We use the new keyword when creating instances. This creates a new object and assigns it to `this`. See how name got assigned to `this` in the Dog function? That Dog function is the constructor for our class. 
+
+How do we add a method? 
+
+```JS 
+function Dog(name) {
+  this.name = name
+}
+
+Dog.prototype.bark = function() {
+  console.log(`${this.name} says: gimme a biscuit!`)
+}
+
+const myDog = new Dog('Spot')
+console.log(myDog.name) // Spot
+myDog.bark() // Spot says: gimme a biscuit!
+```
+
+I heard you could use the class keyword? Yes you can it's a new syntax. It's better, you should use it.
+
+Is it different? Nope. It's the same thing but looks different. We call it "syntactical sugar." It's a nicer flavor of the same old thing. 
+
+How to make the Dog class with the class keyword:
+
+```JS 
+class Dog {
+  constructor(name) {
+    this.name = name
+  }
+
+  bark() {
+    console.log(`${this.name} says: gimme a biscuit!`)
+  }
+}
+
+const myDog = new Dog('Spot')
+console.log(myDog.name) // Spot
+myDog.bark() // Spot says: gimme a biscuit!
+```
+
+NOTE! We used the `constructor()` function to initialize the class. Notice that all of the initial property values (`name`) are passed into the function here and assigned to `this`. You must do this to store a value on the newly created class instance.  
+
+### What about inheritence?
+
+You can do that with JS. SpaceDogs can shoot lasers from their eyes. 
+
+```JS 
+class SpaceDog extends Dog {
+  constructor(name, planet) {
+    super(name)
+    this.planet = planet
+  }
+
+  shootLaser() {
+    console.log(`${this.name} shoots lasers!`)
+  }
+}
+
+const spaceDog = new SapceDog('Rocko', 'Mars')
+console.log(spaceDog.name) // Rocko
+spaceDog.bark() // Rocko says: gimme a biscuit!
+spaceDog.shootLaser() // Rocko shoots lasers!
+spaceDog.planet // Mars
+```
+
+We use the extends keyword to create a subclass of a prarent or super class. 
+
+NOTE! You must call `super()` in the constructor. 
+
+Note! Calling `super()` you must pass any properties required by consructor of the super class. This is how `name` is set in our super class `Dog`.
+
+<!-- > -->
+
+### Creating Classes for Breakout
 
 The engineering team has decided to **OOP**ify the whole game. 
 
@@ -86,15 +173,76 @@ Define properties in each class with the values that the object needs to do it's
 
 <!-- > -->
 
+### Sprite class
+
+A Sprite is a game object. Think about it like a rectangle on the screen. The game is built from these. Everything on the screen has an x and y position and most things have a width and height and a color. 
+
+- x
+- y
+- width
+- height
+- color
+
+```JS
+class Sprite {
+  constructor(x = 0, y = 0, width = 100, height = 100, color = '#f00') {
+    this.x = x
+    this.y = y
+    this.width = width
+    this.height = height
+    this.color = color
+  }
+}
+```
+
+A Sprite class might also have a `render()` method. This method needs to take in the ctx as a parameter. 
+
+```JS
+class Sprite {
+  ...
+
+  render(ctx) {
+    ctx.beginPath();
+    ctx.rect(this.x, this.y, this.width, this.height);
+    ctx.fillStyle = this.color;
+    ctx.fill();
+    ctx.closePath();
+  }
+}
+```
+
+Why pass the `ctx` as a parameter it's a global variable? We want to avoid global variables! These open our code up to problems. It also means the code only works when this mysterious value `ctx` happens to be defined in the global scope. If you were to use this class in another project error messages would start asking you why the mysterious `ctx` is not defined. 
+
+Passing `ctx` as a parameter is safe and reliable. The variable is scoped to this method. Any programmer can see where it is defined and decide how they will provide it. 
+
+### Brick Class
+
+The Brick class can extend the Sprite class. Brick only adds a single new property. A brick can also initialize itself to fixed expected values. See the width, height, and color. 
+
+```JS
+class Brick extends Sprite {
+  constructor(x, y, width = 75, height = 20, color = '#0095DD') {
+    super(x, y, width, height, color) // pass arguments to Sprite!
+    this.status = true // adds a new property
+  }
+}
+```
+
+A brick is just a Sprite with an extra property called status and some standard numbers for width height, and a color.
+
+<!-- > -->
+
+### Ball class
+
 For example, the Ball class might look like this: 
 
 ```JavaScript
-class Ball {
-  constructor(radius, color = "#0095DD") {
+class Ball extends Sprite{
+  constructor(x = 0, y = 0, radius = 10, color = "#0095DD") {
+    super(x, y, 0, 0, color)
     this.radius = radius;
-    this.color = color;
-    this.x = 0;
-    this.y = 0;
+    this.dx = 2
+    this.dy = -2
   }
 
   move() {
@@ -102,7 +250,7 @@ class Ball {
     this.y += this.dy
   }
 
-  render(ctx) {
+  render(ctx) { // Overrides the existing render method!
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
     ctx.fillStyle = this.color;
@@ -128,10 +276,10 @@ Here `Ball` Class defines instances which will have four properties. Two of the 
 Make instance of a class like this: 
 
 ```JS 
-const ball = new Ball(10)
+const ball = new Ball(200, 200, 10)
 
-console.log( ball.x ) // 0
-console.log( ball.y ) // 0
+console.log( ball.x ) // 200
+console.log( ball.y ) // 200
 console.log( ball.radius ) // 10
 ```
 
@@ -206,6 +354,9 @@ class Ball {
     ctx.closePath();
   }
 }
+
+const b = new Ball(200, 200, 10)
+b.render(ctx) // pass the cts as an argument! 
 ```
 
 <!-- > -->
@@ -220,7 +371,7 @@ const ball = new Ball(...)
 
 function draw() {
   ball.move()
-  ball.render(ctx)
+  ball.render(ctx) // pass the dependency!
   ...
 }
 ```
@@ -233,250 +384,11 @@ Start working on [Assignment 3](../Assignments/Assignment-3-OOP.md)
 
 <!-- > -->
 
-## OOP
-
-Whoa, who wrote this tutorial? It's lacking in OOP! It's your job to improve it by increasing OOPiness!
-
-<!-- > -->
-
-Making the code more Object Oriented won't make the code execute faster. It will make the code easier to work with, and easier to expand its systems and add new features in the future.
-
-<!-- > -->
-
-**What is an object?**
-
-Objects are collections and namespaces. An object is a collection of properties (variables) and methods (functions). A namespace gives you one name to access items in the collection.
-
-<!-- > -->
-
-**Why make Objects?** 
-
-It's easier to think of a ball Object than it is to think about: `x`, `y`, `ballRadius`, `dx`, `dy`, and `color` as the ball.
-
-<!-- > -->
-
-Grouping related variables together in an object will organize and encapsulate these variables. Grouping variables together to create a ball Object.
-
-```JavaScript
-const ball = {
-  x: 240, 
-  y: 290, 
-  radius: 10, 
-  dx: -2,
-  dy: -2, 
-  color: '#0095DD'
-}
-```
-
-<!-- > -->
-
-With the change above the location of the ball which was previously determined by `x` and `y` is now determined by `ball.x` and `ball.y`.
-
-<!-- > -->
-
-**Remove** the variables that are now stored with the ball object: 
-
-```JS
-...
-let x = canvas.width / 2;
-let y = canvas.height - 30;
-let dx = 2;
-let dy = -2;
-const ballRadius = 10;
-...
-```
-
-<!-- > -->
-
-Find where these variables exist in your code and replace them with 
-
-- `x` becomes `ball.x`
-- `y` becomes `ball.y`
-- `dx` becomes `ball.dx`
-- `dy` becomes `ball.dy`
-- `ballRadius` becomes `ball.radius`
-
-<!-- > -->
-
-For example the `drawBall()` function becomes: 
-
-```JS
-const drawBall = () => {
-  ctx.beginPath();
-  // Notice the changes here
-  ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2);
-  ctx.fillStyle = ball.color;
-  ctx.fill();
-  ctx.closePath();
-}
-```
-
-<!-- > -->
-
-**Discussion:** 
-
-- With these changes is the code better? 
-- What is different? 
-- What possible benefits would these changes have?
-
-<!-- > -->
-
-With this arrangement, there is only a single global variable. This makes your code safer, there is less chance we might overwrite a variable by accident. 
-
-**Encapsulation**
-
-Properties that affect the ball are stored together. 
-
-<!-- > -->
-
-It also **makes the code easier to reason about**. We have one ball with some logical properties that belong to it. Rather than a pool of variables some of which control the appearance of the ball. 
-
-<!-- > -->
-
-It also makes the system easier to expand. If you need to make another ball you can make another object with the same properties or even duplicate an existing ball object. 
-
-Adding new properties to the ball is easier. 
-
-<!-- > -->
-
-Objects with the same properties are also interchangeable. This allows for Polymorphism an advanced OOP topic. 
-
-<!-- > -->
-
-### JS Classes
-
-While defining a ball with an object literal works. You can go a step further by making a template for the ball Object called a class.
-
-```JavaScript
-class Ball {
-  constructor(x, y, radius = 10) {
-    this.x = x
-    this.y = y
-    ...
-  }
-
-  move() {
-    this.x += this.dx
-    this.y += this.dy
-  }
-}
-
-const ball = new Ball(200, 300)
-```
-
-<!-- > -->
-
-An object created from a class is called an instance. 
-
-```JS 
-const ball = new Ball(100, 30)
-
-console.log( ball.x ) // 100
-```
-
-<!-- > -->
-
-**ES6 style classes** have some features that deserve discussion. 
-
-- constructor 
-- initialization
-- parameters
-- default parameters
-
-(refer to the code samples above)
-
-<!-- > -->
-
-**Vocabulary** 
-
-- **property** - a variable/value stored by a class 
-    - `x`, `y`, `radius`, `dx`, `dy`, `color`
-- **method** - a function stored in a class 
-    - `move()`
-
-<!-- > -->
-
 ### Classes
 
+Read up on classes in the JS docs: 
+
 - [Review Classes in JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes) 
-
-<!-- > -->
-
-## Break 
-
-Take a ten-minute break and look at all of the objects in the world and name their properties.
-
-<!-- > -->
-
-# Lab
-
-Spend the lab time working on solving the challenges here: 
-
-[Assignment 3 OOP](Assignments/Assignment-3-OOP.md)
-
-Take notes as you work for discussion after the lab. 
-
-## After Lab 
-
-We've removed a lot of global variables and grouped properties into objects. There are a couple of variables that are shared across some of the objects. You need a way to handle these situations. 
-
-## Dependency Injection
-
-Many of the game objects need to draw themselves. To do this, they need access to the canvas rendering context. This is a _dependency_. These classes should NOT rely on a global variable! The solution is to inject the _dependency_. 
-
-```JavaScript
-class Ball {
-  constructor(radius, color = "#0095DD") {
-    this.radius = radius;
-    this.color = color;
-    this.x = 0;
-    this.y = 0;
-  }
- 
-  render(ctx) {
-    ...
-  }
-}
-```
-
-Here the render method takes `ctx` as a parameter. This class can now be used anywhere and is not dependent on a global variable. Instead, the value is passed from outside. 
-
-An important technique you can make use of here is [Depedancy Injection](https://en.wikipedia.org/wiki/Dependency_injection). Skim this.
-
-This is a powerful idea that is used often in software development. In a nutshell: 
-
-> A dependency is an object that can be used by another object. Dependency Injection is the passing of a dependency to the dependent object that would use it.
-
-Your goal for the current challenges is to create class objects for the Brick, Ball, Paddle, and Background. These classes will need to draw onto the canvas. The canvas context is a _dependancy_ for the Brick, Paddle, Ball, etc. These objects are dependent on a canvas context, they can't draw themselves without one!
-
-While you could supply the canvas when you initialized an object that would create a more tightly coupled system. Passing the canvas to the object when it needs to draw itself is a more elegant solution. 
-
-Revisit the `Ball` class. In the code snippet below I've added a `render()` method. This method takes the rendering context as a parameter. You could say the context is 'injected'.
-
-```JavaScript
- class Ball {
-  constructor(radius, color = "#0095DD") {
-    this.radius = radius;
-    this.color = color;
-  }
-
-  render(ctx) {
-    ctx.beginPath();
-    ctx.arc(x, y, this.radius, 0, Math.PI * 2);
-    ctx.fillStyle = this.color;
-    ctx.fill();
-    ctx.closePath();
-  }
-}
-``` 
-
-This is a Dependency Injection at work! Overall this is a very nice Class package you could make and render as many instances of this class as you might need, and render them on any canvas context. 
-
-
-<!-- .slide: data-background="#087CB8" -->
-## [**10m**] BREAK
-
-<!-- > -->
 
 ## After Class 
 
@@ -487,3 +399,21 @@ This is a Dependency Injection at work! Overall this is a very nice Class packag
 ## Additional Resources
 
 1. Video Playlist walking through the entire assignment: https://www.youtube.com/playlist?list=PLoN_ejT35AEiSYr-OhYV-C6uWZgPLBMZM
+
+<!-- > -->
+
+<!-- ## Minute-by-Minute
+
+| **Elapsed** | **Time** | **Activity** |
+| ----------- | --------- | ----------- |
+| 0:05 | 0:05 | Admin |
+| 0:05 | 0:10 | [Overview](#overview) |
+| 0:05 | 0:15 | [Learning Objectives](#learning-objectives) |
+| 0:15 | 0:05 | [Refactoring](#refactoring-code) |
+| 0:30 | 0:15 | [OOP and JS](#oop) |
+| 0:45 | 0:15 | [Defining Classes](#js-classes) |
+| 0:55 | 0:10 | [BREAK](#break) |
+| 1:55 | 0:60 | [Lab - OOP](#lab) |
+| 2:10 | 0:15 | [Post Lab Q & A](#after-lab) |
+| 2:35 | 0:15 | [Dependency Injection](#dependency-injection) |
+| 2:45 | 0:10 | Review Homework | -->
