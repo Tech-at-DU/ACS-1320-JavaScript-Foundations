@@ -7,27 +7,6 @@
 
 <!-- > -->
 
-## Minute-by-Minute
-
-| **Elapsed** | **Time** | **Activity** |
-| ----------- | --------- | ----------- |
-| 0:05 | 0:05 | Overview |
-| 0:05 | 0:10 | [Class Learning Objectives](#class-learning-objectives) |
-| 0:05 | 0:15 | [Discuss Breakout tutorial](#discuss-breakout-tutorial) |
-| 0:05 | 0:25 | [Arrays](#arrays) |
-| 0:05 | 0:25 | [Loops](#loops) |
-| 0:05 | 0:30 | [Functions](#functions) |
-| 0:05 | 0:35 | [Objects](#objects) |
-| 0:05 | 0:40 | [Conditional](#conditional) |
-| 0:05 | 0:45 | [Name Space and Identifiers](#name-space-and-identifiers) |
-| 0:05 | 0:50 | [Scope](#scope) |
-| 0:10 | 1:00 | BREAK |
-| 0:10 | 1:10 | [Expanding the game](#expanding-the-game) |
-| 0:10 | 1:20 | [OOP](#oop) |
-| 0:60 | 2:20 | [Challenges](#challenges) |
-
-<!-- > -->
-
 ## Class Learning Objectives
 
 1. Use for Loops 
@@ -333,14 +312,14 @@ const bricks = [];
 
 // *** This would be better in a function
 for (let c = 0; c < brickColumnCount; c += 1) {
- bricks[c] = [];
- for (let r = 0; r < brickRowCount; r += 1) {
- bricks[c][r] = {
- x: 0,
- y: 0,
- status: 1,
- };
- }
+  bricks[c] = [];
+  for (let r = 0; r < brickRowCount; r += 1) {
+    bricks[c][r] = {
+      x: 0,
+      y: 0,
+      status: 1,
+    };
+  }
 }
 
 // **************************************************************
@@ -348,73 +327,73 @@ for (let c = 0; c < brickColumnCount; c += 1) {
 // **************************************************************
 
 function drawBall() {
- ctx.beginPath();
- // * Math.PI * 2 could be a constant
- ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
- ctx.fillStyle = '#0095DD'; // * Could be good as a constant
- ctx.fill();
- ctx.closePath();
+  ctx.beginPath();
+  // * Math.PI * 2 could be a constant
+  ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
+  ctx.fillStyle = '#0095DD'; // * Could be good as a constant
+  ctx.fill();
+  ctx.closePath();
 }
 
 function drawPaddle() {
- ctx.beginPath();
- ctx.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
- ctx.fillStyle = '#0095DD'; // * Could be good as a constant
- ctx.fill();
- ctx.closePath();
+  ctx.beginPath();
+  ctx.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
+  ctx.fillStyle = '#0095DD'; // * Could be good as a constant
+  ctx.fill();
+  ctx.closePath();
 }
 
 function drawBricks() {
- for (let c = 0; c < brickColumnCount; c += 1) {
- for (let r = 0; r < brickRowCount; r += 1) {
- if (bricks[c][r].status === 1) {
- // **** This block should really be part of the brick initialization
- const brickX = (c * (brickWidth + brickPadding)) + brickOffsetLeft;
- const brickY = (r * (brickHeight + brickPadding)) + brickOffsetTop;
- bricks[c][r].x = brickX;
- bricks[c][r].y = brickY;
+  for (let c = 0; c < brickColumnCount; c += 1) {
+    for (let r = 0; r < brickRowCount; r += 1) {
+      if (bricks[c][r].status === 1) {
+        // **** This block should really be part of the brick initialization
+        const brickX = (c * (brickWidth + brickPadding)) + brickOffsetLeft;
+        const brickY = (r * (brickHeight + brickPadding)) + brickOffsetTop;
+        bricks[c][r].x = brickX;
+        bricks[c][r].y = brickY;
 
- ctx.beginPath();
- ctx.rect(brickX, brickY, brickWidth, brickHeight);
- ctx.fillStyle = '#0095DD'; // * Could be good as a constant
- ctx.fill();
- ctx.closePath();
- }
- }
- }
+        ctx.beginPath();
+        ctx.rect(brickX, brickY, brickWidth, brickHeight);
+        ctx.fillStyle = '#0095DD'; // * Could be good as a constant
+        ctx.fill();
+        ctx.closePath();
+      }
+    }
+  }
 }
 
 function collisionDetection() {
- for (let c = 0; c < brickColumnCount; c += 1) {
- for (let r = 0; r < brickRowCount; r += 1) {
- const b = bricks[c][r];
- if (b.status === 1) {
- if (x > b.x && x < b.x + brickWidth && y > b.y && y < b.y + brickHeight) {
- dy = -dy;
- b.status = 0;
- score += 1;
- if (score === brickRowCount * brickColumnCount) {
- // eslint-disable-next-line no-alert
- alert('YOU WIN, CONGRATULATIONS!'); // * Could be good as a constant
- document.location.reload();
- }
- }
- }
- }
- }
+  for (let c = 0; c < brickColumnCount; c += 1) {
+    for (let r = 0; r < brickRowCount; r += 1) {
+      const b = bricks[c][r];
+      if (b.status === 1) {
+        if (x > b.x && x < b.x + brickWidth && y > b.y && y < b.y + brickHeight) {
+          dy = -dy;
+          b.status = 0;
+          score += 1;
+          if (score === brickRowCount * brickColumnCount) {
+            // eslint-disable-next-line no-alert
+            alert('YOU WIN, CONGRATULATIONS!'); // * Could be good as a constant
+            document.location.reload();
+          }
+        }
+      }
+    }
+  }
 }
 
 function drawScore() {
- ctx.font = '16px Arial'; // * Could be good as a constant
- ctx.fillStyle = '#0095DD'; // * Could be good as a constant
- ctx.fillText(`Score: ${score}`, 8, 20);
+  ctx.font = '16px Arial'; // * Could be good as a constant
+  ctx.fillStyle = '#0095DD'; // * Could be good as a constant
+  ctx.fillText(`Score: ${score}`, 8, 20);
 }
 
 function drawLives() {
- ctx.font = '16px Arial'; // * Could be good as a constant
- ctx.fillStyle = '#0095DD'; // * Could be good as a constant
- // * canvas.width might be better as a constants
- ctx.fillText(`Lives: ${lives}`, canvas.width - 65, 20);
+  ctx.font = '16px Arial'; // * Could be good as a constant
+  ctx.fillStyle = '#0095DD'; // * Could be good as a constant
+  // * canvas.width might be better as a constants
+  ctx.fillText(`Lives: ${lives}`, canvas.width - 65, 20);
 }
 
 // --------------------------------------------------------------
@@ -422,69 +401,69 @@ function drawLives() {
 // --------------------------------------------------------------
 
 function draw() {
- // Clear the canvas
- // * canvas.width, and canvas.height might be better as constants 
- ctx.clearRect(0, 0, canvas.width, canvas.height);
- // Call helper functions
- drawBricks();
- drawBall();
- drawPaddle();
- drawScore();
- drawLives();
- collisionDetection();
+  // Clear the canvas
+  // * canvas.width, and canvas.height might be better as constants 
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  // Call helper functions
+  drawBricks();
+  drawBall();
+  drawPaddle();
+  drawScore();
+  drawLives();
+  collisionDetection();
 
- // Bounce the ball off the left and right of the canvas
- if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
- dx = -dx;
- }
+  // Bounce the ball off the left and right of the canvas
+  if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
+    dx = -dx;
+  }
 
- // Bounce the ball off the top, paddle, or hit the bottom of the canvas
- if (y + dy < ballRadius) {
- // hit the top
- dy = -dy;
- } else if (y + dy > canvas.height - ballRadius) {
- // hit the bottom
- if (x > paddleX && x < paddleX + paddleWidth) {
- // Hit the paddle
- dy = -dy;
- } else {
- // Lose a life
- lives -= 1;
- if (!lives) {
- // Game Over
- // eslint-disable-next-line no-alert
- alert('GAME OVER'); // * Could be good as a constant
- x = 200;
- y = 200;
- document.location.reload();
- } else {
- // Start the over you hit the bottom
- // ** Set the position of ball and paddle
- // ** And set the speed and direction of the ball
- x = canvas.width / 2;
- y = canvas.height - 30;
- dx = 2;
- dy = -2;
- paddleX = (canvas.width - paddleWidth) / 2;
- }
- }
- }
+  // Bounce the ball off the top, paddle, or hit the bottom of the canvas
+  if (y + dy < ballRadius) {
+    // hit the top
+    dy = -dy;
+  } else if (y + dy > canvas.height - ballRadius) {
+      // hit the bottom
+    if (x > paddleX && x < paddleX + paddleWidth) {
+      // Hit the paddle
+      dy = -dy;
+    } else {
+      // Lose a life
+      lives -= 1;
+      if (!lives) {
+        // Game Over
+        // eslint-disable-next-line no-alert
+        alert('GAME OVER'); // * Could be good as a constant
+        x = 200;
+        y = 200;
+        document.location.reload();
+      } else {
+        // Start the over you hit the bottom
+        // ** Set the position of ball and paddle
+        // ** And set the speed and direction of the ball
+        x = canvas.width / 2;
+        y = canvas.height - 30;
+        dx = 2;
+        dy = -2;
+        paddleX = (canvas.width - paddleWidth) / 2;
+      }
+    }
+  }
 
- // Move Ball
- // *** Better as a separate function
- x += dx;
- y += dy;
+  // Move Ball
+  // *** Better as a separate function
+  x += dx;
+  y += dy;
 
- // Check for arrow keys
- // *** Better as a function
- if (rightPressed && paddleX < canvas.width - paddleWidth) {
- paddleX += 7;
- } else if (leftPressed && paddleX > 0) {
- paddleX -= 7;
- }
+  // Check for arrow keys
+  // *** Better as a function
+  if (rightPressed && paddleX < canvas.width - paddleWidth) {
+    paddleX += 7;
+  } else if (leftPressed && paddleX > 0) {
+    paddleX -= 7;
+  }
 
- // Draw the screen again
- requestAnimationFrame(draw);
+  // Draw the screen again
+  requestAnimationFrame(draw);
 }
 
 // --------------------------------------------------------------
@@ -492,26 +471,26 @@ function draw() {
 // --------------------------------------------------------------
 
 function keyDownHandler(e) {
- if (e.keyCode === 39) {
- rightPressed = true;
- } else if (e.keyCode === 37) {
- leftPressed = true;
- }
+  if (e.keyCode === 39) {
+    rightPressed = true;
+  } else if (e.keyCode === 37) {
+    leftPressed = true;
+  }
 }
 
 function keyUpHandler(e) {
- if (e.keyCode === 39) {
- rightPressed = false;
- } else if (e.keyCode === 37) {
- leftPressed = false;
- }
+  if (e.keyCode === 39) {
+    rightPressed = false;
+  } else if (e.keyCode === 37) {
+    leftPressed = false;
+  }
 }
 
 function mouseMoveHandler(e) {
- const relativeX = e.clientX - canvas.offsetLeft;
- if (relativeX > 0 && relativeX < canvas.width) {
- paddleX = relativeX - paddleWidth / 2;
- }
+  const relativeX = e.clientX - canvas.offsetLeft;
+  if (relativeX > 0 && relativeX < canvas.width) {
+    paddleX = relativeX - paddleWidth / 2;
+  }
 }
 
 // **************************************************************
@@ -530,3 +509,22 @@ document.addEventListener('mousemove', mouseMoveHandler, false);
 draw();
 ```
 
+
+<!-- ## Minute-by-Minute
+
+| **Elapsed** | **Time** | **Activity** |
+| ----------- | --------- | ----------- |
+| 0:05 | 0:05 | Overview |
+| 0:05 | 0:10 | [Class Learning Objectives](#class-learning-objectives) |
+| 0:05 | 0:15 | [Discuss Breakout tutorial](#discuss-breakout-tutorial) |
+| 0:05 | 0:25 | [Arrays](#arrays) |
+| 0:05 | 0:25 | [Loops](#loops) |
+| 0:05 | 0:30 | [Functions](#functions) |
+| 0:05 | 0:35 | [Objects](#objects) |
+| 0:05 | 0:40 | [Conditional](#conditional) |
+| 0:05 | 0:45 | [Name Space and Identifiers](#name-space-and-identifiers) |
+| 0:05 | 0:50 | [Scope](#scope) |
+| 0:10 | 1:00 | BREAK |
+| 0:10 | 1:10 | [Expanding the game](#expanding-the-game) |
+| 0:10 | 1:20 | [OOP](#oop) |
+| 0:60 | 2:20 | [Challenges](#challenges) | -->
