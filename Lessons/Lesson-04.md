@@ -139,6 +139,18 @@ Note! Calling `super()` you must pass any properties required by consructor of t
 
 <!-- > -->
 
+## Classes are best in modules 
+
+Be sure to declare your script as a module: 
+
+Edit index.html:
+
+```HTML
+<script src="main.js" type="module"></script>
+```
+
+Add type="module"
+
 ### Creating Classes for Breakout
 
 The engineering team has decided to **OOP**ify the whole game. 
@@ -193,6 +205,8 @@ class Sprite {
     this.color = color
   }
 }
+
+export default Sprite
 ```
 
 A Sprite class might also have a `render()` method. This method needs to take in the ctx as a parameter. 
