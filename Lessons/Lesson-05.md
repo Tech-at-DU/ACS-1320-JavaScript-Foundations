@@ -5,20 +5,6 @@
 
 ➡️ [**Slides**](/Syllabus-Template/Slides/Lesson1.html ':ignore')
 
-<!-- > -->
-
-## Minute-by-Minute
-
-| **Elapsed** | **Time** | **Activity** |
-| ----------- | --------- | ------------ |
-| 0:05 | 0:05 | admin |
-| 0:05 | 0:10 | [Overview](#overview) |
-| 0:05 | 0:15 | [Why learn Classes and inheritance](#why-learn-classes-and-inheritance) |
-| 0:20 | 0:05 | [Learning Objectives](#learning-objectives) |
-| 0:50 | 0:30 | [Inheritence](#inheritence) |
-| 1:00 | 0:10 | [BREAK](#break) |
-| 2:25 | 1:30 | Lab |
-| 2:45 | 0:20 | [Wrap up](#wrap-up) |
 
 <!-- > -->
 
@@ -52,10 +38,10 @@ Inheritance is when you get something from your ancestors. By definition it's th
 
 <!-- > -->
 
-In software this could be: 
+In software a class can inherit properties and methods: 
 
-- variables/properties - `'Foo' 999.999`
-- methods/functions - `function() {}`
+- variables/properties - `'Foo', 999.999`
+- methods/functions - `function draw() {}`
 
 <!-- > -->
 
@@ -68,7 +54,9 @@ Who do _you_ inherit from?
 
 In software who do you inherit from?
 
-- Your parent/superclass - ???
+- Your parent/superclass -
+  - `Rectangle` inherits from `Polygon`
+  - `Pokemon` inherits from `GameObject` inherits from `Sprite`
 
 <!-- > -->
 
@@ -79,30 +67,35 @@ Any class can inherit from another class. You can also think of classes that inh
 <!-- > -->
 
 ```js
+// Sprite defines two properties and one method
 class Sprite {
   constructor() {
     this.x = 0
     this.y = 0
   }
+
+  render() { ... }
 }
 
+// Ball has all of the properties and methods 
+// that Sprite has and adds one new property
 class Ball extends Sprite {
-  constructor() {
-    super()
-    this.radius = 10
+  constructor(x, y, radius = 10) {
+    super(x, y) // Calling super initializes the super class!
+    this.radius = radius
   }
 }
 
-const ball = new Ball() // { x: 0, y: 0, radius: 10 }
+// Making an instance 
+const ball = new Ball(0, 0) 
+// { x: 0, y: 0, radius: 10, render: function(){ ... } }
 ```
 
 <!-- > -->
 
-Calling `super()` in a subclass is like calling the constructor function in your **superclass**. 
+Calling `super()` in a subclass is like calling the constructor function in your **superclass**. You must supply any arguments that are required. 
 
-**You must call `super()`!** 
-
-It's how the properties in the super class get initialized!
+**You must call `super()`!** It's how the properties in the super class get initialized!
 
 <!-- > -->
 
@@ -114,6 +107,8 @@ class Sprite {
     this.x = 0
     this.y = 0
   }
+
+  render() { ... }
 }
 
 class Ball extends Sprite {
@@ -200,6 +195,8 @@ class Sprite {
     this.x = 0
     this.y = 0
   }
+
+  render() { ... }
 }
 
 class Ball extends Sprite {
@@ -313,3 +310,18 @@ Take a 10-minute break and think about things in the world that share properties
 
 1. https://javascript.info/classes
 
+
+<!-- > -->
+
+<!-- ## Minute-by-Minute
+
+| **Elapsed** | **Time** | **Activity** |
+| ----------- | --------- | ------------ |
+| 0:05 | 0:05 | admin |
+| 0:05 | 0:10 | [Overview](#overview) |
+| 0:05 | 0:15 | [Why learn Classes and inheritance](#why-learn-classes-and-inheritance) |
+| 0:20 | 0:05 | [Learning Objectives](#learning-objectives) |
+| 0:50 | 0:30 | [Inheritence](#inheritence) |
+| 1:00 | 0:10 | [BREAK](#break) |
+| 2:25 | 1:30 | Lab |
+| 2:45 | 0:20 | [Wrap up](#wrap-up) | -->
