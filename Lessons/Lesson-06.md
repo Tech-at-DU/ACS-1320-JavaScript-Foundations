@@ -7,22 +7,6 @@
 
 <!-- > -->
 
-## Minute-by-Minute
-
-| **Elapsed** | **Time** | **Activity** |
-| ----------- | -------- | ------------ |
-| 0:05 | 0:05 | admin |
-| 0:05 | 0:10 | [Overview: Bundling](#overview) |
-| 0:05 | 0:15 | [Learning Objectives](#learning-objectives) |
-| 0:10 | 0:25 | [Bundling and compiling JS](#bundling-and-compiling-js) |
-| 0:30 | 0:55 | [How to bundle code](#how-to-bundle-code) |
-| 1:05 | 0:10 | [BREAK](#break) |
-| 2:05 | 1:00 | [Lab](#lab) |
-| 2:35 | 0:30 | [Wrap Up and review](#wrap-up-and-review) |
-| 2:45 | 0:10 | admin |
-
-<!-- > -->
-
 # Overview
 
 Bundling is a common practice used across the JS ecosystem. While JS is not compiled to machine code like other languages, JS files are processed heavily in modern applications. 
@@ -86,7 +70,7 @@ Bundling processes your sources file and produces new files.
 
 - **minify** - 🗜
 
-reduces file size by removing unnecessary characters: 
+Reduces file size by removing unnecessary characters: 
 
 ```JS
 function hello(str) {
@@ -107,7 +91,7 @@ function hello(str){if(str==='foo'){return 'bar'}return'foo'}
 
 - **uglify** - 🙀
 
-renames elements to obfuscate code and reduce file size
+Renames elements to obfuscate code and reduce file size
 
 <!-- > -->
 
@@ -125,7 +109,7 @@ Convert ES6 JS into JS that is compatible with older browsers
 
 - **bundling** - 🏀🏓🧱 → 📦
 
-combining all .js files into a single bundle.js file
+Combining all .js files into a single bundle.js file
 
 <!-- > -->
 
@@ -159,7 +143,7 @@ Each file is a separate stream. A browser has to provide overhead and manage eac
 
 <!-- > -->
 
-In the end, bundling is the process of processing and combining files into a single file, often called bundle.js. This bundle.js is your "compiled" application. 
+In the end, bundling is the process of processing and combining files into a single file, often called bundle.js. This bundle.js is your "compiled" application and the code you will publish to the world! 
 
 <!-- > -->
 
@@ -258,7 +242,7 @@ In the end your directory will look like this:
 
 <!-- > -->
 
-Edit index.html. The script tag shoould point to `bundle.js`. 
+Edit index.html. The script tag should point to `bundle.js`. 
 
 `<script src="bundle.js"></script>`
 
@@ -266,7 +250,7 @@ Edit index.html. The script tag shoould point to `bundle.js`.
 
 <!-- > -->
 
-Notice we haven't created bundle.js. This file will be created in the next step by webpack. This will be the compiled, minified, and uglified file built from your JS code and code you might have imported from other libs. 
+**Notice we haven't created bundle.js.** This file will be created in the next step by webpack. This will be the compiled, minified, and uglified file built from your JS code and code you might have imported from other libs. 
 
 <!-- > -->
 
@@ -276,11 +260,11 @@ Notice we haven't created bundle.js. This file will be created in the next step 
 
 Webpack is an industry-standard tool. You will see this tool in the future, expect to work with it. 
 
-The webpack.config.js file configures webpack, it is written in JavaScript. 
+The `webpack.config.js` file configures webpack, it is written in JavaScript. 
 
 <!-- > -->
 
-Copy the code below and paste it into your webpack.config.js. 
+Copy the code below and paste it into your `webpack.config.js`. 
 
 ```JS
 const path = require('path');
@@ -300,14 +284,14 @@ Examine the config file discuss it with another student. What do you think it wi
 
 <!-- > -->
 
-- entry - start with src/index.js
-- output 
- - filename - create a file named bundle.js
- - path - put bundle.js in the dist/ folder 
+- `entry` - start with `src/index.js`
+- `output` 
+ - `filename` - create a file named `bundle.js`
+ - `path` - put `bundle.js` in the `dist/` folder 
 
 <!-- > -->
 
-You need to change the name here (`index.js`) to the name of the JS file that you link to in your inde.html!
+You need to change the name here (`index.js`) to the name and path of the JS file that you link to in your inde.html! For example: 
 
 ```JS
 ...
@@ -319,13 +303,13 @@ entry: './src/index.js',
 
 ## Running Scripts
 
-You can run scripts from the command line. You did this earlier when you installed the npm packages. You can also store scripts in your package.json and run them with your project. 
+You can run scripts from the command line. You did this earlier when you installed the npm packages. You can also store scripts in your `package.json` and run them with your project. 
 
 <!-- > -->
 
-Open packages.json and find the scripts section. 
+Open `packages.json` and find the scripts section. 
 
-edit package.json
+edit `package.json`
 
 ```
 {
@@ -342,16 +326,16 @@ edit package.json
 
 Here you are adding two scripts
 
-- "develop": "webpack --mode development --watch"
-- "build": "webpack --mode production"
+- `"develop": "webpack --mode development --watch"`
+- `"build": "webpack --mode production"`
 
 <!-- > -->
 
-The first is for development mode. Use this one when you are working on your project as a developer. 
+The first is for **dev**elopment mode. Use this one when you are working on your project as a developer. 
 
 <!-- > -->
 
-The second is the build script. Use this when you want to create the bundle.js and distribute your project to the world. 
+The second is the **build** script. Use this when you want to create the `bundle.js` and distribute your project to the world. 
 
 <!-- > -->
 
@@ -367,21 +351,23 @@ Bundle your project in development mode:
 
 <!-- > -->
 
-Notice that since we aren't running a specific file but rather **running a script**, we use `npm run scriptName`!
+Notice that since we aren't running a specific file but rather **running a script**, we use `npm run <scriptName>`!
 
 Running this script should launch Webpack in development mode. It should compile your .js files and create dist.bundle.js. 
 
 <!-- > -->
 
-This mode uses the--watch flag. The watch flag monitors file changes you make and recompiles each time there is a change.
+This mode uses the `--watch` flag. The watch flag monitors file changes you make and recompiles each time you save a change.
 
 <!-- > -->
 
-Try it make some changes, save. Notice the terminal shows output each time you save. Telling us that webpack is working recompiling bundle.js. 
+Try it make some changes, save. Notice the terminal shows output each time you save. Telling us that webpack is working recompiling `bundle.js`. 
 
 <!-- > -->
 
-Take a look at the distribution code in bundle.js. It is human readable, even if it isn't what you would have written. Note the file size of this file. For me it was 19k.
+Take a look at the distribution code in `bundle.js`. It is human readable, even if it isn't what you would have written. Note the file size of this file. For me it was 19k. 
+
+This should contain all of the JS code from all of the JS files imported into your project along with some extra code to make it compatible with every browser imaginable.  
 
 <!-- > -->
 
@@ -391,7 +377,7 @@ Try production mode.
 
 <!-- > -->
 
-This script doesn't use the --watch flag
+This script doesn't use the `--watch` flag. It will only run once. 
 
 `"build": "webpack --mode production"`
 
@@ -401,7 +387,9 @@ Running it once builds your code for production. This should be your last step b
 
 <!-- > -->
 
-Take a look at the distribution code in bundle.js. What happened? The code here has been minified and uglified. Check the file size. For me it was 5k. 
+Take a look at the distribution code in `bundle.js`. What happened? The code here has been minified and uglified. Check the file size. For me it was 5k.
+
+The code here is not human reable. Take a look at it. 
 
 <!-- .slide: data-background="#087CB8" -->
 # BREAK
@@ -438,3 +426,19 @@ Use the lab time to complete your project.
 - https://skalman.github.io/UglifyJS-online/
 - https://blog.logrocket.com/uglify-vs-babel-minify-vs-terser-a-mini-battle-royale/
 - https://www.sitepoint.com/beginners-guide-webpack-module-bundling/
+
+<!-- > -->
+
+<!-- ## Minute-by-Minute
+
+| **Elapsed** | **Time** | **Activity** |
+| ----------- | -------- | ------------ |
+| 0:05 | 0:05 | admin |
+| 0:05 | 0:10 | [Overview: Bundling](#overview) |
+| 0:05 | 0:15 | [Learning Objectives](#learning-objectives) |
+| 0:10 | 0:25 | [Bundling and compiling JS](#bundling-and-compiling-js) |
+| 0:30 | 0:55 | [How to bundle code](#how-to-bundle-code) |
+| 1:05 | 0:10 | [BREAK](#break) |
+| 2:05 | 1:00 | [Lab](#lab) |
+| 2:35 | 0:30 | [Wrap Up and review](#wrap-up-and-review) |
+| 2:45 | 0:10 | admin | -->
