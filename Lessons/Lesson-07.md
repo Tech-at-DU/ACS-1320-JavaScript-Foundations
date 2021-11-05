@@ -317,7 +317,7 @@ Take a 10 minute break and visualize the workd as components.
 
 Work through the React Fundamentals tutorial.
 
-https://github.com/MakeSchool-Tutorials/React-Fundamentals
+https://github.com/Tech-at-DU/React-Fundamentals
 
 <!-- v -->
 
