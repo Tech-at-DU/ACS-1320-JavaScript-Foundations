@@ -12,11 +12,9 @@ React is one of the most popular libraries used today. It's hugely popular expec
 
 Follow this tutorial and complete it. 
 
-You can follow it on the Make School website or on github from either of the links below. 
+Follow the tutorial here: 
 
-https://www.makeschool.com/academy/track/react-fundamentals-vm0
-
-https://github.com/MakeSchool-Tutorials/React-Fundamentals
+https://github.com/Tech-at-DU/React-Fundamentals-tutorial
 
 ### Deliverable
 
