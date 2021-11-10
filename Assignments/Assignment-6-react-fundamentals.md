@@ -18,7 +18,7 @@ https://github.com/Tech-at-DU/React-Fundamentals-tutorial
 
 ### Deliverable
 
-Submit your work on [GradeScope](https://www.gradescope.com/courses/202953). 
+Submit your work on [GradeScope](https://www.gradescope.com/). 
 
 ## Assess your work
 
