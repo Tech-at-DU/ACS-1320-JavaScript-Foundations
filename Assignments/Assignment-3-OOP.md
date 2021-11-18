@@ -102,6 +102,12 @@ Your job is to refactor your work. You'll be making a class object to replace th
 
 This OOP thing is fun! I can tell you want more! Here are a few more things you can try. 
 
+**Challenge**
+
+Take a look at the original break out game. https://en.wikipedia.org/wiki/Breakout_(video_game)
+
+The goal of this challenge is to recreate the look of the original game. Takle a look at the screenshot of the original. Try and reproduce the dimensions of the game, the number of rows and columns and color of the bricks. 
+
 **Stretch Challenge 1**: Make a `Game` Class. The Game itself can be an object that creates and owns all of the other objects. The game can hold all of the global properties, and methods. 
 
 - Properties
@@ -120,6 +126,7 @@ This OOP thing is fun! I can tell you want more! Here are a few more things you 
     - `mouseMoveHandler()`
 
  **Stretch Challenge 2**: Improved alert message. 
+
 
 **Challenge**: Improve Alert messages.
 
@@ -141,7 +148,7 @@ This OOP thing is fun! I can tell you want more! Here are a few more things you 
 
  (There is a different system used with the edges of the screen)
 
- This system of collision dete ction is easy to implement but has some imperfections. The ball will pass half way into any object before a collision is detected. 
+ This system of collision detection is easy to implement but has some imperfections. The ball will pass half way into any object before a collision is detected. 
 
 **Solution**: There are a few ways to handle this. A step up from the current system would be to consider the ball as a rectangle with 4 points, one at each corner. Your code check each corner to find if it is within the rectangle of a brick or the paddle. 
 
