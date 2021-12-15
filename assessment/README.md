@@ -1,6 +1,6 @@
 # Assessment
 
-These challenges are a tool to measure the skills you developed this term.  
+These challenges are meant measure the skills you developed this term.  
 
 Your goal is to make a project with React, load data from a JSON file, create and display components, use state, and use Array.map to create a collection of components.
 

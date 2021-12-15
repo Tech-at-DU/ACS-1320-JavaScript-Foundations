@@ -29,28 +29,32 @@ By the end of the course will be able to:
 
 ## Schedule
 
-**Course Dates:** Tuesday and Thrusday, October 19 – December 9, 2021
+**Course Dates:** Term 3 1/18/22 to 3/4/22
 
-**Class Times:** Tuesday, Thursday at 4:00pm – 5:30pm
+**Class Times:** Monday, Wednesday, and Friday 2:30 PM to 4:20 PM
 
 | Class | Date | Topics | Assignment |
 |:-----:|:-----|:-------|:-----------|
-|  1 | Tue, Oct 19 | [JavaScript Basics] | [Break Out: Tutorial] | 
-|  2 | Thu, Oct 21 | [JavaScript Professional Best Practice] | [Break Out: EsLint] |
-|  3 | Tue, Oct 26 | [JavaScript OOP] | [Break Out: OOP] |
-|  4 | Thu, Oct 28 | [OOP and Classes] | [Break Out: OOP Inheritance] |
-|  5 | Tue, Nov  2 | [JS OOP Inheritence] | Lab |
-|  6 | Thu, Nov  4 | [Bundling JS] | [Break out: Bundling JavaScript] |
-|  7 | Tue, Nov  9 | [Single Page Applications] | [React: Fundamentals Tutorial] |
-|  8 | Thu, Nov 11 | [Component Architecture] | [Final Project: Getting started] |
-|  9 | Tue, Nov 16 | [Components and State] | - |
-| 10 | Thu, Nov 18 | [Forms and user input] | - | 
-| 11 | Tue, Nov 23 | [Building and Publishing] | - |
-| 12 | Thu, Nov 25 | Thanksgiving No Class | - |
-| 13 | Tue, Nov 30 | TBA | - |
-| 14 | Thu, Dec  2 | Lab and Review | - |
-| 15 | Tue, Dec  7 | [Show Your Work] | - |
-| 16 | Thu, Dec  9 | [Final Assessment: Test your Knowledge] | - |
+|  1 | Wed, Jan 19 | [JavaScript Basics] | [Break Out: Tutorial] | 
+|  2 | Fri, Jan 21 | [JavaScript Professional Best Practice] | [Break Out: EsLint] |
+|  3 | Mon, Jan 24 | [JavaScript OOP] | [Break Out: OOP] |
+|  4 | Wed, Jan 26 | [OOP and Classes] | [Break Out: OOP Inheritance] |
+|  5 | Fri, Jan 28 | [JS OOP Inheritence] | Lab |
+|  6 | Mon, Jan 31 | [Bundling JS] | [Break out: Bundling JavaScript] |
+|  7 | Wed, Feb  2 | [Single Page Applications] | [React: Fundamentals Tutorial] |
+|  8 | Fri, Feb  4 | [Component Architecture] | [Final Project: Getting started] |
+|  9 | Mon, Feb  7 | [Components and State] | - |
+| 10 | Wed, Feb  9 | [Forms and user input] | - | 
+| 11 | Fri, Feb 11 | [Building and Publishing] | - |
+| 12 | Mon, Feb 14 | Thanksgiving No Class | - |
+| 13 | Mon, Feb 16 | TBA | - |
+| 14 | Wed, Feb 18 | Lab and Review | - |
+| 15 | Mon, Feb 21 | - | - |
+| 16 | Wed, Feb 23 | - | - |
+| 15 | Fri, Feb 25 | - | - |
+| 16 | Mon, Feb 28 | - | - |
+| 15 | Wed, Mar  2 | [Show Your Work] | - |
+| 16 | Fri, Mar  4 | [Final Assessment: Test your Knowledge] | - |
 
 <!-- Lesson 1 -->
 [JavaScript Basics]: Lessons/Lesson-01.md
