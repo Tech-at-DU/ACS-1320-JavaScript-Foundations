@@ -36,23 +36,23 @@ By the end of the course will be able to:
 | Class | Date | Topics | Assignment |
 |:-----:|:-----|:-------|:-----------|
 |  1 | Wed, Jan 19 | [JavaScript Basics] | [Break Out: Tutorial] | 
-|  2 | Fri, Jan 21 | [JavaScript Professional Best Practice] | [Break Out: EsLint] |
-|  3 | Mon, Jan 24 | [JavaScript OOP] | [Break Out: OOP] |
-|  4 | Wed, Jan 26 | [OOP and Classes] | [Break Out: OOP Inheritance] |
-|  5 | Fri, Jan 28 | [JS OOP Inheritence] | Lab |
-|  6 | Mon, Jan 31 | [Bundling JS] | [Break out: Bundling JavaScript] |
-|  7 | Wed, Feb  2 | [Single Page Applications] | [React: Fundamentals Tutorial] |
-|  8 | Fri, Feb  4 | [Component Architecture] | [Final Project: Getting started] |
-|  9 | Mon, Feb  7 | [Components and State] | - |
-| 10 | Wed, Feb  9 | [Forms and user input] | - | 
-| 11 | Fri, Feb 11 | [Building and Publishing] | - |
-| 12 | Mon, Feb 14 | Thanksgiving No Class | - |
-| 13 | Mon, Feb 16 | TBA | - |
-| 14 | Wed, Feb 18 | Lab and Review | - |
-| 15 | Mon, Feb 21 | - | - |
-| 16 | Wed, Feb 23 | - | - |
-| 15 | Fri, Feb 25 | - | - |
-| 16 | Mon, Feb 28 | - | - |
+|  2 | Fri, Jan 21 | Lab | - |
+|  3 | Mon, Jan 24 | [JavaScript Professional Best Practice] | [Break Out: EsLint] |
+|  4 | Wed, Jan 26 | [JavaScript OOP] | [Break Out: OOP] |
+|  5 | Fri, Jan 28 | Lab | - |
+|  6 | Mon, Jan 31 | [OOP and Classes] | [Break Out: OOP Inheritance] |
+|  7 | Wed, Feb  2 | [JS OOP Inheritence] | - |
+|  8 | Fri, Feb  4 | Lab | - |
+|  9 | Mon, Feb  7 | [Bundling JS] | [Break out: Bundling JavaScript] |
+| 10 | Wed, Feb  9 | [Single Page Applications] | [React: Fundamentals Tutorial] | 
+| 11 | Fri, Feb 11 | Lab | - |
+| 12 | Mon, Feb 14 | [Component Architecture] | [Final Project: Getting started] |
+| 13 | Wed, Feb 16 | [Components and State] | - |
+| 14 | Fri, Feb 18 | Lab | - |
+| 15 | Mon, Feb 21 | **President's Day** | - |
+| 16 | Wed, Feb 23 | [Forms and user input] | - |
+| 15 | Fri, Feb 25 | Lab | - |
+| 16 | Mon, Feb 28 | [Building and Publishing] | - |
 | 15 | Wed, Mar  2 | [Show Your Work] | - |
 | 16 | Fri, Mar  4 | [Final Assessment: Test your Knowledge] | - |
 
