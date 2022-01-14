@@ -9,55 +9,40 @@
 
 <!-- > -->
 
-<!-- ## Minute-by-Minute
-
-| **Elapsed** | **Time** | **Activity** |
-| ----------- | --------- | ------------ |
-| 0:05 | 0:05 | [Class Learning Objectives](#class-learning-objectives) |
-| 0:05 | 0:10 | [Projects](#projects) |
-| 0:50 | 0:15 | [Start Break out](#start-break-out-tutorial) |
-| 1:40 | 0:50 | [Lab: Break Out Tutorial](#lab) |
-| 1:50 | 0:10 | [Break](#break) |
-| 2:20 | 0:30 | Review progress on Tutorial |
-| 2:40 | 0:10 | Review Homework |
-| 2:45 | 0:05 | Review objectives | -->
-
-<!-- > -->
-
 ## Class Learning Objectives
 
 The goal of this class is to improve and develop your JavaScript skill, knowledge, and to further develop your skills in software development. 
 
+<!-- > -->
+
 By the end of the class you should be able to:
 
-- Use functions and variables to create front end applications
-- Write For loops in JavaScript
+- Use functions and variables
+- Write for loops in JavaScript
 - Write if statements in JavaScript
 - Use Canvas to draw bitmap graphics
 - Describe program flow
 
 <!-- > -->
 
-### Your Goals
+### Your Goals ⭐️
 
 These are the two goals that will bring you success. 
 
-- Building Portfolio Projects
-- Master Learning Objectives
+- Building Portfolio Projects 🖼
+- Master Learning Objectives 🧠
 
 <!-- > -->
 
-Portfolio projects are what get you noticed. Your portfolio is often the reason people get invited to job interviews.
-
-One of your goals this term will be to build two portfolio projects.
+Portfolio projects 🖼 are what get you noticed 👁. Your portfolio is often the reason people get invited to job interviews 🤝.
 
 <!-- > -->
 
 ### What are Learning Objectives? 
 
-Learning objectives are the concepts and ideas that you need to know to claim mastery of a subject.
+Learning objectives are the concepts and ideas that you need to know to claim mastery of a subject. 🏫
 
-Learning Objectives are often skills that are related to success at job interviews and on the job.
+Learning Objectives are often skills that are related to success at job interviews and on the job. 😎
 
 <!-- > -->
 
@@ -65,11 +50,16 @@ When you understand a learning objective you will be able to explain it and put 
 
 <!-- > -->
 
-**There will be learning objectives for each class.** You should test your knowledge by explaining the concepts to someone else and implement the learning objectives in code when the learning objectives are code. Some objectives are larger overarching concepts, in these cases, you should identify the learning objective in your code, your project as a whole, or in the larger software ecosystem or the world at large. 
+**There will be learning objectives for each class.** You should test your knowledge by explaining the concepts to someone else. 🤼‍♀️ 
 
 <!-- > -->
 
-**If you are having trouble understanding a learning objective you need to take action.** Discuss the topic with another student, talk with a TA, bring questions to class, talk to an instructor during lab or office hours. 
+**If you are having trouble understanding a learning objective you need to take action.**  
+
+1. Discuss the topic with another student
+1. Talk with a TA 
+1. Bring questions to class
+1. Talk to an instructor during lab or office hours. 
 
 <!-- > -->
 
@@ -87,57 +77,56 @@ The goal is to produce something that shows your skills.
 
 The Breakout tutorial is a great JS practice project. It makes use of many of the core concepts found in every programming language. 
 
-- **Variables** - values stored and used by the program
-- **Functions** - code blocks used and reused by the program 
-- **Flow control** - controlling when which blocks of code are run and how often
- - **loops** - repeats blocks of code 
- - **if else** statements - makes decisions about which blocks should be run
-- **Arrays** - stores lists of things/values accessible by index
-- **Objects** - stores things/values accessed by key
+<!-- > -->
 
-Today in class your job is to start on the tutorial and identify the things on this list
+- **Variables** 
+- **Functions** 
+- **Flow control** 
+	- **loops** 
+	- **if else** 
+- **Arrays** 
+- **Objects**
 
 <!-- > -->
 
-These things are core to programming in general. Learn these things here and you can apply them anywhere (in many languages). 
-
 After completing the tutorial you will improve the code applying modern techniques and best practices. This will include:
 
-- Using ES6 JS ideas and syntax
-- Linting to professional standards 
-- Using build systems and bundling
+- Using **ES6** JS ideas and syntax
+- **Linting** to professional standards 
+- Using build systems and **bundling**
 
 <!-- > -->
 
 ### Contractor/Custom project 
 
-The Custom/Constractor project will be built with React. Here you will put all of the things from the first project into something that is built using the one of the most common and popular libraries in use today.
+The Custom/Constractor project will be built with React. 
+
+Here you will put all of the things from the first project into something that is built using one of the most common and popular libraries in use today.
 
 <!-- > -->
 
-## Break Out
+## Break Out 🧱
+
+<!-- > -->
 
 - What is Breakout?
 - How does the tutorial game work? 
-	- draws all of the game elements with canvas
-	- What are cartesian coordinates? 
-- Draw Break game with Sketch
-	- How big is the desktop: 1440 x 1024
-	- How big is the game: 480 x 320
-	- Draw game elements
-	- bricks: 75 x 20
-	- rows: 3
-	- columns: 5
-	- ball: 10 radius
-	- paddle: 75 x 10
+	- Draws with canvas
+	- Use cartesian coordinates? 
 
-**Exercise 1:** Open sketch and draw Breakout 
+<!-- > -->
+
+[Breakout](https://en.wikipedia.org/wiki/Breakout_(video_game)) was invented by Atari in 1976! 
+
+![atari-breakout](images/atari-breakout.png)
+
+It looked like this.
 
 <!-- > -->
 
 ## Canvas 
 
-Canvas is a JS API that allows you to draw bitmapped graphics. Use it to create special effects and games. Bitmapped graphics draw faster and allow for pixel-level control of an image.
+Canvas is a JS API that allows you to draw bitmapped graphics. Use it to draw pictures. It's good for games. 
 
 Canvas is a tag: 
 
@@ -152,8 +141,44 @@ Think of canvas as the `<img>` tag with the ability to draw on it.
 Like the `<img>` tag you should give `<canvas>` width and height. 
 
 ```html
-<canvas id="myCanvas" width="400" height="300"></canvas>
+<canvas id="myCanvas" width="480" height="320"></canvas>
 ```
+
+<!-- > -->
+
+Your game will look like this:
+
+![Breakout-0](images/Breakout-0.png)
+
+<!-- > -->
+
+You will draw your game on Cavnas with JS. 
+
+Canvas allows you to draw shapes into a rectangular area.
+
+<!-- > -->
+
+Canvas is mapped in cartesian coordinates. 
+
+![Breakout-1](images/Breakout-1.png)
+
+<!-- > -->
+
+Canvas is mapped in cartesian coordinates. 
+
+![Breakout-2](images/Breakout-2.png)
+
+<!-- > -->
+
+You'll draw the ball from the center:
+
+![Breakout-3](images/Breakout-3.png)
+
+<!-- > -->
+
+You'll draw the rectangles from the upper left corner:
+
+![Breakout-4](images/Breakout-4.png)
 
 <!-- > -->
 
@@ -173,13 +198,15 @@ const ctx = canvas.getContext("2d");
 
 Draw on your canvas using the canvas API. The tutorial uses a few of the APIs methods.
 
+<!-- > -->
+
 Drawing with canvas generally follows these steps: 
 
-- begin a new path
-- draw a shape with one of the drawing methods
-- set the fill style 
-- set the stroke style 
-- fill and stroke your path
+1. begin a new path
+1. draw a shape with one of the drawing methods
+1. set the fill style 
+1. set the stroke style 
+1. fill and stroke your path
 
 Here are a few examples...
 
@@ -197,7 +224,6 @@ ctx.fill()                    // fills the current path
 
 - **Q:** How big is the rectangle? 
 - **Q:** Where is it in the canvas?
-- **Try it:** (in theory) draw a rectangle in sketch and get the coordinates and size. 
 
 <!-- > -->
 
@@ -212,8 +238,8 @@ ctx.closePath()
 ```
 
 - **Q:** How big is the circle? 
-- **Q:** Where is the circle? 
-- **Try it:** (in theory) look at your sketch and find the ball. Get it's radius and coordinates. 
+- **Q:** Where is the circle?
+- **Q:** What color is the circle?   
 
 <!-- > -->
 
@@ -224,12 +250,13 @@ ctx.clearRect(x, y, width, height)
 ```
 
 - **Q:** What area of the screen is being cleared? 
-
+<!-- 
 <!-- > -->
 
 Million Dollar Homepage! Canvas Practice.
 
-https://github.com/soggybag/canvas-practice
+https://github.com/soggybag/canvas-practice 
+-->
 
 <!-- > -->
 
@@ -245,15 +272,19 @@ Start working on assignment 1 [here](../Assignments/Assignment-1-Break-Out.md).
 
 This tutorial is 10 pages. At the end of every page is the completed source code. If you run into any problems you can check your code against the source.
 
+<!-- > -->
+
 While you work look for the things on this list:
 
-- **Variables** - values stored and used by the program
-- **Functions** - code blocks used and reused by the program 
-- **Flow control** - controlling when which blocks of code are run and how often
- - **loops** - repeats blocks of code 
- - **if else** statements - makes decisions about which blocks should be run
-- **Arrays** - stores lists of things/values accessible by index
-- **Objects** - stores things/values accessed by key
+- **Variables**
+- **Functions** 
+- **Flow control**
+ - **loops**  
+ - **if else** 
+- **Arrays** 
+- **Objects**
+
+<!-- > -->
 
 Today in class your job is to start on the tutorial and identify the things on this list
 
@@ -290,3 +321,17 @@ Follow the instructions [here](../Assignments/Assignment-1-Break-Out.md)
 
 
 
+<!-- > -->
+
+<!-- ## Minute-by-Minute
+
+| **Elapsed** | **Time** | **Activity** |
+| ----------- | --------- | ------------ |
+| 0:05 | 0:05 | [Class Learning Objectives](#class-learning-objectives) |
+| 0:05 | 0:10 | [Projects](#projects) |
+| 0:50 | 0:15 | [Start Break out](#start-break-out-tutorial) |
+| 1:40 | 0:50 | [Lab: Break Out Tutorial](#lab) |
+| 1:50 | 0:10 | [Break](#break) |
+| 2:20 | 0:30 | Review progress on Tutorial |
+| 2:40 | 0:10 | Review Homework |
+| 2:45 | 0:05 | Review objectives | -->
