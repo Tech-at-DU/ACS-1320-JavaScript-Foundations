@@ -319,8 +319,6 @@ Follow the instructions [here](../Assignments/Assignment-1-Break-Out.md)
 1. [For loops](https://eloquentjavascript.net/02_program_structure.html#h_oupMC+5FKN)
 1. [Canvas](https://eloquentjavascript.net/17_canvas.html)
 
-
-
 <!-- > -->
 
 <!-- ## Minute-by-Minute

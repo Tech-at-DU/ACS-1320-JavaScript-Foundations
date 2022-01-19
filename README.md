@@ -110,6 +110,12 @@ Assignments **must be turned in via [Gradescope](https://gradescope.com) for cre
 - Project 2 - Single Page Application Tutorial - Assignment 6
 - Project 3 - Final Project - Assignment 7
 
+## Video Lectures 
+
+You can follow video lectures for this course here: 
+
+- https://www.youtube.com/playlist?list=PLoN_ejT35AEiSYr-OhYV-C6uWZgPLBMZM
+
 ## Evaluation
 
 To pass this course you must meet the following requirements:
