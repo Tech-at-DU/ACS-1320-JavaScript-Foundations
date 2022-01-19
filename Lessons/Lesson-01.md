@@ -160,8 +160,6 @@ Canvas allows you to draw shapes into a rectangular area.
 
 Canvas is mapped in cartesian coordinates. 
 
-<img src="Images/Breakout-1.png" style="border: 1px solid">
-
 ![Breakout-1](Images/Breakout-1.png)
 
 <!-- > -->
