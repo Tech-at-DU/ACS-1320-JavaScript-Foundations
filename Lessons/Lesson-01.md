@@ -118,7 +118,7 @@ Here you will put all of the things from the first project into something that i
 
 [Breakout](https://en.wikipedia.org/wiki/Breakout_(video_game)) was invented by Atari in 1976! 
 
-![atari-breakout](images/atari-breakout.png)
+![atari-breakout](Images/atari-breakout.png)
 
 It looked like this.
 
