@@ -148,7 +148,7 @@ Like the `<img>` tag you should give `<canvas>` width and height.
 
 Your game will look like this:
 
-![Breakout-0](images/Breakout-0.png)
+![Breakout-0](Images/Breakout-0.png)
 
 <!-- > -->
 
@@ -160,25 +160,25 @@ Canvas allows you to draw shapes into a rectangular area.
 
 Canvas is mapped in cartesian coordinates. 
 
-![Breakout-1](images/Breakout-1.png)
+![Breakout-1](Images/Breakout-1.png)
 
 <!-- > -->
 
 Canvas is mapped in cartesian coordinates. 
 
-![Breakout-2](images/Breakout-2.png)
+![Breakout-2](Images/Breakout-2.png)
 
 <!-- > -->
 
 You'll draw the ball from the center:
 
-![Breakout-3](images/Breakout-3.png)
+![Breakout-3](Images/Breakout-3.png)
 
 <!-- > -->
 
 You'll draw the rectangles from the upper left corner:
 
-![Breakout-4](images/Breakout-4.png)
+![Breakout-4](Images/Breakout-4.png)
 
 <!-- > -->
 
