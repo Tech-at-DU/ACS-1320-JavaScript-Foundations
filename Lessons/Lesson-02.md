@@ -11,14 +11,14 @@
 
 - Describe linting
 - Use ESLint
-- Evaulate your work against professional standards
+- Evaluate your work against professional standards
 - Write JS to professional standards
 
 <!-- > -->
 
 ## Overview 🔎
 
-This class you will look at the JS you wrote in the tutorial  improve and upgrade it to modern and professional standards.
+In this class, you will look at the JS you wrote in the tutorial to improve and upgrade it to modern and professional standards.
 
 <!-- > -->
 
@@ -27,20 +27,20 @@ This class you will look at the JS you wrote in the tutorial  improve and upgrad
 Pair up and discuss code quality. Answer these questions:
 
 - What is code quality?
-- What does high quality code look like?
+- What does high-quality code look like?
 - How do you write better quality code?
 
 <!-- > -->
 
 - Consistent style ✅
-    - Reads well to Everyone on your team 
-    - Uses consistent syntax 
-        - `{}` or `new Object()`
+  - Reads well to Everyone on your team 
+  - Uses consistent syntax 
+  - `{}` or `new Object()`
 - Uses up to date best practices ⭐️
-    - e.g. `const` > `let` > `var`
-    - Uses deconstruction
-    - Uses template strings over concatenation
-    - Uses += instead of ++
+  - e.g. `const` > `let` > `var`
+  - Uses deconstruction
+  - Uses template strings over concatenation
+  - Uses += instead of ++
 
 <!-- > -->
 
@@ -48,7 +48,7 @@ Pair up and discuss code quality. Answer these questions:
 
 <!-- > -->
 
-You should be using the most up to date JS in your work. Its expected in the professional environment. 
+You should be using the most up-to-date JS in your work. It is expected in the professional environment. 
 
 👨‍💻 👩‍💻 👩‍💼 🧑‍💼
 
@@ -66,7 +66,7 @@ You will be using the Airbnb JS style guide. This guide was developed at Airbnb 
 
 <!-- > -->
 
-**Using this style guide is profesional best practice, it will make you code better, and make you write higher quality code.**
+**Using this style guide is professional best practice, it will make your code better, and make you write higher quality code.**
 
 🏅
 
@@ -76,7 +76,7 @@ You will be using the Airbnb JS style guide. This guide was developed at Airbnb 
 
 <!-- > -->
 
-**Lint** was the name of a program that flagged suspicious non portable constructs in C code that were likely to cause bugs. The term is now applied generically to tools that flag suspicious code and inconsistent style in any language.
+**Lint** was the name of a program that flagged suspicious non-portable constructs in C code that were likely to cause bugs. The term is now applied generically to tools that flag suspicious code and inconsistent style in any language.
 
 <!-- > -->
 
@@ -84,7 +84,7 @@ You will be using the Airbnb JS style guide. This guide was developed at Airbnb 
 
 **ESLint** is a tool that "lints" your JavaScript. It has many options and is widely used. 
 
-You will set up ESLint with a Style guide used by profesionals. 
+You will set up ESLint with a Style guide used by professionals. 
 
 <!-- > -->
 
@@ -224,7 +224,7 @@ https://repl.it/classroom/invite/kHcWR5n
 
 ### JS - Template Strings 
 
-Best Practice use template literals over the + for concatenation. 
+Best Practice use template literal over the + for concatenation. 
 
 Bad!
 
@@ -244,12 +244,12 @@ console.log(`hello ${name}`) // concatenate with template literal
 
 ### What's wrong with `"" + ?`
 
-The + is used for addition _and for concatenation_. 
+The + is used for addition _and concatenation_. 
 
 This makes it ambiguous sometimes and might confuse or generate errors.
 
 ```JS
-const str = "Score:" + score + 10  // Score:1010
+const str = "Score:" + score + 10 // Score:1010
 ```
 
 ✚ is a common source of problems in JS
