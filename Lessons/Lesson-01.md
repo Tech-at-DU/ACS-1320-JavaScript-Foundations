@@ -54,7 +54,7 @@ When you understand a learning objective you will be able to explain it and put 
 
 <!-- > -->
 
-**If you are having trouble understanding a learning objective you need to take action.**  
+**If you are having trouble understanding a learning objective you need to take action.** 
 
 1. Discuss the topic with another student
 1. Talk with a TA 
@@ -69,7 +69,7 @@ The goal is to produce something that shows your skills.
 
 - **Breakout** - This is a JavaScript implementation of the arcade game Breakout 
 - **React Fundamentals Tutorial** - This tutorial will get you started with React
-- **Custom/Contractor Project with React** - This will be a web site built with React and is open to your ideas and input.
+- **Custom/Contractor Project with React** - This will be a website built with React and is open to your ideas and input.
 
 <!-- > -->
 
@@ -89,7 +89,7 @@ The Breakout tutorial is a great JS practice project. It makes use of many of th
 
 <!-- > -->
 
-After completing the tutorial you will improve the code applying modern techniques and best practices. This will include:
+After completing the tutorial you will improve the code by applying modern techniques and best practices. This will include:
 
 - Using **ES6** JS ideas and syntax
 - **Linting** to professional standards 
@@ -99,7 +99,7 @@ After completing the tutorial you will improve the code applying modern techniqu
 
 ### Contractor/Custom project 
 
-The Custom/Constractor project will be built with React. 
+The Custom/Contractor project will be built with React. 
 
 Here you will put all of the things from the first project into something that is built using one of the most common and popular libraries in use today.
 
@@ -152,7 +152,7 @@ Your game will look like this:
 
 <!-- > -->
 
-You will draw your game on Cavnas with JS. 
+You will draw your game on Canvas with JS. 
 
 Canvas allows you to draw shapes into a rectangular area.
 
@@ -189,7 +189,7 @@ const canvas = document.getElementById("myCanvas");
 const ctx = canvas.getContext("2d");
 ```
 
-`ctx` is the convas context. You'll call on methods of this object to draw on the canvas. 
+`ctx` is the canvas context. You'll call on methods of this object to draw on the canvas. 
 
 - **Q:** What's a method?
 - **Q:** What's an Object?
@@ -215,11 +215,11 @@ Here are a few examples...
 **Draw a rectangle**
 
 ```js 
-ctx.beginPath()               // begins a new path
+ctx.beginPath() // begins a new path
 ctx.rect(x, y, width, height) // draws a rectangular path
-ctx.fillStyle = "#0095DD"     // sets the fill color
-ctx.closePath()               // closes the path
-ctx.fill()                    // fills the current path
+ctx.fillStyle = "#0095DD" // sets the fill color
+ctx.closePath() // closes the path
+ctx.fill() // fills the current path
 ```
 
 - **Q:** How big is the rectangle? 
@@ -239,7 +239,7 @@ ctx.closePath()
 
 - **Q:** How big is the circle? 
 - **Q:** Where is the circle?
-- **Q:** What color is the circle?   
+- **Q:** What color is the circle? 
 
 <!-- > -->
 
@@ -279,8 +279,8 @@ While you work look for the things on this list:
 - **Variables**
 - **Functions** 
 - **Flow control**
- - **loops**  
- - **if else** 
+	- **loops** 
+	- **if else** 
 - **Arrays** 
 - **Objects**
 
