@@ -7,37 +7,22 @@
 
 <!-- > -->
 
-<!-- ## Minute-by-Minute
-
-| **Elapsed** | **Time** | **Activity** |
-| ----------- | --------- | ----------- |
-| 0:05 | 0:05 | Roll |
-| 0:10 | 0:05 | [Class Learning Objectives](#class-learning-objectives) (Lecture) |
-| 0:20 | 0:10 | [Code Quality](#code-quality) (Discussion) |
-| 0:40 | 0:20 | [ESLint - Setup](#eslint) (Lab) |
-| 1:40 | 0:60 | [ESLint - Lab](#lab) (Lab) |
-| 1:50 | 0:10 | Break |
-| 2:00 | 0:10 | [JS Best Practice](#js-est-practice) |
-| 2:40 | 0:40 | Code Review/Lab Time |
-| 2:45 | 0:05 | [Homework](#homework) | -->
-
-<!-- > -->
-
-## Class Learning Objectives
+## Class Learning Objectives 📋
 
 - Describe linting
 - Use ESLint
-- Evaulate your work against profesional standards
+- Evaulate your work against professional standards
+- Write JS to professional standards
 
 <!-- > -->
 
-## Overview
+## Overview 🔎
 
-This class will look at the JS you wrote in the tutorial and improve and upgrade it to modern and professional standards.
+This class you will look at the JS you wrote in the tutorial  improve and upgrade it to modern and professional standards.
 
 <!-- > -->
 
-## Code Quality 
+## Code Quality 🥇
 
 Pair up and discuss code quality. Answer these questions:
 
@@ -47,11 +32,11 @@ Pair up and discuss code quality. Answer these questions:
 
 <!-- > -->
 
-- Consistent style 
+- Consistent style ✅
     - Reads well to Everyone on your team 
     - Uses consistent syntax 
         - `{}` or `new Object()`
-- Uses up to date best practices
+- Uses up to date best practices ⭐️
     - e.g. `const` > `let` > `var`
     - Uses deconstruction
     - Uses template strings over concatenation
@@ -59,19 +44,35 @@ Pair up and discuss code quality. Answer these questions:
 
 <!-- > -->
 
-### Why is this important?
-
-You should be using the most up to date JS in your work. Its expected in the professional environment. 
-
-Improves the quality of your work by reducing errors and making your code easier to understand. 
-
-You will be using the Airbnb JS style guide. This guide was developed at Airbnb and is used by their engineering team. It defines the coding style expected from Airbnb engineers.
-
-**Using this style guide is profesional best practice, it will make you code better, and make you write higher quality code.**
+### Why is this important? 🤔
 
 <!-- > -->
 
-## Linting
+You should be using the most up to date JS in your work. Its expected in the professional environment. 
+
+👨‍💻 👩‍💻 👩‍💼 🧑‍💼
+
+<!-- > -->
+
+Improves the quality of your work by reducing errors and making your code easier to understand. 
+
+🙌
+
+<!-- > -->
+
+You will be using the Airbnb JS style guide. This guide was developed at Airbnb and is used by their engineering team. It defines the coding style expected from Airbnb engineers.
+
+🔬 🧬 🧫
+
+<!-- > -->
+
+**Using this style guide is profesional best practice, it will make you code better, and make you write higher quality code.**
+
+🏅
+
+<!-- > -->
+
+## Linting 🔎
 
 <!-- > -->
 
@@ -79,16 +80,18 @@ You will be using the Airbnb JS style guide. This guide was developed at Airbnb 
 
 <!-- > -->
 
-### ESLint
+### ESLint 🔎
 
 **ESLint** is a tool that "lints" your JavaScript. It has many options and is widely used. 
 
 You will set up ESLint with a Style guide used by profesionals. 
 
+<!-- > -->
+
 **ESlint has two parts:**
 
-1. A plugin/extension for your code editor
-1. A package with options specific to your project
+1. 🔌 A plugin/extension for your code editor
+1. 📦 A package with options specific to your project
 
 <!-- > -->
 
@@ -98,20 +101,20 @@ https://eslint.org/docs/user-guide/getting-started
 
 <!-- > -->
 
-**Setup npm**
+1️⃣ **Setup npm**
 
 ```
 npm init -y
 ```
 
 
-**Install ESLint**
+2️⃣ **Install ESLint** 
 
 ```
 npm install eslint -g
 ```
 
-**Setup a config file**
+3️⃣ **Setup a config file**
 
 ```
 npx eslint --init
@@ -121,7 +124,7 @@ Use the answers below as you follow the setup process.
 
 <!-- > -->
 
-Choose these options:
+**Choose these options:**
 
 - To check syntax, find problems, and enforce code style
 - None of these
@@ -137,15 +140,16 @@ Choose these options:
 
 **Install ESLint in your code editor**
 
-You'll need to install ESLint in your code editor. Go to Packages/Plugins/Extensions and search for ESLint and install. 
+You'll need to install ESLint in your code editor. 
+
+- 1️⃣ Go to Packages/Plugins/Extensions
+- 2️⃣ search for ESLint and install. 
 
 <!-- > -->
 
 ### Lint your code
 
-(If you haven't already)
-
-**Move your code into a JS file**
+**Move your code into a JS file** (If you haven't already)
 
 The linter will only lint files with the `.js` file extension. Move your code into it a separate JS file `index.js`. 
 
@@ -155,7 +159,9 @@ Then link that to your project. In index.html use:
 
 <!-- > -->
 
-**Start Linting**
+**Start Linting** 🐿
+
+<!-- > -->
 
 Take a look at `index.js`. There should be some red lines highlighting sections of your code. These are linting errors. 
 
@@ -167,8 +173,8 @@ Your job id to figure these out and solve the problems. Your deeper and more imp
 
 Take a look at the errors you see and answer these questions: 
 
-- What changes is the linter asking for? 
-- Why these changes?
+- 💬 What changes is the linter asking for? 
+- 🤔 Why these changes?
 
 <!-- > -->
 
@@ -236,42 +242,27 @@ console.log(`hello ${name}`) // concatenate with template literal
 
 <!-- > -->
 
-### What's wrong with "" + ?
+### What's wrong with `"" + ?`
 
-The + is used for addition and for concatenation. This makes it ambiguous sometiems to developers and to JavaScript engine.
+The + is used for addition _and for concatenation_. 
+
+This makes it ambiguous sometimes and might confuse or generate errors.
 
 ```JS
 const str = "Score:" + score + 10  // Score:1010
 ```
 
-This is a common source of problems in JS
+✚ is a common source of problems in JS
 
 <!-- > -->
 
-## Lab
-
-- Install ESlint 
-- Install the Aitbnb styleguide
-- Make a new branch for changes
-- Solve all of the linter errors
-- Consult with your peers if you can't solve an error
-- Take notes for unsolved errors
-- Try the stretch challenges 
-
-<!-- > -->
-
-<!-- .slide: data-background="#087CB8" -->
-## BREAK
-
-<!-- > -->
-
-## After Lab
+## Wrap up
 
 List linter suggestions on the board. Split into groups of 4 to discuss these. Each group decides why these suggestions were included in the style guide. 
 
 - What changes did the linter ask for? 
 - Why do you think these changes? 
-- What were the problems that couldn't be solved?
+- Were linter errors that could not be solved?
 
 <!-- > -->
 
@@ -287,3 +278,18 @@ List linter suggestions on the board. Split into groups of 4 to discuss these. E
 1. https://www.youtube.com/watch?v=SydnKbGc7W8
 1. [Assignment 2 ESLint.md](Assignments/Assignment-2-EsLint.md)
 
+<!-- ## Minute-by-Minute
+
+| **Elapsed** | **Time** | **Activity** |
+| ----------- | --------- | ----------- |
+| 0:05 | 0:05 | Roll |
+| 0:10 | 0:05 | [Class Learning Objectives](#class-learning-objectives) (Lecture) |
+| 0:20 | 0:10 | [Code Quality](#code-quality) (Discussion) |
+| 0:40 | 0:20 | [ESLint - Setup](#eslint) (Lab) |
+| 1:40 | 0:60 | [ESLint - Lab](#lab) (Lab) |
+| 1:50 | 0:10 | Break |
+| 2:00 | 0:10 | [JS Best Practice](#js-est-practice) |
+| 2:40 | 0:40 | Code Review/Lab Time |
+| 2:45 | 0:05 | [Homework](#homework) | -->
+
+<!-- > -->
