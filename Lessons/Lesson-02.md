@@ -27,20 +27,18 @@ In this class, you will look at the JS you wrote in the tutorial to improve and 
 Pair up and discuss code quality. Answer these questions:
 
 - What is code quality?
-- What does high-quality code look like?
-- How do you write better quality code?
+- What does quality code look like?
+- How do you write quality code?
 
 <!-- > -->
 
 - Consistent style ✅
   - Reads well to Everyone on your team 
-  - Uses consistent syntax 
-  - `{}` or `new Object()`
-- Uses up to date best practices ⭐️
+  - Uses consistent syntax
+- Uses best practices ⭐️
   - e.g. `const` > `let` > `var`
-  - Uses deconstruction
-  - Uses template strings over concatenation
-  - Uses += instead of ++
+  - Deconstruction `const { a } = Obj`
+- DRY
 
 <!-- > -->
 
@@ -48,7 +46,7 @@ Pair up and discuss code quality. Answer these questions:
 
 <!-- > -->
 
-You should be using the most up-to-date JS in your work. It is expected in the professional environment. 
+You should be using the professional JS in your work. It is expected in a work environment. 
 
 👨‍💻 👩‍💻 👩‍💼 🧑‍💼
 
@@ -147,25 +145,33 @@ You'll need to install ESLint in your code editor.
 
 <!-- > -->
 
-### Lint your code
+### Lint your code 🧼
+
+<!-- > -->
 
 **Move your code into a JS file** (If you haven't already)
-
-The linter will only lint files with the `.js` file extension. Move your code into it a separate JS file `index.js`. 
 
 Then link that to your project. In index.html use: 
 
 `<script src="index.js"></script>`
 
-<!-- > -->
-
-**Start Linting** 🐿
+<small>The linter will only lint files with the `.js` file extension. Move your code into it a separate JS file `index.js`. </small>
 
 <!-- > -->
 
-Take a look at `index.js`. There should be some red lines highlighting sections of your code. These are linting errors. 
+**Start Linting** 🦫
+
+Take a look at `index.js`. There should be some red lines highlighting sections of your code. These are linting errors.
+
+<!-- > -->
+
+🔬
 
 Move the cursor over these and you'll see notes from the linter telling you how your code doesn't meet the requirements of the style guide. 
+
+<!-- > -->
+
+🔨
 
 Your job id to figure these out and solve the problems. Your deeper and more important goal job is to do your best to understand why professionals would ask for these changes. 
 
@@ -185,6 +191,11 @@ You can read about the Airbnb style guide here:
 https://github.com/airbnb/javascript#types
 
 Take a look at the style guide. Pair and discuss.
+
+<!-- > -->
+
+<!-- .slide: data-background="#087CB8" -->
+## [**10m**] BREAK 🦜
 
 <!-- > -->
 
@@ -211,7 +222,11 @@ Why? `const` and `let` are block-scoped and are not hoisted. This makes your cod
 
 ### JS - Functions and Hoisting
 
+<!-- > -->
+
 JavaScript is processed in two steps. In the first step, the JavaScript engine examines code and processes it. In the second step, the code is executed. 
+
+<!-- > -->
 
 One of the processed that happens in the first step is Hoisting. Hoisting effectively moves some elements to the top of their scope. Things that are affected by hoisting are:
 
