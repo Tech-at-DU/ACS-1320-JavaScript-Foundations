@@ -1,5 +1,5 @@
 <!-- .slide: data-background="./Images/header.svg" data-background-repeat="none" data-background-size="40% 40%" data-background-position="center 10%" class="header" -->
-# ACS 1320 - Lesson 4 - OOP and Classes
+# ACS 1320 - Lesson 4 - OOP
 
 <!-- Put a link to the slides so that students can find them -->
 
@@ -7,7 +7,7 @@
 
 <!-- > -->
 
-## Overview
+## Overview 🌏
 
 Class Objects and OOP. Use Object Oriented programming techniques to make your code modular and organized. 
 
@@ -15,7 +15,7 @@ You've written lots of code so far you've probably incurred some [technical debt
 
 <!-- > -->
 
-## Learning Objectives
+## Learning Objectives 🥸
 
 - Use Refactoring to improve code quality
 - Build systems with Objects 
@@ -24,19 +24,23 @@ You've written lots of code so far you've probably incurred some [technical debt
 
 <!-- > -->
 
-## Refactoring Code
+## Refactoring Code 🍜
 
 The goal of [refactoring code](https://en.wikipedia.org/wiki/Code_refactoring) in short is to improve your existing code base and put it into a shape that will accept future updates. 
 
 <!-- > -->
 
-Refactoring is not about adding new features. Instead, you want to have the **same functionality** with an **improved codebase** underneath it. 
+Refactoring is not about adding new features. Instead, you want to have the **same functionality** with an **improved codebase** underneath it.
+
+🏆
 
 <!-- > -->
 
-## Creating classes
+## Creating classes ⚒️
 
-In JavaScript a Class is really a function and a function is really an object. No really! All functions are just objects. Seriously try this: 
+<!-- > -->
+
+In JavaScript a Class is really a function and a function is really an object. All functions are just objects. Seriously try this: 
 
 ```JS
 function FunkyTown() {
@@ -46,8 +50,10 @@ function FunkyTown() {
 FunkyTown.band = 'Lipps Inc'
 
 console.log(FunkyTown.band) // Lipps Inc
-console.log(FunkyTown())   // "Won't you take me to"
+console.log(FunkyTown())    // "Won't you take me to"
 ```
+
+<!-- > -->
 
 A function is also a class! Yep, it sure is. Try this: 
 
@@ -55,7 +61,9 @@ A function is also a class! Yep, it sure is. Try this:
 const myTown = new FunkyTown()
 ```
 
-Wait we need to add some properties to our object. Let's make a dog!
+<!-- > -->
+
+Wait we need to add some properties to our object. Let's make a dog! 🐶
 
 ```JS 
 function Dog(name) {
@@ -66,7 +74,22 @@ const myDog = new Dog('Spot')
 console.log(myDog.name) // Spot
 ```
 
-We use the new keyword when creating instances. This creates a new object and assigns it to `this`. See how name got assigned to `this` in the Dog function? That Dog function is the constructor for our class. 
+<!-- > -->
+
+We use the `new` keyword when creating instances. 
+
+This creates a new object and assigns it to `this`. 
+
+```js
+// It's like this is happening in the background
+new Dog() // this = {}
+```
+
+See how name got assigned to `this` in the Dog function? 
+
+The Dog function is the constructor for our class.
+
+<!-- > -->
 
 How do we add a method? 
 
@@ -84,11 +107,23 @@ console.log(myDog.name) // Spot
 myDog.bark() // Spot says: gimme a biscuit!
 ```
 
-I heard you could use the class keyword? Yes you can it's a new syntax. It's better, you should use it.
+Methods are added to the prototype property! 
 
-Is it different? Nope. It's the same thing but looks different. We call it "syntactical sugar." It's a nicer flavor of the same old thing. 
+<!-- > -->
 
-How to make the Dog class with the class keyword:
+Q: I heard you could use the class keyword? 🤔
+
+A: Yes you can it's a new syntax. It's better, you should use it. 💪
+
+<!-- > -->
+
+Q: Is it different? 🤔
+
+A: Nope. It's the same thing but looks different. We call it "syntactical sugar." 🍰 It's a nicer flavor of the same old thing. 
+
+<!-- > -->
+
+How to make a Dog class 🐕 with the class keyword:
 
 ```JS 
 class Dog {
@@ -106,9 +141,17 @@ console.log(myDog.name) // Spot
 myDog.bark() // Spot says: gimme a biscuit!
 ```
 
-NOTE! We used the `constructor()` function to initialize the class. Notice that all of the initial property values (`name`) are passed into the function here and assigned to `this`. You must do this to store a value on the newly created class instance.  
+<!-- > -->
 
-### What about inheritence?
+NOTE! We used the `constructor()` function to initialize the class. 
+
+Notice that all of the initial property values (`name`) are passed into the function here and assigned to `this`. **You must do this to store a value on the newly created class instance.**
+
+<!-- > -->
+
+### What about inheritence? 👩‍👧‍👦
+
+<!-- > -->
 
 You can do that with JS. SpaceDogs can shoot lasers from their eyes. 
 
@@ -131,15 +174,21 @@ spaceDog.shootLaser() // Rocko shoots lasers!
 spaceDog.planet // Mars
 ```
 
+<!-- > -->
+
 We use the extends keyword to create a subclass of a prarent or super class. 
-
-NOTE! You must call `super()` in the constructor. 
-
-Note! Calling `super()` you must pass any properties required by consructor of the super class. This is how `name` is set in our super class `Dog`.
 
 <!-- > -->
 
-## Classes are best in modules 
+NOTE! You must call `super()` in the constructor. 🦹‍♀️ 
+
+Note! Calling `super()` you must pass any properties required by consructor of the super class. This is how `name` is set in our super class `Dog`. 🦸‍♂️
+
+<!-- > -->
+
+## Modules 📦
+
+<!-- > -->
 
 Be sure to declare your script as a module: 
 
@@ -151,7 +200,31 @@ Edit index.html:
 
 Add type="module"
 
+<!-- > -->
+
+Use import and export to share things between modules. 
+
+Export your Dog from Dog.js:
+
+```JS
+//Dog.js
+class Dog() { ... }
+
+export default Dog
+```
+
+Import your Dog into main.js:
+
+```JS
+//main.js
+import Dog from './Dog.js'
+```
+
+<!-- > -->
+
 ### Creating Classes for Breakout
+
+<!-- > -->
 
 The engineering team has decided to **OOP**ify the whole game. 
 
@@ -187,13 +260,19 @@ Define properties in each class with the values that the object needs to do it's
 
 ### Sprite class
 
-A Sprite is a game object. Think about it like a rectangle on the screen. The game is built from these. Everything on the screen has an x and y position and most things have a width and height and a color. 
+<!-- > -->
+
+A Sprite is a game object. Think about it like a rectangle on the screen. The game is built with Sprites. 
+
+Everything on the screen has an x and y position and most things have a width and height and a color. 
 
 - x
 - y
 - width
 - height
 - color
+
+<!-- > -->
 
 ```JS
 class Sprite {
@@ -209,7 +288,9 @@ class Sprite {
 export default Sprite
 ```
 
-A Sprite class might also have a `render()` method. This method needs to take in the ctx as a parameter. 
+<!-- > -->
+
+A Sprite class should have a `render()` method. This method needs to take in the ctx as a parameter. 
 
 ```JS
 class Sprite {
@@ -225,11 +306,23 @@ class Sprite {
 }
 ```
 
-Why pass the `ctx` as a parameter it's a global variable? We want to avoid global variables! These open our code up to problems. It also means the code only works when this mysterious value `ctx` happens to be defined in the global scope. If you were to use this class in another project error messages would start asking you why the mysterious `ctx` is not defined. 
+<!-- > -->
+
+Q: Why pass the `ctx` as a parameter it's a global variable? 
+
+A: We want to avoid global variables! These open our code up to problems. 
+
+It also means the code only works when this mysterious value `ctx` happens to be defined in the global scope. If you were to use this class in another project error messages would start asking you why the mysterious `ctx` is not defined. 
+
+<!-- > -->
 
 Passing `ctx` as a parameter is safe and reliable. The variable is scoped to this method. Any programmer can see where it is defined and decide how they will provide it. 
 
-### Brick Class
+<!-- > -->
+
+### Brick Class 🧱
+
+<!-- > -->
 
 The Brick class can extend the Sprite class. Brick only adds a single new property. A brick can also initialize itself to fixed expected values. See the width, height, and color. 
 
@@ -242,11 +335,15 @@ class Brick extends Sprite {
 }
 ```
 
-A brick is just a Sprite with an extra property called status and some standard numbers for width height, and a color.
+<!-- > -->
+
+A brick is just a Sprite with an extra property called `status` and some standard values for `width`, `height`, and `color`.
 
 <!-- > -->
 
-### Ball class
+### Ball class ⚽️
+
+<!-- > -->
 
 For example, the Ball class might look like this: 
 
@@ -287,6 +384,8 @@ Here `Ball` Class defines instances which will have four properties. Two of the 
 
 ### Making an instance
 
+<!-- > -->
+
 Make instance of a class like this: 
 
 ```JS 
@@ -300,6 +399,8 @@ console.log( ball.radius ) // 10
 <!-- > -->
 
 ### What about drawing the ball?
+
+<!-- > -->
 
 Objects like: Ball, Brick, and Paddle own all of the properties they need to render themselves on canvas. 
 
@@ -328,14 +429,18 @@ class Ball {
 
 ### What about this global references?
 
+<!-- > -->
+
 The canvas context `ctx` is a global variable in the original code. To reference a global variable in a class is bad practice. Imagine you needed to change the name of that variable, you'd have to make lots changes. What if you wanted to use this class in another project, that project would have to define a variable with the same name. 
+
+<!-- > -->
 
 A better way to handle this is to pass the *dependancy* into the class as a parameter. 
 
 ```JS 
 ...
 const ctx = canvas.getContext('2d')
-
+...
 class Ball {
   ...
   render(ctx) { // pass ctx here! 
@@ -350,7 +455,9 @@ class Ball {
 
 <!-- > -->
 
-### Dependency Injection
+### Dependency Injection 💉
+
+<!-- > -->
 
 Call this: *dependency injection* 
 
