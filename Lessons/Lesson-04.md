@@ -240,8 +240,8 @@ You need to make this game **Object Oriented**.
 
 You need to make a class for each of the game objects.
 
-- **Ball**
 - **Brick**
+- **Ball**
 - **Paddle**
 - **Score**
 - **Lives**
@@ -338,6 +338,58 @@ class Brick extends Sprite {
 <!-- > -->
 
 A brick is just a Sprite with an extra property called `status` and some standard values for `width`, `height`, and `color`.
+
+<!-- > -->
+
+Use the brick class! The bricks are stored in an array and initialized like this in the original code: 
+
+```JS
+var bricks = [];
+for (var c = 0; c < brickColumnCount; c++) {
+  bricks[c] = [];
+  for (var r = 0; r < brickRowCount; r++) {
+    bricks[c][r] = { x: 0, y: 0, status: 1 };
+  }
+}
+```
+
+<!-- > -->
+
+The brick object is here: 
+
+```JS
+bricks[c][r] = { x: 0, y: 0, status: 1 };
+```
+
+The Object here has the properties: x, y, status.
+
+```JS
+{ x: 0, y: 0, status: 1 }
+```
+
+<!-- > -->
+
+We can now replace this with: 
+
+```JS
+bricks[c][r] = new Brick(0, 0)
+```
+
+Here the two parameters are the x and y.
+
+<!-- > -->
+
+Let's be clear! 
+
+```JS
+{ x: 0, y: 0, status: 1 }
+
+// and 
+
+new Brick(0, 0)
+```
+
+Make an object with the same properties. 
 
 <!-- > -->
 
