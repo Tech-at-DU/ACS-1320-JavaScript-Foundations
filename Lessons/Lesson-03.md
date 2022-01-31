@@ -18,6 +18,8 @@
 
 # Discuss Breakout tutorial
 
+<!-- > -->
+
 Discuss these questions with someone else in class:
 
 - How does the break out game work? (general overview)
@@ -26,13 +28,21 @@ Discuss these questions with someone else in class:
  - How does break out define its application state?
  - The values stored by the game and how are they updated?
 
+<!-- > -->
+
 ## How does Break Out work? 
+
+<!-- > -->
 
 The MDN break out code organizes its code in the following areas. 
 
 It uses variable to hold values, constants are values that don't change, functions encapsulate blocks of code and some code that initializes the game. 
 
+<!-- > -->
+
 ### Variables
+
+<!-- > -->
 
 These variables hold values that are used by the game to control and display game elements. 
 
@@ -44,24 +54,35 @@ These variables hold values that are used by the game to control and display gam
 - `score` - **number** holds the score
 - `lives` - **number** holds lives 
 
+<!-- > -->
+
 ### Constants 
+
+<!-- > -->
 
 Constants are fixed values used by the game that don't change. 
 
-- `canvas` - a reference to the canvas used to get the canvas context
-- `ctx` - canvas context needed for drawing on the canvas
+- `canvas` - a reference to the canvas
+- `ctx` - canvas context needed for drawing
 - `ballRadius` - 
 - `paddleHeight` - 
 - `paddleWidth` - 
+
+<!-- > -->
+
 - `brickRowCount` - Number of rows of bricks
 - `brickColumnCount` - Number columns of bricks
 - `brickWidth` - 
 - `brickHeight` - 
 - `brickPadding` - 
-- `brickOffsetTop` - space between the bricks and the top of the canvas
-- `brickOffsetLeft` - Space between the bricks and the left of the canvas
+- `brickOffsetTop` - space between the bricks 
+- `brickOffsetLeft` - Space between the bricks
+
+<!-- > -->
 
 ### Functions 
+
+<!-- > -->
 
 - `drawScore()` - Draws the score
 - `drawLives()` - Draws lives 
@@ -70,18 +91,28 @@ Constants are fixed values used by the game that don't change.
 - `keyDownHandler()` - looks for right or left arrow pressed down
 - `keyUpHandler()` - Looks for the left or right arrow key released. 
 - `mouseMoveHandler()` - Looks for mouse move events and sets the paddle position. 
+
+<!-- > -->
+
 - `drawBall()` - Draws the ball 
 - `drawPaddle()` - draws the paddle 
+
+<!-- > -->
+
 - `draw()` - Does a lot
- - clears the canvas
- - moves the ball 
- - looks for a collision between the ball and the edge of the canvas
- - Looks for a collision between the ball and the paddle
- - moves the paddle if the arrow keys are pressed 
- - calls all of the other functions: `drawBricks()`, `drawBall()`, `drawPaddle()`, `drawScore()`, `drawLives()`, `collisionDetection()`
- - Calls `requestAnimationFrame(draw)` which runs the draw function on the frame update. 
+  - clears the canvas
+  - moves the ball 
+  - looks for a collision between the ball and the edge of the canvas
+  - Looks for a collision between the ball and the paddle
+  - moves the paddle if the arrow keys are pressed 
+  - calls all of the other functions: `drawBricks()`, `drawBall()`, `drawPaddle()`, `drawScore()`, `drawLives()`, `collisionDetection()`
+  - Calls `requestAnimationFrame(draw)` which runs the draw function on the frame update. 
+
+<!-- > -->
 
 ### Code just hanging out 
+
+<!-- > -->
 
 Some of the code is not in a function and is not a variable declaration and initialization. 
 
@@ -95,6 +126,8 @@ This code is run once when the page is loaded. You can think of it as initializi
 
 ### Breakout Flow
 
+<!-- > -->
+
 Discuss the flow of code. 
 
 - Initialization
@@ -103,6 +136,9 @@ Discuss the flow of code.
  - Define functions
  - Populate the bricks array 
  - Start the game
+
+<!-- > -->
+
 - Game Loop
  - Clear canvas
  - drawBricks()
@@ -126,7 +162,11 @@ Discuss the flow of code.
 
 ## Challenges
 
+<!-- > -->
+
 Try these challenges to improve your understanding of the breakout code by improving the code.
+
+<!-- > -->
 
 ### Challenge 1 - Organize Code 
 
@@ -140,19 +180,27 @@ Code works better and is easier to understand when it is organized.
 
 Use comments to mark each of the areas above. 
 
+<!-- > -->
+
 ### Challenge 2 - Make Constants
 
-Identify values that could be constants. These would be any value that you might want to change in the future. Making it a constant and defining it at the top will make it easy to find and change in the future. 
+Identify values that could be constants. These would be any value that you might want to change in the future. Making it a constant and defining it at the top will make it easy to find and change in the future.
 
 - color values are a good example. Move these into your constants section
 
+<!-- > -->
+
 What should you define as new constants? Anything that is a string, especially if it appears more than once. Here are some suggestions: 
 
-- `const color = '#0095DD'`
-- `const ARROW_RIGHT = 'ArrowRight'`
-- `const ARROW_LEFT = 'ArrowLeft'`
-- `const RIGHT = 'RIGHT'`
-- `condst LEFT = 'LEFT'`
+```
+const color = '#0095DD'
+const ARROW_RIGHT = 'ArrowRight'
+const ARROW_LEFT = 'ArrowLeft'
+const RIGHT = 'RIGHT'
+condst LEFT = 'LEFT'
+```
+
+<!-- > -->
 
 ### Challenge 3 - Define new functions 
 
@@ -161,11 +209,17 @@ Storing your code in functions is a best practice. The tutorial code does an oka
 - Define an initialization function and move all of the initialization code here. 
 - You'll need to call your initialization function to initialize the game. 
 
+<!-- > -->
+
 ### Challenge 4 - Define new functions 
 
 Functions are best when they do one thing. When a function does too much it's a sign of poor quality code. 
 
+<!-- > -->
+
 The `draw()` function does too much. Functions like `drawPaddle()`, `drawBall()`, `drawBricks()` are good they have one job that they do. Notice these functions are generally shorter. 
+
+<!-- > -->
 
 The draw function currently does all of this: 
 
@@ -187,6 +241,8 @@ The draw function currently does all of this:
 - Check for keyboard input
 - Registers `draw()` to be called again when the screen refreshes.
 
+<!-- > -->
+
 Notice that one of the things the draw function is responsible for is calling other functions. 
 
 Your job is to extract code from the draw function and create some new functions. Make the following functions using code you remove from draw then add a call to the new function inside draw. 
@@ -196,11 +252,17 @@ Your job is to extract code from the draw function and create some new functions
 - `function collisionPaddle()` - Checks for collision with between the ball and the paddle.
 - `function checkKeys()` - Moves the paddle if the left or right arrow is pressed. 
 
+<!-- > -->
+
 ### Challenge 5 - Identify duplicate code
+
+<!-- > -->
 
 Identify Duplicate code. Any time you are doing the same operation more than once you should make a function. This will avoid errors in the future and make it easier to make changes and find problems.
 
 - Look at the array where the bricks array is initialized. Each brick has an x and y of 0. Now, look at the `drawBricks` function. Here the x and y of each brick is calculated each time the bricks are drawn. Your goal is to initialize bricks with the correct x and y. Now just use the x and y of each in `drawBricks`.
+
+<!-- > -->
 
 ### Challenge 6 - More Challenges 
 
@@ -210,11 +272,15 @@ Identify Duplicate code. Any time you are doing the same operation more than onc
 - Change the number of rows and columns of bricks. For example, make 4 rows or 6 columns of bricks. 
 - Make bricks 
 
+<!-- > -->
+
 ### Challenge 7 - Draw something on the background
 
 The game currently fills the canvas with a light gray then draws the game objects.
 
 your goal with this challenge is to draw something interesting on the background. do this by creating a function that draws the background, call this new function from at the top of the draw function. 
+
+<!-- > -->
 
 ### More Challenges
 
@@ -227,6 +293,8 @@ How would you solve these problems? Discuss these with someone else in the class
 5. Imagine each time all the bricks are cleared a new row of bricks is added?
 6. Imagine bricks take more than one hit to remove? 
 7. One brick is special when hit it releases a second ball? 
+
+<!-- > -->
 
 ## Wrap Up (5 min)
 

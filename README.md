@@ -63,7 +63,7 @@ By the end of the course will be able to:
 [JavaScript Professional Best Practice]: Lessons/Lesson-02.md
 [Break Out: EsLint]: Assignments/Assignment-2-EsLint.md
 <!-- Lesson 3 -->
-[JavaScript OOP]: Lessons/Lesson-03.md
+[JavaScript OOP]: Lessons/Lesson-04.md
 [Break Out: OOP]: Assignments/Assignment-3-OOP.md
 <!-- Lesson 4 -->
 [OOP and Classes]: Lessons/Lesson-04.md

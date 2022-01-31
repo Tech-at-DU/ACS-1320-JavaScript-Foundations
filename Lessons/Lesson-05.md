@@ -5,7 +5,6 @@
 
 ➡️ [**Slides**](/Syllabus-Template/Slides/Lesson1.html ':ignore')
 
-
 <!-- > -->
 
 # Overview
