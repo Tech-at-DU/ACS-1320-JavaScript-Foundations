@@ -264,6 +264,56 @@ Identify Duplicate code. Any time you are doing the same operation more than onc
 
 <!-- > -->
 
+### Challenge 6 - Store bricks in a single Array
+
+Currently the bricks are stored in a two dimentional array. This is adds complexity for little return. It migth be better to have all bricks in a single array. 
+
+How to make the rows and columns with a single array? The index of each brick can determine both it's row and column position. The default game has 5 columns and three rows. 
+
+To get the column use modulus to get the column number from the index. Remember there are 15 bricks total. In the example below the number in the left column is the index. Each brick has an index of 0 to 14. 
+
+```JS
+0 % 5 = 0
+1 % 5 = 1
+2 % 5 = 2
+3 % 5 = 3
+4 % 5 = 4
+5 % 5 = 0
+6 % 5 = 1
+7 % 5 = 2
+8 % 5 = 3
+9 % 5 = 4
+10 % 5 = 0
+11 % 5 = 1
+12 % 5 = 2
+13 % 5 = 3
+14 % 5 = 4
+```
+
+You can caluclate the row number using a similar process. This time divide by the number of columns and round down. You can round down using Math.floor(). For example: 
+
+```JS
+Math.floor(0 / 5) // 0
+Math.floor(1 / 5) // 0
+Math.floor(2 / 5) // 0
+Math.floor(3 / 5) // 0
+Math.floor(4 / 5) // 0
+Math.floor(5 / 5) // 1
+Math.floor(6 / 5) // 1
+Math.floor(7 / 5) // 1
+Math.floor(8 / 5) // 1
+Math.floor(9 / 5) // 1
+Math.floor(10 / 5) // 2
+Math.floor(11 / 5) // 2
+Math.floor(12 / 5) // 2
+Math.floor(13 / 5) // 2
+Math.floor(14 / 5) // 2
+```
+
+While we have to math it's easy math just division. This is easier to manage and less confusion than `bricks[c][r]`
+
+<!-- > -->
+
 ### Challenge 6 - More Challenges 
 
 - Change the color of the game elements. Use a different color for the ball, paddle, bricks, and background. 
