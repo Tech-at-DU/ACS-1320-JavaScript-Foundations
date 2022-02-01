@@ -132,7 +132,7 @@ The above creates a ball with: `{ x: 100, y: 300, width: 20, height: 20, radius:
 
 The Brick is a Sprite, it draws as a rectangle. So the Brick is mostly a sprite. It has one new property that sprites don't have: status. 
 
-```JS
+```JS`
 class Brick extends Sprite {
   // Todo:
   // add the constructor
