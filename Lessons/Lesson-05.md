@@ -3,7 +3,7 @@
 
 <!-- Put a link to the slides so that students can find them -->
 
-➡️ [**Slides**](/Syllabus-Template/Slides/Lesson1.html ':ignore')
+<!-- ➡️ [**Slides**](/Syllabus-Template/Slides/Lesson1.html ':ignore') -->
 
 <!-- > -->
 
@@ -54,8 +54,8 @@ Who do _you_ inherit from?
 In software who do you inherit from?
 
 - Your parent/superclass -
-  - `Rectangle` inherits from `Polygon`
-  - `Pokemon` inherits from `GameObject` inherits from `Sprite`
+  - `Rectangle` inherits from `Polygon` ▬ ⬢
+  - `Pokemon` inherits from `GameObject` inherits from `Sprite` 
 
 <!-- > -->
 
@@ -68,19 +68,26 @@ Any class can inherit from another class. You can also think of classes that inh
 ```js
 // Sprite defines two properties and one method
 class Sprite {
-  constructor() {
+  constructor(x, y, width, height, color) {
     this.x = 0
     this.y = 0
+    this.width = width
+    this.height = height
+    this.color = color
   }
 
-  render() { ... }
+  render(ctx) { ... }
 }
+```
 
+<!-- > -->
+
+```JS
 // Ball has all of the properties and methods 
 // that Sprite has and adds one new property
 class Ball extends Sprite {
-  constructor(x, y, radius = 10) {
-    super(x, y) // Calling super initializes the super class!
+  constructor(x, y, radius = 10, color) {
+    super(x, y, 0, 0, color) // Calling super initializes the super class!
     this.radius = radius
   }
 }
@@ -107,7 +114,7 @@ class Sprite {
     this.y = 0
   }
 
-  render() { ... }
+  render(ctx) { ... }
 }
 
 class Ball extends Sprite {
@@ -127,7 +134,13 @@ You must pass parameters to super. Notice the constructor takes these parameters
 
 <!-- > -->
 
+![Super and interitence](images/Inheritence-and-super.png)
+
+<!-- > -->
+
 # Inheritance Challenges
+
+<!-- > -->
 
 **Challenge 1**: many of the classes you created for Break Out share some of the same properties. Moving these to a super class would keep them in one locaiton that could be shared, edited, and make it easier to reason about. This would make your code DRY. 
 
@@ -135,11 +148,11 @@ You must pass parameters to super. Notice the constructor takes these parameters
 
 All of these classes: 
 
-- `Ball`
-- `Paddle`
-- `Brick`
-- `Lives`
-- `Score` 
+- `Ball` ⚽️
+- `Paddle` 🏓
+- `Brick` 🧱
+- `Lives` 🖖
+- `Score` 🔟
 
 <!-- > -->
 
@@ -147,6 +160,9 @@ Share these properties:
 
 - `x`
 - `y`
+- `width`
+- `height`
+- `color`
 
 <!-- > -->
 
@@ -163,53 +179,66 @@ Here is some starter code:
 
 ```js
 class Sprite {
-  constructor(x, y) {
+  constructor(x, y, width, height, color) {
     this.x = 0
     this.y = 0
-  }
-}
-
-class Ball extends Sprite {
-  constructor(x, y, color, radius) {
-    super(x, y) // Must pass parameters to super!
+    this.width = width
+    this.height = height
     this.color = color
-    this.radius = radius
   }
 }
 ```
 
 <!-- > -->
 
-You may have to modify this to include other properties your classes might support. 
-
-In this code sample the **`Sprite`** class supports the **`x`** and **`y`** properties and the **`Ball`** class adds **`color`**, and **`radius`**.
-
-The Ball class is repsonsible for passing **`x`** and **`y`** to the super class. 
-
-<!-- > -->
+Sprites can draw a rectangle. Give Sprite a render method: 
 
 ```js
 class Sprite {
-  constructor(x, y) {
-    this.x = 0
-    this.y = 0
+  constructor(x, y, width, height, color) {
+    ...
   }
 
-  render() { ... }
-}
-
-class Ball extends Sprite {
-  constructor(x, y, color, radius) {
-    super(x, y) // Must pass parameters to super!
-    this.color = color
-    this.radius = radius
+  render(ctx) {
+    ctx.beginPath()
+    ctx.rect(this.x, this.y, this.width, this.height)
+    ctx.fillStyle = this.color
+    ctx.fill()
   }
 }
 ```
 
 <!-- > -->
 
-All of these classes should extend the new `Sprite` class. 
+A Brick is a rectangle so it uses all of the properties of Sprite. But a Brick adds a new property: status. Create a brick by extending Sprite: 
+
+```JS
+class Brick extends Sprite {
+  constructor(x, y, width = 75, height = 20, color = 'fuchsia') {
+    super(x, y, width, height, color)
+    this.status = 1;
+  }
+}
+```
+
+<!-- > -->
+
+What properties does the Paddle class have beyond the properties of Sprite? 
+
+```JS
+class Paddle extends Sprite {
+  // What properties would Paddle have? 
+  constructor(x, y, width = 75, height = 20, color = 'orange', ?) {
+    // initialize Sprite
+    super(x, y, width, height)
+    // Define the new properties here?
+  }
+}
+```
+
+<!-- > -->
+
+All of these classes should extend the `Sprite` class. 
 
 - `Ball`
 - `Paddle`
@@ -224,9 +253,9 @@ All of these classes should extend the new `Sprite` class.
 - `Paddle`
 - `Brick`
 
-<!-- > -->
-
 Both of these classes draw as Rectangles willed with a color. You can give the `Sprite` class a `render(ctx)` method. 
+
+<!-- > -->
 
 Doing this will allow any class that extends `Sprite` to use `render()` this method. 
 
@@ -242,47 +271,34 @@ Will define their own `render()` which will override the render method defined i
 
 <!-- > -->
 
-To render itself as a rectangle a Sprite should have a width and a height. 
+Override a method by defining that method in the child class. For example: 
 
 ```JS
-class Sprite {
-  constructor(x, y, width, height) {
-    this.x = 0
-    this.y = 0
-  }
+class Ball extends Sprite {
+  constructor(...) { ... }
 
   render(ctx) {
-    ctx.beginPath();
-    ctx.rect(this.x, this.y, this.width, this.height);
-    ctx.fillStyle = this.color;
-    ctx.fill();
+    ctx.beginPath()
+    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2)
+    ctx.fillStyle = this.color
+    ctx.fill()
   }
 }
 ```
 
 <!-- > -->
 
-A ball could render itself as a circle by **overriding** the `render()` method.
+![Inheritence Methods](images/inheritence-methods.png)
 
-```JS
-class Ball extends Sprite {
-  constructor(x, y, radius = 10, color = 'red') {
-    super(x, y, radius * 2, radius * 2)
-    this.radius = radius
-    ...
-  }
+<!-- > -->
 
-  render(ctx) {
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-    ctx.fillStyle = this.color;
-    ctx.fill();
-    ctx.closePath();
-  }
-}
-```
+In the case of Ball you are overriding the render method that exists in Sprite.
 
-Here you could say that Ball extends Sprite and overrides the render method of it's super class. Ball is the class, Sprite is the super class. 
+When a sub class defines a method with the same name as a method in it's super class that method is used instead of the method in the Super class. 
+
+<!-- > -->
+
+![override method](images/override-method.png)
 
 <!-- > -->
 
