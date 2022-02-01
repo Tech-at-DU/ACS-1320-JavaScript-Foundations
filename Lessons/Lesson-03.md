@@ -312,6 +312,12 @@ Math.floor(14 / 5) // 2
 
 While we have to math it's easy math just division. This is easier to manage and less confusion than `bricks[c][r]`
 
+```JS
+const c = i % brickColumnCount
+const r = Math.floor(i / brickColumnCount) 
+// ...
+```
+
 <!-- > -->
 
 ### Challenge 6 - More Challenges 
