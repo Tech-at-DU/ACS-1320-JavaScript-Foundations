@@ -21,7 +21,7 @@ This is a big topic which reaches deeply into important areas of computer scienc
 
 ## Learning Objectives
 
-1. Create base/superclasses 
+1. Create base and super classes 
 1. Use inheritance with `super` and `extends`
 1. Create classes that inherit from a superclass
 
@@ -87,7 +87,7 @@ class Sprite {
 // that Sprite has and adds one new property
 class Ball extends Sprite {
   constructor(x, y, radius = 10, color) {
-    super(x, y, 0, 0, color) // Calling super initializes the super class!
+    super(x, y, radius * 2, radius * 2, color) // Calling super initializes the super class!
     this.radius = radius
   }
 }
