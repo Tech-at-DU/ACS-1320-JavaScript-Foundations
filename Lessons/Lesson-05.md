@@ -15,6 +15,8 @@ This class will be an OOP workshop to review the concepts from the previous clas
 
 ## Why learn Classes and Inheritance?
 
+<!-- > -->
+
 This is a big topic which reaches deeply into important areas of computer science. Expect to see OOP and inheritance in the libraries you might work with, in interview questions, and on the job as a software engineer. 
 
 <!-- > -->
