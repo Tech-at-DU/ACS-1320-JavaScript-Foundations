@@ -3,34 +3,36 @@
 
 <!-- Put a link to the slides so that students can find them -->
 
-➡️ [**Slides**](/Syllabus-Template/Slides/Lesson1.html ':ignore')
+<!-- ➡️ [**Slides**](/Syllabus-Template/Slides/Lesson1.html ':ignore') -->
 
 <!-- > -->
 
 # Overview
 
-Bundling is a common practice used across the JS ecosystem. While JS is not compiled to machine code like other languages, JS files are processed heavily in modern applications. 
+Bundling 🎁 is a common practice used across the JS ecosystem. While JS is not compiled to machine code like other languages, JS files are processed heavily in modern applications. 
 
 <!-- > -->
 
 ## Why learn bundling
 
-- It's a professional best practice
-- Expect this to be used in a software job
-- Make more reliable apps
-- Make compatible applications
+- 👩‍🍳 It's a professional best practice
+- 👩‍💻 Expect this to be used in a software job
+- 🙌 Make more reliable apps
+- 🔌 Make compatible applications
 
 <!-- > -->
 
 ## Learning Objectives
 
 1. Describe bundling
-1. Describe the raison d'etre of bundling
+1. Describe why bundling is important
 1. Implement bundling system with webpack
 
 <!-- > -->
 
 # Bundling and compiling JS
+
+<!-- > -->
 
 Has anyone used bundling or JS compiler before? 
 
@@ -38,9 +40,11 @@ What did it do?
 
 <!-- > -->
 
-## Bundling JS
+## Bundling 🎁
 
-Modern JS applications are not just written in code and used. At the professional level, they are compiled/bundled. 
+<!-- > -->
+
+Modern JS applications are not just written in code and used. At the professional level, they are compiled/bundled. 👩‍🍳 ➡ 🥧
 
 <!-- > -->
 
@@ -48,27 +52,33 @@ JavaScript is a scripting language. This means it doesn't need to be compiled in
 
 <!-- > -->
 
-While it doesn't need to be turned into machine code we can still do work to make our code more reliable and compatible with the widest array of browsers. 
+While it doesn't need to be turned into machine code we can still do work to make our code more reliable and compatible with the widest array of browsers.
+
+👨‍✈️ 👨‍🎨 👩‍🍳 🧑‍🌾 👩‍🚀
 
 <!-- > -->
 
 A bundler is a tool that converts the source JS that you wrote into code that will be used in your published application/web site. 
 
+👩‍💻 ➡️ 🌏
+
 <!-- > -->
 
-What does bundling do? 
+What does bundling do? 🤔
 
 <!-- > -->
 
 Bundling processes your sources file and produces new files.
 
-<!-- > -->
-
-**What types of processing?**
+📦 📦 📦 ⚙️ 🎁
 
 <!-- > -->
 
-- **minify** - 🗜
+**What types of processing?** 🤔
+
+<!-- > -->
+
+**Minify** - 🗜
 
 Reduces file size by removing unnecessary characters: 
 
@@ -89,25 +99,27 @@ function hello(str){if(str==='foo'){return 'bar'}return'foo'}
 
 <!-- > -->
 
-- **uglify** - 🙀
+**Uglify** - 🙀
 
-Renames elements to obfuscate code and reduce file size
+Renames elements to obfuscate code and reduces file size
 
 <!-- > -->
 
-- **Compile TypeScript** - 🦆 →  🦢
+**Compile TypeScript** - 🦆 →  🦢
 
 Converts .ts files into .js files
 
-<!-- > -->
-
-- **Compatibility** - 🔩
-
-Convert ES6 JS into JS that is compatible with older browsers
+We can also convert JSX to JS. 
 
 <!-- > -->
 
-- **bundling** - 🏀🏓🧱 → 📦
+**Compatibility** - 🔩
+
+Convert ES6 JS into JS that is compatible with older browsers.
+
+<!-- > -->
+
+- **bundling** - 🏀🏓🧱 → 🎁
 
 Combining all .js files into a single bundle.js file
 
@@ -129,13 +141,13 @@ Read more about these: https://blog.logrocket.com/uglify-vs-babel-minify-vs-ters
 
 <!-- > -->
 
-Another effect of the bundler is that it combines multiple .js files into a single .js file. 
+Another effect of the bundler is that it combines multiple .js files into a single .js file. You could say you were bundling these files together. We often call this file `bundle.js` 🎁
 
 <!-- > -->
 
 This provides an advantage when loading projects by reducing the number of streams your page requires to load itself. 
 
-Loading fewer files is faster.
+Loading fewer files is faster. 💨
 
 <!-- > -->
 
@@ -144,6 +156,8 @@ Each file is a separate stream. A browser has to provide overhead and manage eac
 <!-- > -->
 
 In the end, bundling is the process of processing and combining files into a single file, often called bundle.js. This bundle.js is your "compiled" application and the code you will publish to the world! 
+
+🎁 ➡️ 🌏
 
 <!-- > -->
 
@@ -173,9 +187,9 @@ You may have used npm before but have you ever thought about what npm is? Here i
 
 npm consists of three distinct components:
 
-- website
-- Command Line Interface (CLI)
-- package registry
+- 🌏 website
+- 💻 Command Line Interface (CLI)
+- 📋 package registry
 
 <!-- > -->
 
@@ -185,9 +199,11 @@ npm stores packages in a registry. Packages are programs (snippets of code).
 
 npm is a code library, a web site and a command-line tool that allows you to "check out" packages for use in your projects. 
 
+npm === 📚
+
 <!-- > -->
 
-# How to bundle code
+# How to bundle code 🗜
 
 <!-- > -->
 
