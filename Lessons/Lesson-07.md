@@ -25,21 +25,23 @@ By the end of the class you should be able to:
 
 <!-- > -->
 
-## Single Page Applications
-
-A single application is a Single webpage that acts like an application in your browser.
-
-VisiCalc was the first Killer App that made the Apple II useful. I'd say that Gmail was the Killer app that gave rise to Single Page Applications.
-
-What's a **Killer App**? Look it up. https://en.wikipedia.org/wiki/VisiCalc
+## Single Page Applications ☝️
 
 <!-- > -->
 
-Discuss.
+A single application is a Single webpage that acts like a full application in your browser.
+
+☝️ 🌏
 
 <!-- > -->
 
-Single Page Applications are web pages that act like multipage static sites but are built from a single HTML file. **These pages don't load or reload new HTML files. Instead, they rewrite the content of the existing HTML page to show new content.**
+Single Page Applications are web pages that act like multipage static sites but are built from a single HTML file. 
+
+☝️ ➡️ 📄 📄 📄
+
+<!-- > -->
+
+**These pages don't load or reload new HTML files. Instead, they rewrite the content of the existing HTML page to show new content.**
 
 Read this:
 
@@ -51,21 +53,48 @@ Discuss.
 
 <!-- > -->
 
-# React
-
-React is a popular library/framework for making Single Page Applications.
+# React ⚛
 
 <!-- > -->
 
-Here is what you need to know about React:
+React is a popular library/framework for making Single Page Applications.
 
-- React is written in JS
-- React uses ES6 and must be compiled with webpack and babel
-- React applications are built with components
-  - Components are the building blocks of React Applications
-- React uses JSX
-  - JSX is an extension of the JavaScript language used to generate HTML
-  - JSX has it's own syntax
+☝️ ⚛️ 🌏
+
+<!-- > -->
+
+Here is what you need to know about React 🧐
+
+<!-- > -->
+
+React projects are written in JS
+
+⚛️
+
+<!-- > -->
+
+React uses ES6 and must be compiled with webpack and babel
+
+⚙️
+
+<!-- > -->
+
+React applications are built with components.
+
+🧱
+
+Components are the building blocks of React Applications
+
+🏡
+
+<!-- > -->
+
+React uses JSX 🛠
+
+- JSX is an extension of the JavaScript language used to generate HTML
+- JSX has it's own syntax
+
+
 
 <!-- > -->
 
@@ -81,16 +110,22 @@ Use the Terminal to navigate a directory where you will build your first React P
 npx create-react-app my-first-app
 ```
 
+<!-- > -->
+
 This command creates a new react starter project using the Create React tool.
 
-`my-first-app` would be the name of your app.
+```
+my-first-app
+``` 
+
+would be the name of your app.
 
 <!-- > -->
 
 Run your app by navigating to the folder with:
 
 ```
-cd first-app
+cd my-first-app
 ```
 
 Then launch the project with:
@@ -130,6 +165,8 @@ The React project is a folder with several files and folders.
 
 You'll do all of your work in src take a look at it.
 
+<!-- > -->
+
 - **src**
   - **App.css** - CSS for App component
   - **App.js** - App Component
@@ -168,7 +205,7 @@ https://reactjs.org/docs/jsx-in-depth.html
 
 <!-- > -->
 
-### Defining your own components
+### Defining your own components 🧱
 
 <!-- > -->
 
@@ -176,6 +213,8 @@ When creating components, you have the choice between two different ways:
 
 1. Class-based components
 2. Functional components
+
+<!-- > -->
 
 A Class-based component has a render method that returns JSX.
 
@@ -187,6 +226,8 @@ class Heading extends React.Component {
 }
 ```
 
+<!-- > -->
+
 A functional component is just a function that returns JSX.
 
 ```JS
@@ -195,7 +236,9 @@ const Heading = () => {
 }
 ```
 
-Use this component like this:
+<!-- > -->
+
+Use either component in your app like this:
 
 ```JSX
 <Heading />
@@ -213,6 +256,8 @@ const Heading = () => {
 }
 ```
 
+<!-- > -->
+
 When writing JS expressions (JS code) inside a block of JSX you must wrap is in the curly braces
 
 ```JSX
@@ -227,6 +272,8 @@ When writing JS expressions (JS code) inside a block of JSX you must wrap is in 
 
 Props are an important part of components. **Props are attributes passed into a component. The component then receives the attributes as a prop object**
 
+<!-- > -->
+
 In class-based components:
 
 ```JS
@@ -237,6 +284,8 @@ class Heading extends React.Component {
 }
 ```
 
+<!-- > -->
+
 In functional components:
 
 ```JS
@@ -244,6 +293,8 @@ const Heading = props => {
   return <h1>{props.str}</h1>
 }
 ```
+
+<!-- > -->
 
 Pass props to your component through attributes:
 
@@ -279,10 +330,12 @@ Usually, you'll want to put each component into it's own file. Do that with the 
 - `export default Heading` goes at the bottom of the component
 - In App.js import your Heading component: `import Heading from './Heading'`
 
+<!-- > -->
+
 ```JS
 import React from 'react'
 
-const Heading = props => {
+function Heading(props) {
   return <h1>{props.str}</h1>
 }
 
@@ -304,7 +357,7 @@ Work through the React Fundamentals tutorial.
 
 https://github.com/Tech-at-DU/React-Fundamentals
 
-<!-- v -->
+<!-- > -->
 
 ## Wrap Up
 
@@ -313,6 +366,8 @@ https://github.com/Tech-at-DU/React-Fundamentals
 - What do you think of Components?
 - What problems did you encounter?
 - How did you solve them?
+
+<!-- > -->
 
 ### After Class
 
