@@ -215,6 +215,75 @@ Take a ten-minute break and think of your favorite lists.
 
 <!-- > -->
 
+## Components and styles
+
+<!-- > -->
+
+Components are styled with CSS. 👨‍🎨
+
+<!-- > -->
+
+In other web pages you used sa single stylesheet for a site. 
+
+👨‍🎨 🌏
+
+In React you'll often use a single stylesheet for each component. 
+
+👨‍🎨 🧱
+
+<!-- > -->
+
+Usually what you'll do is create a folder for each component. Name it after the component: 
+
+```
+EmojiButton
+  - EmojiButton.js
+  - EmojiButton.css
+```
+
+This folder contains both the component JS file and the component CSS file.
+
+<!-- > -->
+
+Import the style at the top of a component like this: 
+
+```JS
+import './EmojiButton.css' // Import CSS!
+
+function EmojiButton({ label, emoji }) {
+  return (
+    <button className="EmojiButton">
+      <span>{label}</span> 
+      <span>{emoji}</span>
+    </button>
+  )
+}
+
+export default EmojiButton
+```
+
+<!-- > -->
+
+By using a class name that matches the component name you be sure it is unique and related to the component. 
+
+You can style your component with the class name: 
+
+```CSS
+.EmojiButton {
+	padding: 1rem;
+	border: 1px solid;
+	background-color: white;
+	border-radius: 0.5rem;	
+	font-size: 1rem;
+}
+```
+
+<!-- > -->
+
+With everything in one folder you know where everything is, it's also easy to move this component to another project! 
+
+<!-- > -->
+
 # Lab
 
 <!-- > -->
