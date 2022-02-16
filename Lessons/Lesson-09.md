@@ -6,27 +6,14 @@
 <!-- ➡️ [**Slides**](/Syllabus-Template/Slides/Lesson1.html ':ignore') -->
 
 <!-- > -->
-<!-- 
-## Minute-by-Minute
 
-| **Elapsed** | **Time** | **Activity** |
-| ----------- | -------- | ------------ |
-| 0:00 | 0:05 | [Learning Objectives](#learning-objectives) |
-| 0:05 | 0:15 | [Why you should know this](#why-you-should-know-this)] |
-| 0:20 | 0:30 | In Class Activity I |
-| 0:50 | 0:10 | BREAK |
-| 1:00 | 0:45 | In Class Activity II |
-| 1:45 | 0:05 | Wrap up review objectives | -->
-
-<!-- > -->
-
-## Why you should know this?
+## Why you should know this? 🤔
 
 **State** is a key part of React components. To fully understand React you have to undestand state. 
 
 <!-- > -->
 
-## Learning Objectives
+## Learning Objectives 😎
 
 1. Describe State
 1. Compare and contrast state and props
@@ -34,414 +21,370 @@
 
 <!-- > -->
 
-## React Component State 
+## React Component State ⚛️
 
-State in React represents a value that is held/stored by a component, and triggers a render when the value changes. Imagine state as something that is connected to the user interface and when a change to state occurs you would want the user interface to update.
+<!-- > -->
 
-Props are values that come from outside of a component state is stored intinally by the component. Use props to configure your component use state to hold a value the component keeps track of. 
+🧪
 
-There are two ways to handle state. With a class based component, or with a hook. Hooks are a new feature. The first part of this lesson will cover class based components later we will look at hooks. 
+State in React represents a value that is held/stored by a component, and triggers a render when the value changes. 
 
-## Class Based components 
+<!-- > -->
 
-Components can also be written/Created from a class. In the previous examples you used functions to make components. 
+🧑‍🔬
 
-```JSX
-import React, { Component } from 'react'
+Imagine state as something that is connected to the user interface and when a change to state occurs you would want the user interface to update.
 
-class Counter extends Component {
-  constructor(props) {
-    super(props)
-    ...
-  }
-  render() {
-    return (
-      <div>
-        <h1>0</h1>
-        <button>Click</button>
-      </div>
-    )
-  }
+<!-- > -->
+
+🔭
+
+Props are values that come from outside of a component. When a component receives props is renders.
+
+<!-- > -->
+
+🔬
+
+State is stored internally by the component. When state changes the component is rendered. 
+
+<!-- > -->
+
+There are two ways to handle state. With a class based component, or with a hook. Hooks are a new feature. 
+
+🪝
+
+We will use for all of the examples. 
+
+<!-- > -->
+
+We haven't seen state yet but here is an example of props: 
+
+```JS
+function Heading(props) {
+  return <h1>{props.title}</h1>
 }
 ```
 
-<!-- > -->
-
-Class based components are: 
-
-- Written as a class
-- Must Extend React.Component
-- Must include a render method 
-- Must pass props to super
-
-Pick these things out of the code sample above. 
+Notice that props is a parameter. The Heading function is called and props are passed. 
 
 <!-- > -->
 
-### Defining state 
+### Defining state 🔬
 
-Define state in the constructor. With a class based component state is stored on `this` as a property that belongs to an instance of the class. State is always an object. All of the values you want to store on state should be properties of that object. 
+<!-- > -->
+
+🪝
+
+Hooks are functions that begin with "use". Use the "useState" hook to define a state variable and setter function. 
 
 ```JSX
-import React, { Component } from 'react'
+import { useState } from 'react'
 
-class Counter extends Component {
-  constructor(props) {
-    super(props)
-    this.state = { count: 0 } // define state here!
-  }
-  ...
+function Counter() {
+  const [count, setCount] = useState(0)
+
+  return (
+    <h1>{count}</h1>
+  )
 }
 ```
 
-State is an object and can have as many properties as you care to define with any value. 
+<small>Notice that state is defined inside the component!</small>
+
+<!-- > -->
+
+### useState Hook 🪝
+
+<!-- > -->
+
+The `useState` hook returns an array with two values. The first is a value, and the second is a function. 
 
 ```JSX
-// define state here!
-this.state = { 
-  searchQury: '',
-  userName: '',
-  age: null, 
-  date: new Date(),
-  shoeSize: 43,
-  choices: []
-} 
+const [count, setCount] = useState(0)
+console.log(count)    // 0
+console.log(setSound) // function
+```
+
+Here `count` is 0 and `setCount` is a function. 
+
+<small>The argument passed to `useState` is value returned for first value is the array. </small>
+
+<!-- > -->
+
+We use the function to returned from useState to update the value.
+
+We call this a setter function. 
+
+<!-- > -->
+
+Yes, useState returns an array! You could do this: 
+
+
+```JSX
+const arr = useState(0)
+console.log(arr[0]) // 0
+console.log(arr[1]) // function
 ```
 
 <!-- > -->
 
-- State is always an object
-- State is always an instance property on `this`
-- Values are stored as properties
-- Use any value on `this.state`
+It's easier to destructure the array into two variables, like this! 
+
+```JSX
+const [count, setCount] = useState(0)
+```
 
 <!-- > -->
 
-### Changing State
+What does state do?
 
-You **must** change state by calling `this.setState()` with the new value for state. 
+Why not just make a variable? 
+
+<!-- > -->
+
+🧐
+
+State stores a value and updates a component when that value changes. 
+
+😮
+
+If you just made a variable and changed the value the component would NOT render!
+
+<!-- > -->
+
+Imagine you need to create a counter. With a button that increments the counter with each click. 
+
+🤔
+
+<!-- > -->
 
 ```JSX
-import React, { Component } from 'react'
+import { useState } from 'react'
 
-class Counter extends Component {
-  constructor(props) {
-    super(props)
-    this.state = { count: 0 } // define initial value for state
-  }
+function Counter() {
+  const [count, setCount] = useState(0)
 
-  increment() {
-    // Increment count by calling setState()
-    this.setState({ count: this.state.count + 1 })
-  }
-
-  render() {
-    ...
-  }
+  return (
+    <div>
+      <h1>{count}</h1>
+      <button 
+        onClick={() => setCount(count + 1)}
+      >+</button>
+    </div>
+  )
 }
 ```
 
-When changing state you must call `this.setState()`. Here are some examples: 
-
-```JS
-// sets count to 0
-this.setState({ count: 0 }) 
-// sets count to count + 1
-this.setState({ count: this.state.count + 1 })
-// Sets three properties at once
-this.setState({ name: 'Jim', age: 66, shoeSize: 45 }) 
-```
-
-The setState() method takes an object with properties that you want to set and their new values. Set as many properties as needed at the same time.  
+Each time the button is clicked count is updated and the component is rendered. 
 
 <!-- > -->
 
-- Always access state with `this.state.someProperty`
-- You should always change state by calling `this.setState()`
-- Provide an object with the properties that you want to update: `this.setState({ value: newValue })`
+🙌
+
+To update state you must call the setter function!
+
+When state is updated the component renders!
 
 <!-- > -->
-
-### Handling Click events
-
-Adding events in React is done through props. In vanilla JS you might add an event listener: 
-
-```JS
-// In vanilla JS you might handle a click event like this
-button.addEventListener('click', (e) => { ... })
-```
-
-This same type of event would be created in React like this: 
-
-```JSX
-// In React you would handle a click event like this
-<button onClick={(e) => { ... }}>Click</button>
-```
-
-<!-- > -->
-
-```JSX
-import React, { Component } from 'react'
-
-class Counter extends Component {
-  constructor(props) {
-    super(props)
-
-    this.state = { count: 0 }
-  }
-
-  increment() {
-    this.setState({ count: this.state.count + 1 })
-  }
-
-  render() {
-    return (
-      <div>
-        <h1>{this.count}</h1>
-        <button onClick={(e) => {
-          this.increment()
-        }}>Click</button>
-      </div>
-    )
-  }
-}
-```
-
-<!-- > -->
-
-- Events receive an event object
-- Arrow functions are good here
-- You'll need to call `this.increment()` inside of an anonymous function or bind that method to your instance.
-
-<!-- > -->
-
-### This is confusing in JS
-
-The `this` keyword is often a point of confusion in JS. Below are common errors and solutions.
-
-```JS
-import React, { Component } from 'react'
-
-class Counter extends Component {
-  constructor(props) {
-    super(props)
-
-    this.state = { count: 0 }
-  }
-
-  increment() {
-    this.setState({ count: this.state.count + 1 })
-  }
-
-  render() {
-    return (
-      <div>
-        <h1>{this.count}</h1>
-
-        {/* Does NOT work! */}
-        <button onClick={this.increment}>Click</button>
-        {/* Does NOT work! */}
-        <button onClick={this.increment()}>Click</button>
-
-
-        {/* Works! */}
-        <button onClick={(e) => {
-          this.increment()
-        }}>Click</button>
-        {/* Works! */}
-        <button onClick={this.increment.bind(this)}>Click</button>
-      </div>
-    )
-  }
-}
-```
-
-**Mistake 1**
-
-```JS
-<button onClick={this.increment}>Click</button>
-```
-
-This does not work! Here the increment function is assigned to the button and `this` is executed in a different context. When clicked the button provides the value for `this` inside the increment function. 
-
-**Mistake 2**
-
-```JS
-<button onClick={this.increment()}>Click</button>
-```
-
-This does not work! Here you've executed function when you created the button and assigned the value returned to `onCLick`. The `increment()` method doesn't return anything so the value is `undefined`.
 
 ## Lab
 
 Try these challenges during lab:
 
+<!-- > -->
+
 ### Challenge 0 - Counter
 
-Create the Counter component as outlined above 
+Create the Counter component as outlined above. 
+
+Make an instance of your counter in the App component and test it to make sure it's working.
+
+```JS
+<Counter />
+```
+
+<!-- > -->
 
 ### Challenge 1 - decrement 
 
-A counter that only counts up might be useful but might be more sueful if there were +/- buttons. Create the count component as 
+A counter that only counts up might be useful but might be more sueful if there was a button that added 1 and another button that subtracted 1. 
+
+The new button can use the same setter like this: 
+
+```JS
+onClick={() => setCount(count - 1)}
+```
+
+<!-- > -->
 
 ### Challenge 2
 
-Make an instance of your counter in the root component App. test it and make sure it's working. 
+State is stored internally by each component. You can test this by making multiple copies of your counter component. 
+
+```JS
+<Counter />
+<Counter />
+<Counter />
+```
+
+Each should track it's own count independent of the others!
+
+<!-- > -->
+
+Here is what your component might look like at this point. 
+
+```JS
+function Counter(props) {
+  const [count, setCount] = useState(0)
+
+  return (
+    <div>
+      <button onClick={() => setCount(count + 1)}>+</button>
+      <h1>{count}</h1>
+      <button onClick={() => setCount(count - 1)}>+</button>
+    </div>
+  )
+}
+```
+
+<!-- > -->
 
 ### Challenge 3 
 
-Make three instances of the Counter Component in the root component. Test these. They should each track a separate value. 
+Style your component. Add a stylesheet and some styles. Import the stylesheet into the component. 
 
-This is state. Each component can keep their own state. State is held inside each component that defines it. 
+Notife all of the components share the styles. 
 
-### Challenge 4
+YOu only need one Counter component but you can create as many instances as you need. 
 
-Modify the counter component so that it can count in any increment. For example each click adds 1, 3, or 5. Then **make three counters using the same component**. The first counter shouls count in 1, the second by 3, and the third by 50!
+<!-- > -->
 
-You'll be making a single counter component. Then making three instances of this component. 
+Make a stylesheet: Counter.css
 
-To make this work you'll be passing the step amount (the amount to add with each click) to each instance of the component as a prop. For example: 
+Assign the outermost element a class name to to match your component: 
 
-```js
-<Counter step={1} />
-<Counter step={3} />
-<Counter step={50} />
+```JS
+<div className="Counter">...</div>
 ```
 
-### Challenge 5 
+<!-- > -->
 
-Counters might be more useful if you could limit the minimum and maximum values. Add two props: `min` and `max`. The component should not allow state to not allow state to increase beyond max or below min. 
+Add some selectors: 
 
-<!-- .slide: data-background="#087CB8" -->
-## [**10m**] BREAK
+```CSS
+.Counter {
+  /* Container styles */
+}
 
-Take a break. 
+.Counter > h1 {
+  /* count display */
+}
 
-### Challenge 6
+.Counter > button {
+  /* Button styles */
+}
 
-Add some styles to your component. Think about the component as three elements in a container: 
+.Counter > button:first-child {
+  /* left button */
+}
 
-```HTML
-<!-- Counter -->
-<div className="Counter-3">
-  <button>−</button>
-  <h1>{this.state.count}</h1>
-  <button>＋</button>
-</div>
+.Counter > button:last-child {
+  /* Right button */
+}
 ```
 
-The container is the outer div, inside are three elements two buttons surrounding an h1. 
+<!-- > -->
 
 div Container styles: 
 
-- `display: flex;`
-
-h1 value display: 
-
-- `padding: 0.5em;`
-- `margin: 0;`
-- `border-top: 3px solid;`
-- `border-bottom: 3px solid;`
-
-button both left and right +/- buttons
-
-- `font-size: 1em;`
--	`width: 50px;`
--	`margin: 0;`
--	`background-color: #eee;`
--	`border: none;`
--	`border-top: 3px solid;`
--	`border-bottom: 3px solid;`
-
-button left - button
-
-- `border-left: 3px solid;`
--	`border-top-left-radius: 1em;`
--	`border-bottom-left-radius: 1em;`
-
-button right + button
-
-- `border-right: 3px solid;`
--	`border-top-right-radius: 1em;`
--	`border-bottom-right-radius: 1em;`
-
-### Challenge 7
-
-How do you get state out of a component? It's nice that these counters know what their count is but the app might need to know the value stored by a counter.
-
-To do this pass a callback to your component via props. 
-
-```JS
-import React, { Component } from 'react'
-import './Counter-3.css'
-
-class Counter extends Component {
-	constructor(props) {
-		super(props)
-
-		this.state = {
-			count: 0
-		}
-	}
-
-  // ******************************************
-	increment(amount) {
-		const newValue = this.state.count + amount
-    this.setState({ count: newValue })
-    // If onChange exists 
-		if (this.props.onChange) {
-      // Call onChange with the new value
-			this.props.onChange(newValue)
-		}
-  }
-  // ******************************************
-
-	render() {
-		return (
-			<div className="Counter-3">
-
-				<button
-					onClick={() => {
-						if (this.state.count > this.props.min) {
-							this.increment( -this.props.step )
-						}
-					}}
-				>−</button>
-				
-				<h1>{this.state.count}</h1>
-
-				<button
-					onClick={() => {
-						if (this.state.count < this.props.max) {
-							this.increment( this.props.step )
-						}
-					}}
-				>＋</button>
-
-			</div>
-		)
-	}
+```CSS
+.Counter {
+  display: flex;
 }
-
-export default Counter
 ```
 
-Take a close look at the comments above. When the value is changed the component calls `this.props.onChange()` and passes the new value into this method as an argument. 
+<!-- > -->
 
-To use this you might write your component like this: 
+h1 count display styles: 
 
-```JS
+```CSS
+.Counter > h1 {
+	padding: 0.5em;
+	margin: 0;
+	border-top: 3px solid;
+	border-bottom: 3px solid;
+}
+```
+
+<!-- > -->
+
+General button styles: 
+
+```CSS
+.Counter > button {
+	font-size: 1em;
+	width: 50px;
+	margin: 0;
+	background-color: #eee;
+	border: none;
+	border-top: 3px solid;
+	border-bottom: 3px solid;
+}
+```
+
+<!-- > -->
+
+Left (-) button styles: 
+
+```CSS
+.Counter > button:first-child {
+	border-left: 3px solid;
+	border-top-left-radius: 1em;
+	border-bottom-left-radius: 1em;
+}
+```
+
+<!-- > -->
+
+Right (+) button styles: 
+
+```CSS
+.Counter > button:last-child {
+	border-right: 3px solid;
+	border-top-right-radius: 1em;
+	border-bottom-right-radius: 1em;
+}
+```
+
+<!-- > -->
+
+### Challenge 4
+
+Modify the counter component so that it can count in any increment. For example each click adds 1, 3, or 5.
+
+Pass the "step" amount to each component as a prop. Like this:  
+
+```js
+<Counter step={1} /> // Counts in 1s - 1, 2, 3...
+<Counter step={3} /> // Counts in 3s - 3, 6, 9, ...
+<Counter step={5} /> // Counts in 5s - 5, 10, 15, ...
+```
+
+<!-- > -->
+
+### Challenge 5 
+
+Counters might be more useful if you could limit the minimum and maximum values. 
+
+Add two props: `min` and `max`. Your component should prevent state from going above or below the max and min values. 
+
+```js
 <Counter 
-  onChange={(newValue) => {
-    // do something with newValue here! 
-  }}
-  min={0} 
-  max={10} 
-  ßstep={1} 
-/>
+  step={1} 
+  min={0}
+  max={3}
+/> // Counts in 1s - 1, 2, 3, 3, 3, ...
 ```
-
-Notice you're writing a function here that takes `newValue` as a parameter. 
 
 <!-- > -->
 
@@ -468,3 +411,16 @@ Your final project must:
 ## Additional Resources
 
 1. https://reactjs.org/docs/faq-state.html
+
+<!-- > -->
+<!-- 
+## Minute-by-Minute
+
+| **Elapsed** | **Time** | **Activity** |
+| ----------- | -------- | ------------ |
+| 0:00 | 0:05 | [Learning Objectives](#learning-objectives) |
+| 0:05 | 0:15 | [Why you should know this](#why-you-should-know-this)] |
+| 0:20 | 0:30 | In Class Activity I |
+| 0:50 | 0:10 | BREAK |
+| 1:00 | 0:45 | In Class Activity II |
+| 1:45 | 0:05 | Wrap up review objectives | -->
