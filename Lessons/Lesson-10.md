@@ -35,9 +35,7 @@ Identify one or more items on the list that you can accomplish in class today du
 
 # React and Forms
 
-When using forms and inputs React has a special pattern.
-
-https://reactjs.org/docs/forms.html
+When using forms and inputs React has a special pattern. It's called the controlled component pattern. 
 
 <!-- > -->
 
@@ -45,61 +43,67 @@ The controlled component pattern uses state to hold the value of an input.
 
 You should try it for yourself with these challenges. 
 
+<!-- > -->
+
 ## Using Input with React
+
+<!-- > -->
 
 When using input fields/form elements with React you'll use a special pattern called the controlled component pattern. 
 
 https://reactjs.org/docs/forms.html
 
+<!-- > -->
+
 The idea is that the value you enter into a form element is stored in state and it's that value that is displayed by the form element. 
 
-Imagine the input below takes in a person's name. Imagine this is defined a component with state defined as `{ name: '' }`.
+<!-- > -->
+
+Imagine you have a for where a user will input their name.
 
 ```JS 
-<input 
-  type="text"
-  value={this.state.name}
-  onChange={(e) => this.setState({ name: e.target.value })}
-/>
-```
+import { useState } from 'react'
 
-This might seem a little strange or circular. Here is the process. 
+function NameForm() {
+  const [name, setName] = useState('')
 
-- You enter a character in the field
-- onChange fires
-- Call set state and change state to the new value in the field
-- set the value of the input to the new value on state
-
-Here is the whole component. 
-
-```JS
-class FormThing {
-  constructor(props) {
-    super(props)
-    this.state = { name: '' }
-  }
-
-  render() {
-    <form>
-      <input 
-        type="text"
-        value={this.state.name}
-        onChange={(e) => this.setState({ name: e.target.value })}
-      />
-    </form>
-  }
+  return (
+    <input 
+      type="text"
+      value={name}
+      onChange={(e) => setName(e.target.name)}
+    />
+  )
 }
 ```
 
-### Hooks 
+<!-- > -->
 
-Hooks are a new way to handle state with a function based component. 
+Here is the process. 
+
+- You enter a character in the field
+- onChange event fires
+- Call `setName` to change the value of state
+- set the value of the input to state
+
+<!-- > -->
+
+### Forms 
+
+<!-- > -->
+
+The example above is only the input. Often you'll want to wrap your inputs in a form element. 
+
+<!-- > -->
+
+This is a more complete example: 
 
 ```JS
 import react, { useState } from 'react'
 
 function FormThing() {
  const [name, setName] = useState('')
+ const [email, setEmail] = useState('')
 
   return (
     <form>
@@ -108,27 +112,18 @@ function FormThing() {
         value={name}
         onChange={(e) => setName(e.target.value )}
       />
+
+      <input 
+        type="email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value )}
+      />
     </form>
   )
 }
 ```
 
-Here state is defined with `setState` which returns a value of state and a function used to change or set a new value for state. 
-
-```js
-const [name, setName] = useState('hello')
-```
-
-Here `name` is a value and `setName` is a  function used to change the value of `name`. Call `useState()` with the default value. Here name would have a default value of `hello`.
-
-To change state call the setter function with the new value: 
-
-```JS
-setName('Foo Bar')
-```
- With Hooks you'll use always change state by calling your setter. When changing state the component will render again and update it's view. Calling the setter function has the same effect as calling `this.setState()` in class based component. 
-
- If you have more than one value you want to store 
+Notice here we have two inputs. Each has a state variable that tracks it's value. 
 
 <!-- > -->
 
