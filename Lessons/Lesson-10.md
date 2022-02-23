@@ -129,6 +129,8 @@ Notice here we have two inputs. Each has a state variable that tracks it's value
 
 ### Challenge 1
 
+<!-- > -->
+
 Use the Controlled Component pattern. The goal of this challenge is to create a component with an input field and an H1. As you enter text in the input the H1 should display the same text
 
 - Make a React Project
@@ -140,7 +142,11 @@ Use the Controlled Component pattern. The goal of this challenge is to create a 
 
 ### Challenge 2
 
+<!-- > -->
+
 Make the a tip calculator. Google Tip Calculator and use the Google tip calculator as a model.
+
+<!-- > -->
 
 You'll use the controlled component pattern for the tip calculator inputs. This should store the bill, tip%, and split vlaues on state. In the render method calculate the tip amount from the values in state and display it. 
 

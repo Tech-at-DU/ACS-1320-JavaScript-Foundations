@@ -6,6 +6,10 @@
 npm install -g reveal-md
 ```
 
+```
+reveal-md Lessons/ --css makeschool.css
+```
+
 ## Usage:
 
 ### Syntax
