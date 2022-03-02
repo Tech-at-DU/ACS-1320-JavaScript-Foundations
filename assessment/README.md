@@ -1,10 +1,10 @@
 # Assessment
 
-These challenges are meant measure the skills you developed this term.  
+These challenges are meant to measure the skills you developed this term.  
 
-Your goal is to make a project with React, load data from a JSON file, create and display components, use state, and use Array.map to create a collection of components.
+Your goal is to make a project with JavaScrip and React. You will load data from a JSON file, create and display components, use state, and use Array.map to create a collection of components.
 
-Here is a screen shot of what you will be building. What you make should similar but doesn't need to look exactly like it. 
+Here is a screen shot of what you will be building. What you make should similar but doesn't need to look exactly like the image. 
 
 ![Screen Shot](Screen-Shot.png)
 
@@ -16,9 +16,9 @@ Create a React Project. Use create react app to generate your starter code.
 
 I should be able to run your project with `npm start` or `yarn start`.
 
-Name your project with your name and few 1.2:
+Name your project with your name and ACS 1320:
 
-`{name}-few-1-2-final`
+`{name}-acs-1320-final`
 
 (You can't have any special characters or spaces in the name)
 
@@ -28,7 +28,7 @@ Create a new component. Make a new file `Heading.js` and write your component co
 
 This will be a heading with a your name and the name of the assignment. Your component should display: 
 
-- FEW 1.2 Final Assessment
+- ACS 1320 Final Assessment
 - {Your name}
 
 (Don't forget to export your component)
@@ -93,11 +93,17 @@ Style your Components. Create a stylesheet for each of the components you create
 
 Alternatively you can style your components using inline styles and a JS style Object.
 
-You don't have to spend much time on styling. Add enough styles where I can tell that you styled the components.
+You don't have to spend much time on styling. Add enough styles where I can tell that you styled the components. Here are some ideas: 
+
+- Style the heading/band name
+- Style the other text like fans and country name
+- Style the like counter
 
 ### Challenge 9: Display Bands in Grid
 
 Display all of the bands in a grid. Use three columns. 
+
+Use CSS grid here if you can. 
 
 ### Challenge 10: Conditional Rendering
 
@@ -105,16 +111,11 @@ Not all of the bands are still together. The band objects have a `"split"` prope
 
 Your goal is to only display the `<Like>` component for bands that have NOT split. For bands that have split display the year they split in place of the `<Like>` Component.
 
-Here is one way to handle this problem. 
-
-- Make two copies of the Band component: Band and BandSplit
-- When you are mapping your band data look at the band.split value. If split === '-' return the Band component, else return a BandSplit component. 
-
 ### Stretch Challenges
 
 1) Add an input field that allows us to search for bands by their band name. 
 
-Extra stretch: Also search by style.
+Extra stretch: Also search by style. Every band has a style listed in the data. You would search the name and style. 
 
 2) The number of fans is in thousands. Multiply the fans by 1000 and format the number with commas. For example: 
 
@@ -137,3 +138,4 @@ Use this rubric to assess how your understanding of the learning objectives. You
 | **Completion** | Less than 70% of the challenges completed. | Completed 70 to 100% of the challenges | Completed the stretch challenges. |
 | **Functionality** | Project does not function or throws errors. | Project runs without errors. | Project runs well without warnings in the console. |
 | **Code Quality** | Code editor shows warnings or linter errors. Formatting is inconsistent. | Code is well written and well formatted. | Code is well written and well organized. Careful attention has been paid to names for variables, functions, components. |
+| **Stretch** | Did not complete the stretch goals | Completed some of the stretch goals | Completed all of the stretch goals |
