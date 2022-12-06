@@ -29,32 +29,27 @@ By the end of the course will be able to:
 
 ## Schedule
 
-**Course Dates:** Term 3 1/18/22 to 3/4/22
+**Course Dates:** Term 1 1/11/23 to 3/3/23
 
-**Class Times:** Monday, Wednesday, and Friday 2:30 PM to 4:20 PM
+**Class Times:** Tuesday and Thursday 9:30 AM to 12:15 PM
 
 | Class | Date | Topics | Assignment |
 |:-----:|:-----|:-------|:-----------|
-|  1 | Wed, Jan 19 | [JavaScript Basics] | [Break Out: Tutorial] | 
-|  2 | Fri, Jan 21 | Lab | - |
-|  3 | Mon, Jan 24 | [JavaScript Professional Best Practice] | [Break Out: EsLint] |
-|  4 | Wed, Jan 26 | [JavaScript OOP] | [Break Out: OOP] |
-|  5 | Fri, Jan 28 | Lab | - |
-|  6 | Mon, Jan 31 | [OOP and Classes] | [Break Out: OOP Inheritance] |
-|  7 | Wed, Feb  2 | [JS OOP Inheritence] | - |
-|  8 | Fri, Feb  4 | Lab | - |
-|  9 | Mon, Feb  7 | [Bundling JS] | [Break out: Bundling JavaScript] |
-| 10 | Wed, Feb  9 | [Single Page Applications] | [React: Fundamentals Tutorial] | 
-| 11 | Fri, Feb 11 | Lab | - |
-| 12 | Mon, Feb 14 | [Component Architecture] | [Final Project: Getting started] |
-| 13 | Wed, Feb 16 | [Components and State] | - |
-| 14 | Fri, Feb 18 | Lab | - |
-| 15 | Mon, Feb 21 | **President's Day** | - |
-| 16 | Wed, Feb 23 | [Forms and user input] | - |
-| 15 | Fri, Feb 25 | Lab | - |
-| 16 | Mon, Feb 28 | [Building and Publishing] | - |
-| 15 | Wed, Mar  2 | [Show Your Work] | - |
-| 16 | Fri, Mar  4 | [Final Assessment: Test your Knowledge] | - |
+|  1 | Thr, Jan 12 | [JavaScript Basics] | [Break Out: Tutorial] | 
+|  2 | Tue, Jan 17 | [JavaScript Professional Best Practice] | [Break Out: EsLint] |
+|  3 | Thr, Jan 19 | [JavaScript OOP] | [Break Out: OOP] |
+|  4 | Tue, Jan 24 | [OOP and Classes] | [Break Out: OOP Inheritance] |
+|  5 | Thr, Jan 26 | [JS OOP Inheritence] | - |
+|  6 | Tue, Jan 31 | [Bundling JS] | [Break out: Bundling JavaScript] |
+|  7 | Thr, Feb  2 | [Single Page Applications] | [React: Fundamentals Tutorial] |
+|  8 | Tue, Feb  7 | [Component Architecture] | [Final Project: Getting started] |
+|  9 | Thr, Feb  9 | [Components and State] | - |
+| 10 | Tue, Feb 14 | [Forms and user input] | - | 
+| 11 | Thr, Feb 16 | [Building and Publishing] |  |
+| 12 | Tue, Feb 21 | ??? |  |
+| 13 | Thr, Feb 23 | ??? |  |
+| 14 | Tue, Feb 28 | [Final Assessment: Test your Knowledge] |  |
+| 15 | Thr, Mar  2 | [Show Your Work] |  |
 
 <!-- Lesson 1 -->
 [JavaScript Basics]: Lessons/Lesson-01.md
