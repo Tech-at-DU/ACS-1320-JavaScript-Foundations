@@ -41,12 +41,12 @@ By the end of the course will be able to:
 |  4 | Tue, Jan 24 | [OOP and Classes] | [Break Out: OOP Inheritance] |
 |  5 | Thr, Jan 26 | [JS OOP Inheritence] | - |
 |  6 | Tue, Jan 31 | [Bundling JS] | [Break out: Bundling JavaScript] |
-|  7 | Thr, Feb  2 | [Single Page Applications] | [React: Fundamentals Tutorial] |
-|  8 | Tue, Feb  7 | [Component Architecture] | [Final Project: Getting started] |
-|  9 | Thr, Feb  9 | [Components and State] | - |
-| 10 | Tue, Feb 14 | [Forms and user input] | - | 
-| 11 | Thr, Feb 16 | [Building and Publishing] |  |
-| 12 | Tue, Feb 21 | ??? |  |
+|  7 | Thr, Feb  2 | [breakout-typescript] | [breakout-typescript] |
+|  8 | Tue, Feb  7 | [Single Page Applications] | [React: Fundamentals Tutorial] |
+|  9 | Thr, Feb  9 | [Component Architecture] | [Final Project: Getting started] |
+| 10 | Tue, Feb 14 | [Components and State] | - | 
+| 11 | Thr, Feb 16 | [Forms and user input] |  |
+| 12 | Tue, Feb 21 | [Building and Publishing] |  |
 | 13 | Thr, Feb 23 | ??? |  |
 | 14 | Tue, Feb 28 | [Final Assessment: Test your Knowledge] |  |
 | 15 | Thr, Mar  2 | [Show Your Work] |  |
@@ -68,6 +68,7 @@ By the end of the course will be able to:
 <!-- Lesson 6 -->
 [Bundling JS]: Lessons/Lesson-06.md
 [Break out: Bundling JavaScript]: Assignments/Assignment-5-bundling.md
+[breakout-typescript]: Assignments/breakout-typescript.md
 <!-- Lesson 7 -->
 [Single Page Applications]: Lessons/Lesson-07.md
 [React: Fundamentals Tutorial]: Assignments/Assignment-6-react-fundamentals.md
