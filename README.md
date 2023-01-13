@@ -68,7 +68,7 @@ By the end of the course will be able to:
 <!-- Lesson 6 -->
 [Bundling JS]: Lessons/Lesson-06.md
 [Break out: Bundling JavaScript]: Assignments/Assignment-5-bundling.md
-[breakout-typescript]: Assignments/breakout-typescript.md
+[breakout-typescript]: Lessons/breakout-typescript.md
 <!-- Lesson 7 -->
 [Single Page Applications]: Lessons/Lesson-07.md
 [React: Fundamentals Tutorial]: Assignments/Assignment-6-react-fundamentals.md
