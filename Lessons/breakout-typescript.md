@@ -146,12 +146,14 @@ Notice that the `ctx` is set to type `any`. If there's a situation where you don
 
 ```TS
 class Ball extends Sprite {
-  radius: number
+  // Declare class properties here!
+  radius: number 
   dx: number
   dy: number
 
   constructor(x: number, y: number, radius = 10, color = 'blue') {
     super(x, y, radius * 2, radius * 2, color)
+    // Properties declared above are initialized here
     this.radius = radius
     this.dx = 2
     this.dy = -2
@@ -171,3 +173,11 @@ class Ball extends Sprite {
   }
 }
 ```
+
+## TypeScript docs
+
+You'll need to refer to the TypeScript docs in some cases. Take a look at them here: 
+
+https://www.typescriptlang.org/docs/
+
+
