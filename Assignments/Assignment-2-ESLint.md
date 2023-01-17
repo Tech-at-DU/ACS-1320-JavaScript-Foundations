@@ -38,7 +38,13 @@ This process should cover the following areas:
 - arrow functions 
 - template string literals
 
-Pay close attention to these. They are effected by hoisting. A function or var declare lower in code may need to be declared earlier to work properly. 
+Pay close attention to these. They are effected by hoisting. A function or var declare lower in code may need to be declared earlier to work properly.
+
+**Stretch Challenge**
+
+Use destructuring where you can. The original code uses lot of objects. Each object is an opportunity to use destructuring. Check out this page for some examples and discussion: 
+
+https://javascript.info/destructuring-assignment
 
 ### Deliverable
 
