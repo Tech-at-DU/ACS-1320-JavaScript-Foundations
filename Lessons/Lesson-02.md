@@ -194,6 +194,16 @@ Take a look at the style guide. Pair and discuss.
 
 <!-- > -->
 
+## Why are we using ESLint and a style guide?
+
+Linting your is best prasctice. Adding the style guide is like having an industry professional looking over your shoulder offering helpful advice. 
+
+**You should be asking yourself why the linter is is asking you to make changes.**
+
+In a professional environment you would be required to use a linter!
+
+<!-- > -->
+
 <!-- .slide: data-background="#087CB8" -->
 ## [**10m**] BREAK 🦜
 
