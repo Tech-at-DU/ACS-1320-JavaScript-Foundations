@@ -36,7 +36,7 @@ By the end of the course will be able to:
 | Class | Date | Topics | Assignment |
 |:-----:|:-----|:-------|:-----------|
 |  1 | Thr, Jan 12 | [JavaScript Basics] | [Break Out: Tutorial] | 
-|  2 | Tue, Jan 17 | [JavaScript Professional Best Practice] | [Break Out: EsLint] |
+|  2 | Tue, Jan 17 | [JavaScript Professional Best Practice] | [Break Out: ESLint] |
 |  3 | Thr, Jan 19 | [JavaScript OOP] | [Break Out: OOP] |
 |  4 | Tue, Jan 24 | [OOP and Classes] | [Break Out: OOP Inheritance] |
 |  5 | Thr, Jan 26 | [JS OOP Inheritence] | - |
@@ -56,7 +56,7 @@ By the end of the course will be able to:
 [Break Out: Tutorial]: Assignments/Assignment-1-Break-Out.md
 <!-- Lesson 2 -->
 [JavaScript Professional Best Practice]: Lessons/Lesson-02.md
-[Break Out: EsLint]: Assignments/Assignment-2-EsLint.md
+[Break Out: ESLint]: Assignments/Assignment-2-ESLint.md
 <!-- Lesson 3 -->
 [JavaScript OOP]: Lessons/Lesson-04.md
 [Break Out: OOP]: Assignments/Assignment-3-OOP.md
