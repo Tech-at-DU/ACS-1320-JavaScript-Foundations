@@ -299,6 +299,13 @@ const { a, b } = obj
 console.log(a, b) // 11, 22
 ```
 
+Notice the properties were moved into valariables with the same names! This is easier to read than: 
+
+```JS
+const obj = {a: 11, b: 22}
+console.log(obj.a, obj.b) // 11, 22
+```
+
 <!-- > -->
 
 ## Homework
