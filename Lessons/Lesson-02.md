@@ -279,6 +279,18 @@ List linter suggestions on the board. Split into groups of 4 to discuss these. E
 
 <!-- > -->
 
+## Use Destructuring
+
+Any time you have an object you use the dot to access one of its properties. All of these dots make code harder to read. Use destructuring to make code easier to read. 
+
+```JS
+const obj = {a: 11, b: 22}
+const { a, b } = obj 
+console.log(a, b) // 11, 22
+```
+
+<!-- > -->
+
 ## Homework
 
 - [Assignment 2 ESLint.md](Assignments/Assignment-2-ESLint.md)
