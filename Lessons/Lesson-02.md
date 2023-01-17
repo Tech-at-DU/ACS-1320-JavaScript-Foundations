@@ -228,6 +228,8 @@ Why? `const` and `let` are block-scoped and are not hoisted. This makes your cod
 
 `const` defines a value that can not be reassigned. Knowing a value will not be reassigned makes code more efficient. It also adds safety to your program. 
 
+https://javascript.info/variables
+
 <!-- > -->
 
 ### JS - Functions and Hoisting
@@ -242,6 +244,8 @@ When JS code is run one of the first steps is Hoisting. Hoisting effectively mov
 
 - variables declared with `var`
 - `function` declarations
+
+https://javascript.info/var
 
 <!-- > -->
 
@@ -277,6 +281,8 @@ const str = "Score:" + score + 10 // Score:1010
 
 ✚ is a common source of problems in JS
 
+https://javascript.info/string
+
 <!-- > -->
 
 ## Wrap up
@@ -305,6 +311,8 @@ Notice the properties were moved into valariables with the same names! This is e
 const obj = {a: 11, b: 22}
 console.log(obj.a, obj.b) // 11, 22
 ```
+
+https://javascript.info/destructuring-assignment
 
 <!-- > -->
 
