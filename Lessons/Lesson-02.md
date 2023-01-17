@@ -281,7 +281,7 @@ List linter suggestions on the board. Split into groups of 4 to discuss these. E
 
 ## Homework
 
-- [Assignment 2 ESLint.md](Assignments/Assignment-2-EsLint.md)
+- [Assignment 2 ESLint.md](Assignments/Assignment-2-ESLint.md)
 
 <!-- > -->
 
