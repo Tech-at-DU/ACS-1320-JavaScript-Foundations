@@ -228,12 +228,10 @@ JavaScript is processed in two steps. In the first step, the JavaScript engine e
 
 <!-- > -->
 
-One of the processed that happens in the first step is Hoisting. Hoisting effectively moves some elements to the top of their scope. Things that are affected by hoisting are:
+When JS code is run one of the first steps is Hoisting. Hoisting effectively moves some elements to the top of their scope. Things that are affected by hoisting are:
 
-- variables declared with var
-- functions declarations
-
-https://repl.it/classroom/invite/kHcWR5n
+- variables declared with `var`
+- `function` declarations
 
 <!-- > -->
 
