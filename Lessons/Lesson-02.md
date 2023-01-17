@@ -124,14 +124,14 @@ Use the answers below as you follow the setup process.
 
 **Choose these options:**
 
-- To check syntax, find problems, and enforce code style
-- None of these
-- None of these
-- TypeScript No
-- Browser
-- Use a popular style guide
-- Airbnb: https://github.com/airbnb/javascript 
-- JavaScript
+- How would you like to use ESLint? To check syntax, find problems, and enforce code style
+- What type of modules does your project use? None of these
+- Which framework does your project use? None of these
+- Does your project use TypeScript? No
+- Where does your project run? Browser
+- How would you like to define a style for your project? Use a popular style guide
+- Which style guide do you want to follow? Airbnb: https://github.com/airbnb/javascript 
+- What format do you want your config file to be in? JavaScript
 - Would you like to install them now with npm? Yes
 
 <!-- > -->
