@@ -308,11 +308,11 @@ class Sprite {
 
 <!-- > -->
 
-Q: Why pass the `ctx` as a parameter it's a global variable? 
+**Q:** Why pass the `ctx` as a parameter it's a global variable? 
 
-A: We want to avoid global variables! These open our code up to problems. 
+**A:** We want to avoid global variables! These open our code up to problems. 
 
-It also means the code only works when this mysterious value `ctx` happens to be defined in the global scope. If you were to use this class in another project error messages would start asking you why the mysterious `ctx` is not defined. 
+It also means the code only works when this mysterious value `ctx` happens to be defined in the global scope. If you were to use this class in another project error messages would start asking you why the mysterious `ctx` is not defined.
 
 <!-- > -->
 
