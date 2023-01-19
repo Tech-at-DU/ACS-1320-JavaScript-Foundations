@@ -111,15 +111,15 @@ Methods are added to the prototype property!
 
 <!-- > -->
 
-Q: I heard you could use the class keyword? 🤔
+**Q:** I heard you could use the class keyword? 🤔
 
-A: Yes you can it's a new syntax. It's better, you should use it. 💪
+**A:** Yes you can it's a new syntax. It's better, you should use it. 💪
 
 <!-- > -->
 
-Q: Is it different? 🤔
+**Q:** Is it different? 🤔
 
-A: Nope. It's the same thing but looks different. We call it "syntactical sugar." 🍰 It's a nicer flavor of the same old thing. 
+**A:** Nope, it's the same thing. We call it "syntactical sugar." 🍰 It's a nicer flavor of the same old thing. 
 
 <!-- > -->
 
