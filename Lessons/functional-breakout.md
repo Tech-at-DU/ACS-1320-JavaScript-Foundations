@@ -57,3 +57,6 @@ Pass state to each of these functions and each function returns state. If the fu
 
 Why make a copy when you could just modify the existing object? The function would not be considered "pure" since it would be causing a side effect by modifying a value outside the function. 
 
+Keep an open mind and make this a game of sticking to the rules of pure functions and immutable values. As you work ask yourself if a function has a side effect? If the answer is yes, ask yourself how you can avoid this. 
+
+This is an open ended challenge, have fun and pay attention to the how this program differs from the OOP version!
