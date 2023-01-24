@@ -3,7 +3,7 @@
 
 <!-- Put a link to the slides so that students can find them -->
 
-➡️ [**Slides**](https://docs.google.com/presentation/d/1ex_YOuuPXkCClYfjfQmmxK5Ur9X8cJzFfmDDNCQqBNM/edit?usp=sharing)
+<!-- ➡️ [**Slides**](https://docs.google.com/presentation/d/1ex_YOuuPXkCClYfjfQmmxK5Ur9X8cJzFfmDDNCQqBNM/edit?usp=sharing) -->
 
 <!-- > -->
 

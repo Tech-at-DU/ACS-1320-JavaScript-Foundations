@@ -3,7 +3,7 @@
 
 <!-- Put a link to the slides so that students can find them -->
 
-➡️ [**Slides**](https://docs.google.com/presentation/d/1nheTZgY5fXrCbiw9hst0XGkr_fpnlAq44y7o5GrYvS4/edit?usp=sharing)
+<!-- ➡️ [**Slides**](https://docs.google.com/presentation/d/1nheTZgY5fXrCbiw9hst0XGkr_fpnlAq44y7o5GrYvS4/edit?usp=sharing) -->
 
 <!-- > -->
 
@@ -111,15 +111,15 @@ Methods are added to the prototype property!
 
 <!-- > -->
 
-Q: I heard you could use the class keyword? 🤔
+**Q:** I heard you could use the class keyword? 🤔
 
-A: Yes you can it's a new syntax. It's better, you should use it. 💪
+**A:** Yes you can it's a new syntax. It's better, you should use it. 💪
 
 <!-- > -->
 
-Q: Is it different? 🤔
+**Q:** Is it different? 🤔
 
-A: Nope. It's the same thing but looks different. We call it "syntactical sugar." 🍰 It's a nicer flavor of the same old thing. 
+**A:** Nope, it's the same thing. We call it "syntactical sugar." 🍰 It's a nicer flavor of the same old thing. 
 
 <!-- > -->
 
@@ -308,11 +308,11 @@ class Sprite {
 
 <!-- > -->
 
-Q: Why pass the `ctx` as a parameter it's a global variable? 
+**Q:** Why pass the `ctx` as a parameter it's a global variable? 
 
-A: We want to avoid global variables! These open our code up to problems. 
+**A:** We want to avoid global variables! These open our code up to problems. 
 
-It also means the code only works when this mysterious value `ctx` happens to be defined in the global scope. If you were to use this class in another project error messages would start asking you why the mysterious `ctx` is not defined. 
+It also means the code only works when this mysterious value `ctx` happens to be defined in the global scope. If you were to use this class in another project error messages would start asking you why the mysterious `ctx` is not defined.
 
 <!-- > -->
 
