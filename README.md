@@ -45,9 +45,9 @@ By the end of the course will be able to:
 |  8 | Tue, Feb  7 | [Single Page Applications] | [React: Fundamentals Tutorial] |
 |  9 | Thr, Feb  9 | [Component Architecture] | [Final Project: Getting started] |
 | 10 | Tue, Feb 14 | [Components and State] | - | 
-| 11 | Thr, Feb 16 | [Forms and user input] |  |
-| 12 | Tue, Feb 21 | [Building and Publishing] |  |
-| 13 | Thr, Feb 23 | ??? |  |
+| 11 | Thr, Feb 16 | [Forms and user input] | - |
+| 12 | Tue, Feb 21 | [Building and Publishing] | - |
+| 13 | Thr, Feb 23 | ??? | - |
 | 14 | Tue, Feb 28 | [Final Assessment: Test your Knowledge] |  |
 | 15 | Thr, Mar  2 | [Show Your Work] |  |
 
