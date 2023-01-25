@@ -290,7 +290,7 @@ class Ball extends Sprite {
 
 <!-- > -->
 
-![Inheritence Methods](images/inheritence-methods.png)
+![Inheritence Methods](Images/inheritence-methods.png)
 
 <!-- > -->
 
@@ -300,7 +300,7 @@ When a sub class defines a method with the same name as a method in it's super c
 
 <!-- > -->
 
-![override method](images/override-method.png)
+![override method](Images/override-method.png)
 
 <!-- > -->
 
