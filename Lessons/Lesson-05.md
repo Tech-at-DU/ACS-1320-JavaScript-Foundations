@@ -136,7 +136,7 @@ You must pass parameters to super. Notice the constructor takes these parameters
 
 <!-- > -->
 
-![Super and interitence](images/Inheritence-and-super.png)
+![Super and interitence](Images/Inheritence-and-super.png)
 
 <!-- > -->
 
