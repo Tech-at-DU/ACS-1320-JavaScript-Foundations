@@ -156,6 +156,8 @@ The goal of this challenge is to recreate the look of the original game. Takle a
 
 Submit your work on [GradeScope](https://www.gradescope.com/courses/202953). 
 
+You'll be submitting your OOP version of breakout with the inheritence! 
+
 ## Assess your work
 
 | expectations | Does not meet (0) | Meets (1) | Exceeds (2) |
