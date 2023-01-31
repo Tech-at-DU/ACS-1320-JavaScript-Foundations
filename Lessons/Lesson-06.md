@@ -252,6 +252,9 @@ In the end your directory will look like this:
 |- webpack.config.js
 |- /src
   |- index.js
+  |- Ball.js
+  |- Brick.js
+  ...
 |- /dist
   |- index.html
 ```
