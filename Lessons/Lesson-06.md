@@ -187,7 +187,7 @@ You may have used npm before but have you ever thought about what npm is? Here i
 
 npm consists of three distinct components:
 
-- 🌏 website
+- 🌏 website: https://www.npmjs.com
 - 💻 Command Line Interface (CLI)
 - 📋 package registry
 
@@ -252,6 +252,9 @@ In the end your directory will look like this:
 |- webpack.config.js
 |- /src
   |- index.js
+  |- Ball.js
+  |- Brick.js
+  ...
 |- /dist
   |- index.html
 ```
