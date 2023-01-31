@@ -178,6 +178,17 @@ class Ball extends Sprite {
 }
 ```
 
+### Classes are types
+
+When defining a variable that stores an instance of a class the class is the type! 
+
+```TS 
+import Ball from './Ball.js'
+
+// Notice the type here! 
+const ball: Ball = new Ball()
+```
+
 ## TypeScript docs
 
 You'll need to refer to the TypeScript docs in some cases. Take a look at them here: 
