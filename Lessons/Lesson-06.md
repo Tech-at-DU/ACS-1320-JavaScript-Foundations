@@ -187,7 +187,7 @@ You may have used npm before but have you ever thought about what npm is? Here i
 
 npm consists of three distinct components:
 
-- 🌏 website
+- 🌏 website: https://www.npmjs.com
 - 💻 Command Line Interface (CLI)
 - 📋 package registry
 
