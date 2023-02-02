@@ -183,10 +183,43 @@ class Ball extends Sprite {
 When defining a variable that stores an instance of a class the class is the type! 
 
 ```TS 
-import Ball from './Ball.js'
+import Ball from './Ball'
 
 // Notice the type here! 
 const ball: Ball = new Ball()
+```
+
+### Imports and file extensions
+
+When you convert to Typescript you will need to remove the file extension on your import statements. 
+
+This: 
+```JS
+import Ball from './Ball.js'
+```
+Becomes: 
+```JS
+import Ball from './Ball'
+```
+
+### Array types
+
+In Typescript Arrays are typed. This means that an array can only store one type. For example an array of numbers: 
+
+```TS
+const nums: number[] = [1,2,3,4]
+```
+
+An array of string: 
+
+```TS
+const names: string[] = ['A', 'B', 'C']
+```
+
+For an array of arrays the type might look like this: 
+
+```TS
+const grid: number[][] = [[1,2,3], [4,5,6]]
 ```
 
 ## TypeScript docs
