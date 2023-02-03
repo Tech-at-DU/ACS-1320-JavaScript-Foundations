@@ -46,7 +46,11 @@ Use destructuring where you can. The original code uses lot of objects. Each obj
 
 https://javascript.info/destructuring-assignment
 
-### Deliverable
+## Add a .gitignore
+
+**Be sure to add a .gitignore at this stage!** You need to ignore node_module. Otherwise you will be uploading these dependencies to your GitHub repositories and I will have trouble grading your homework. 
+
+Follow the instructions here: https://sabe.io/blog/git-ignore-node_modules
 
 ### Deliverable
 
