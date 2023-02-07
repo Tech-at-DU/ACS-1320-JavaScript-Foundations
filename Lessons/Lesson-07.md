@@ -148,6 +148,10 @@ https://stackshare.io/stackups/npm-vs-yarn
 
 <!-- > -->
 
+If you forget the commands above they are all in the Readme.md that is included with the create-react-app starter code. Go find it now and take a look, there is a lot more useful info there. 
+
+<!-- > -->
+
 ### Tour the React Project
 
 <!-- > -->
