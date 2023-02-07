@@ -131,13 +131,13 @@ cd my-first-app
 Then launch the project with:
 
 ```
-yarn start
+npm start
 ```
 
 This runs the start script in package.json. You could alternately use:
 
 ```
-npm start
+yarn start
 ```
 
 <!-- > -->
