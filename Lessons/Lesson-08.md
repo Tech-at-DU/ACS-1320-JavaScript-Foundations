@@ -77,7 +77,7 @@ Discuss: the virtual DOM
 <!-- > -->
 
 - It's a React thing, it's not part of the default JS API
-- Do not use jQuery libs with React
+- Do not use jQuery with React
 - Do not manipulate DOM elements directly:
   - `getElementById()` is not reliable since elements might be added and removed by the virtual DOM system
   - `innerHTML` is not reliable since the virtual DOM system will not be aware of your changes and overwrite them
