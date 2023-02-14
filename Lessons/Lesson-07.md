@@ -131,13 +131,13 @@ cd my-first-app
 Then launch the project with:
 
 ```
-yarn start
+npm start
 ```
 
 This runs the start script in package.json. You could alternately use:
 
 ```
-npm start
+yarn start
 ```
 
 <!-- > -->
@@ -145,6 +145,10 @@ npm start
 What's the difference between yarn and npm?
 
 https://stackshare.io/stackups/npm-vs-yarn
+
+<!-- > -->
+
+If you forget the commands above they are all in the Readme.md that is included with the create-react-app starter code. Go find it now and take a look, there is a lot more useful info there. 
 
 <!-- > -->
 

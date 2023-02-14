@@ -279,7 +279,7 @@ Edit index.html. The script tag should point to `bundle.js`.
 
 Webpack is an industry-standard tool. You will see this tool in the future, expect to work with it. 
 
-The `webpack.config.js` file configures webpack, it is written in JavaScript. 
+Create a new file: "webpack.config.js" in the root of your project directory. The `webpack.config.js` file configures webpack, it is written in JavaScript. 
 
 <!-- > -->
 
