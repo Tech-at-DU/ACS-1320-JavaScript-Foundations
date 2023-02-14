@@ -100,7 +100,7 @@ Assignments **must be turned in via [Gradescope](https://gradescope.com) for cre
 | 2 | Thu, Nov  4 | [Break Out: OOP Inheritance](Assignments/Assignment-4-Inheritance.md) Your completed breakout game updated with OOP and inheritence |
 | 3 | Tue, Nov  9 | [Break out: Bundling JavaScript](Assignments/Assignment-5-bundling.md) |
 | 4 | Tue, Nov 23 | [React: Fundamentals Tutorial](Assignments/Assignment-6-react-fundamentals.md) |
-| 5 | Thu, Dec  9 | [Final Project: Getting started](Assignments/Assignment-7-fina-project.md) |
+| 5 | Thu, Dec  9 | [Final Project: Getting started](Assignments/Assignment-7-final-project.md) |
 
 ### Projects
 
