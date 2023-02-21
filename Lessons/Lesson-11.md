@@ -6,25 +6,25 @@
 
 ## Hosting your React Projects with GitHub Pages
 
-Hosting React projects on GitHub requires a little bit of extra work. React projects need to be built and bundled before they can be published to the web. 
+Hosting React projects on GitHub requires a little bit of extra work. React projects need to be built and bundled before they can be published on the web. 
 
 ### Working with Branches
 
-Using the power of GitHub you can publish to a branch and continue to work and edit on your master branch. This workflow mirrors the work flow used by professionals.
+Using the power of GitHub you can publish to a branch and continue to work and edit on your master branch. This workflow mirrors the workflow used by professionals.
 
-Think of a branch as an alternative timeline of the work in a GitHub  repo. Yoiu might create a branch for reasons like: 
+Think of a branch as an alternative timeline of the work in a GitHub repo. You might create a branch for reasons like: 
 
-- Adding new features. Why use a branch for this? The new features might not be fully functional or they might be experimental and need to be tested before they made available for public use. 
+- Adding new features. Why use a branch for this? The new features might not be fully functional or they might be experimental and need to be tested before they are made available for public use. 
 - Creating an alternate version of your project. Why use a branch? You might not be sure these ideas will work and might want to go back to the previous version. 
-- Published branch needs to functional while you work. What? If you're working on your project you might want to keep a copy that you know is working which is published. The working or development branch is now the place where your changes will appear. You can merge this with the development branch when it's ready. 
+- Published branch needs to be functional while you work. What? If you're working on your project you might want to keep a copy that you know is working and is published. The working or development branch is now the place where your changes will appear. You can merge this with the development branch when it's ready. 
 
 You're going to use the last idea today. You'll use the `gh-pages` package to create a branch of your work to GitHub Pages. 
 
 ### Building React Projects
 
-The code you wrote in the `src` directory is not compatiblew with browsers. It needs to be processed. Think back to how you *bundled* your code as the last step with your Break Game. The process is at play here but comes as part of the create-react-app starter code. 
+The code you wrote in the `src` directory is not compatible with browsers. It needs to be processed. Think back to how you *bundled* your code as the last step with your Break Game. The process is at play here but comes as part of the create-react-app starter code. 
 
-Besides minifying and uglifying your code building will take the JSX code you wrote, which is *not* compatible with the browser and turn it into code that is. 
+Besides minifying and uglifying your code building will take the JSX code you wrote, which is *not* compatible with the browser, and turn it into code that is. 
 
 ```JS
 import React from 'react'
@@ -67,14 +67,14 @@ Then uglified to:
 
 While the differences here may not seem to be that great with a large project they add up making your projects load faster and use less bandwidth, this is all especially important for delivering a web experience over mobile devices.
 
-Along the way all of these separate JS and CSS files are also combined into a single bundle.js file. 
+Along the way, all of these separate JS and CSS files are also combined into a single bundle.js file. 
 
 So how does it work? Take a look at the README.md that was included with the create-react-app starter code. You'll see a few commands defined here: 
 
 - `yarn start` - runs your project in development mode
 - `yarn test` - launches the test runner
 - `yarn build` - **builds your app for production to the `build` folder**
-- `yarn eject` - ejects the project if you want to create your own build system
+- `yarn eject` - ejects the project if you want to create your build system
 
 Where do all of these commands live? You'll find them all in `package.json`. Look for the scripts section: 
 
@@ -89,7 +89,7 @@ Where do all of these commands live? You'll find them all in `package.json`. Loo
 ...
 ```
 
-What happens when you build? React creates a build folder. It's this folder that you would upload to a web server for public consumption. This is process that I'm referring to as "publishing". 
+What happens when you build? React creates a build folder. It's this folder that you would upload to a web server for public consumption. This is the process that I'm referring to as "publishing". 
 
 Try it for yourself. Navigate your terminal to your react project folder. This can be your final project or the React Fundamentals tutorial folder. Once there run: 
 
@@ -107,15 +107,15 @@ You can serve code from any or all of your GitHub repos.
 
 You can serve code from any branch in your GitHub repo. 
 
-You'll be splitting your code into published a `gh-pages` branch that will served as a GitHub page, and the master branch which will be your developer code. The master branch is where you will make changes, fix errors and test your work. When you deem your work is ready for public consumption you'll publish to the `gh-branch`. 
+You'll be splitting your code into published a `gh-pages` branch that will be served as a GitHub page, and the master branch which will be your developer code. The master branch is where you will make changes, fix errors and test your work. When you deem your work is ready for public consumption you'll publish it to the `gh-branch`. 
 
 ### Using `gh-pages`
 
-The process of creating a branch on GitHub and building you project to the branch is possible to do manually but easier with a tool and there is a tool made just for this! The `gh-pages` package does this for you. Try it for yourself. 
+The process of creating a branch on GitHub and building your project to the branch is possible to do manually but easier with a tool and there is a tool made just for this! The `gh-pages` package does this for you. Try it for yourself. 
 
 Before starting you'll need a React project that is on GitHub. Use your final project if it's on GitHub, don't worry if it's not complete you update and publish an update by running one command in the terminal. If your final project is not ready use the React Fundamentals tutorial. 
 
-**Intall `gh-pages`**
+**Install `gh-pages`**
 
 Start by installing `gh-pages` package:
 
@@ -123,7 +123,7 @@ Start by installing `gh-pages` package:
 
 **Edit `package.json`**`
 
-Edit your `package.json` add the following line at the root level of the JSON  object. 
+Edit your `package.json` and add the following line at the root level of the JSON  object. 
 
 `"homepage": "https://<username>.github.io/<repo-name>",`
 
@@ -159,7 +159,7 @@ Make a change to your project. Save and commit. Then run:
 
 This will build, commit and push the changes to the `gh-pages` branch. Do this each time you want to publish an update to your work. 
 
-Note! It takes GitHub Pages a few minutes (5 mins sometimes) some times to see changes when they are pushed so be patient. 
+Note! It takes GitHub Pages a few minutes (5 mins sometimes) sometimes to see changes when they are pushed so be patient. 
 
 **Note!** I had an error in the console that read: 
 
@@ -181,7 +181,7 @@ Change this to:
 
 `import { HashRouter as Router, Route } from 'react-router-dom'`
 
-Why is this needed? GitHub's server delivers a "fresh" for each unique router. For example if you're page is: `github.io/user-name/index.html`, and  `index.html` is a real file in your repo GitHub's server finds this and serves it. 
+Why is this needed? GitHub's server delivers a "fresh" for each unique router. For example, if you're page is: `github.io/user-name/index.html`, and  `index.html` is a real file in your repo GitHub's server finds this and serves it. 
 
 If internally your page generates a route like: `github.io/user-name/index.html/id/42` the GitHub server will look for the file 42 in the id folder, which probably doesn't exist. 
 
@@ -193,7 +193,7 @@ Why does HashRouter work? By inserting a hash the params you're adding to a rout
 
 Hashes are used to navigate internally! So: 
 
-`github.io/user-name/index.html#contact` would navigate to the element with the `id="contact"` within the smae page. 
+`github.io/user-name/index.html#contact` would navigate to the element with the `id="contact"` within the same page. 
 
 <!-- > -->
 
@@ -206,7 +206,7 @@ We will use this day to work on completing your final project.
 ## Learning Objectives (5 min)
 
 1. Idenitfy areas for improvement
-1. Idenitfy problems and strategies to solve them
+1. Identify problems and strategies to solve them
 
 <!-- > -->
 
