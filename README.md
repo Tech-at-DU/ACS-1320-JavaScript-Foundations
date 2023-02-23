@@ -47,7 +47,7 @@ By the end of the course will be able to:
 | 10 | Tue, Feb 14 | [Components and State] | - | 
 | 11 | Thr, Feb 16 | [Forms and user input] | - |
 | 12 | Tue, Feb 21 | [Building and Publishing] | - |
-| 13 | Thr, Feb 23 | ??? | - |
+| 13 | Thr, Feb 23 | [Tailwind] | - |
 | 14 | Tue, Feb 28 | [Final Assessment: Test your Knowledge] |  |
 | 15 | Thr, Mar  2 | [Show Your Work] |  |
 
@@ -64,6 +64,8 @@ By the end of the course will be able to:
 [OOP and Classes Lab]: Lessons/Lesson-04.md
 [Break Out: OOP Inheritance]: Assignments/Assignment-4-Inheritance.md
 [Functional Breakout]: Lessons/functional-breakout.md
+
+[Tailwind]: ./Lessons/tailwind.md
 
 <!-- Lesson 5 -->
 [JS OOP Inheritence]: Lessons/Lesson-05.md

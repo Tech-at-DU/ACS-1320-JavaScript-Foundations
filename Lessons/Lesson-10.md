@@ -136,7 +136,7 @@ Use the Controlled Component pattern. The goal of this challenge is to create a 
 - Make a React Project
 - Make a New Component with an input
 - Use Conotrolled Component pattern to store the input value on state
-- Display the value of state in the H1. 
+- Display the value of state in the H1.
 
 <!-- > -->
 
@@ -146,17 +146,19 @@ Use the Controlled Component pattern. The goal of this challenge is to create a 
 
 Make the a tip calculator. Google Tip Calculator and use the Google tip calculator as a model.
 
+Here is an example of what you are trying to make: https://www.google.com/search?q=tip+calculator
+
 <!-- > -->
 
-You'll use the controlled component pattern for the tip calculator inputs. This should store the bill, tip%, and split vlaues on state. In the render method calculate the tip amount from the values in state and display it. 
+You'll use the controlled component pattern for the tip calculator inputs. This should store the bill, tip%, and split vlaues on state. In the render method calculate the tip amount from the values in state and display it.
 
-- You'll need inputs for: 
+- You'll need inputs for:
   - Bill
   - Tip %
   - Split (number of ways to split the bill)
-- Dipslay: 
+- Dipslay:
   - Tip amount
-  - The bill total 
+  - The bill total
   - Per person amount
 - These values should update as you change the values
 
