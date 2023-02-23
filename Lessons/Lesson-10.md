@@ -71,7 +71,7 @@ function NameForm() {
     <input 
       type="text"
       value={name}
-      onChange={(e) => setName(e.target.name)}
+      onChange={(e) => setName(e.target.value)}
     />
   )
 }
