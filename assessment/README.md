@@ -2,7 +2,7 @@
 
 These challenges are meant to measure the skills you developed this term.  
 
-Your goal is to make a project with JavaScrip and React. You will load data from a JSON file, create and display components, use state, and use Array.map to create a collection of components.
+Your goal is to make a project with JavaScript and React. You will load data from a JSON file, create and display components, use state, and use Array.map to create a collection of components.
 
 Here is a screen shot of what you will be building. What you make should similar but doesn't need to look exactly like the image. 
 
@@ -39,7 +39,9 @@ Import and display your `<Heading>` component in `App.js`.
 
 Create a component that displays information about the data as a whole. Name this component: `MetalMeta.js`
 
-Import the `metal.json`. You can do this by adding the file to your **`src`** directory and using:
+Import the `metal.json`. You can do this by adding the file to your **`src`** directory.
+
+Get the metal.json data by importing it into any file that needs it:
 
 `import data from './metal.json'`
 
@@ -67,15 +69,17 @@ Use a component to display each band. This `<Band>` component should display the
 
 ### Challenge 5: Displaying a list
 
-In App.js you'll display a list of bands. Use the Band component you made in the previous step. 
+In `App.js` you'll display a list of bands. Use the Band component you made in the previous step. 
 
 The goal is to display a list of Bands, use the `<Band>` Component you created in the previous step. 
 
-Use `Array.map()` to transform the array of bands objects into an array of `<Band>` components. Dipslay this array in your `App` component.
+Use `Array.map()` to transform the array of bands objects into an array of `<Band>` components. 
 
 Set the props on your band component so it can display the name, formed date, origin, and fans.
 
-Be sure to add a key prop to each Band component with a unique value. You can use the band name since these are unique. 
+Dipslay the array of `Band` components in your `App` component.
+
+Be sure to add a `key` prop to each Band component with a unique value. You can use the band name since these are unique. 
 
 ### Challenge 6: Component State
 
@@ -93,11 +97,13 @@ Style your Components. Create a stylesheet for each of the components you create
 
 Alternatively you can style your components using inline styles and a JS style Object.
 
-You don't have to spend much time on styling. Add enough styles where I can tell that you styled the components. Here are some ideas: 
+You don't have to spend much time on styling. Add enough styles where I can tell that you styled the components. Style the following:
 
 - Style the heading/band name
 - Style the other text like fans and country name
 - Style the like counter
+
+(Extra credit: use Tailwind to style your project)
 
 ### Challenge 9: Display Bands in Grid
 
@@ -107,15 +113,13 @@ Use CSS grid here if you can.
 
 ### Challenge 10: Conditional Rendering
 
-Not all of the bands are still together. The band objects have a `"split"` property. If the value is `'-'` the band is still together, otherwise the value is the year the band split up. 
+Not all of the bands are still together. The band objects have a ``split`` property. If the value is ``-`` the band is still together, otherwise the value is the year the band split up. 
 
 Your goal is to only display the `<Like>` component for bands that have NOT split. For bands that have split display the year they split in place of the `<Like>` Component.
 
 ### Stretch Challenges
 
-1) Add an input field that allows us to search for bands by their band name. 
-
-Extra stretch: Also search by style. Every band has a style listed in the data. You would search the name and style. 
+1) Use Tailwind to style your assessment.
 
 2) The number of fans is in thousands. Multiply the fans by 1000 and format the number with commas. For example: 
 
@@ -123,11 +127,13 @@ Extra stretch: Also search by style. Every band has a style listed in the data. 
 
 Hint! use `someNumber.toLocaleString('en')`. For example: `(1000000).toLocaleString('en')` should return `"1,000,000"`.
 
-3) Display the styles in the `<Band>` component as a list. To do this you need split the style on the ','. Something like this: `band.style.split(',')`. Map this to a list items: `<li>` and display the list items. 
+3) Add an input field that allows us to search for bands by their band name. 
+
+4) Display the styles in the `<Band>` component as a list. To do this you need split the style on the ','. Something like this: `band.style.split(',')`. Map this to a list items: `<li>` and display the list items. 
 
 4) In your meta component display the total number of all fans. To do this you'll need to loop through all bands and add the number of fans together, then multiply the total by 10000. Extra stretch: format the number with commas. 
 
-5) Publish your work to GitHub pages! 
+5) Publish your work to GitHub pages!
 
 ## Assessing your knowledge
 
