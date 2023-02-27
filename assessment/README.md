@@ -141,7 +141,6 @@ Use this rubric to assess how your understanding of the learning objectives. You
 
 | Expectations | Does not meet (0) | Meets (1) | Exceeds (2) |
 |:-------------|:--------------|:-----|:---------|
-| **Completion** | Less than 70% of the challenges completed. | Completed 70 to 100% of the challenges | Completed the stretch challenges. |
+| **Completion** | Less than 70% of the challenges completed. | More than 70% of the challenges completed | Completed one or more of the stretch challenges |
 | **Functionality** | Project does not function or throws errors. | Project runs without errors. | Project runs well without warnings in the console. |
-| **Code Quality** | Code editor shows warnings or linter errors. Formatting is inconsistent. | Code is well written and well formatted. | Code is well written and well organized. Careful attention has been paid to names for variables, functions, components. |
-| **Stretch** | Did not complete the stretch goals | Completed some of the stretch goals | Completed all of the stretch goals |
+| **Code Quality** | Code editor shows warnings or linter errors. Formatting is inconsistent. | Code is well written and well formatted. | Code is well written and well organized. Careful attention has been paid to naming variables, functions, and components |
