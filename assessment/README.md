@@ -20,8 +20,6 @@ Name your project with your name and ACS 1320:
 
 `{name}-acs-1320-final`
 
-(You can't have any special characters or spaces in the name)
-
 ### Challenge 2: Making Simple Components JSX
 
 Create a new component. Make a new file `Heading.js` and write your component code here. 
