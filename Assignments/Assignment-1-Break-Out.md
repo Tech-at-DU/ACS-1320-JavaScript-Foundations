@@ -1,18 +1,16 @@
-# Class - Breakout 
+ # Class - Breakout 
 
 ## Description 
 
-Learn JavaScript by building the classic arcade Break Out. You will use vanilla JS writing all of the code yourself.
+Learn JavaScript by building the classic arcade Break Out. You will use vanilla to create this game following the tutorial. 
+
+Note! This tutorial is not the best use of JS. Think of this as a naive application of code. You will update and rewrite this code to improve it and learn more JS along the way! The first step is to complete the tutorial. 
 
 ### Why this assignment?
 
-This assignment includes a wide range of all features of the JavaScript language. Including functions, variables, arrays, objects, and if-else, and loops. 
+This assignment includes a wide range of features from the JavaScript language. Including functions, variables, arrays, objects, and if-else, and loops. You need to understand these becaus they are the basic building blocks of the JS language. 
 
-**Understanding the concepts used in this project will take you a long way to being able to understand and answer technical questions at interviews.**
-
-Besides basic JS included in the tutorial, you will update everything to modern JavaScript syntax and restructure the code using OOP techniques. 
-
-Last you'll implement a build system and apply modern coding best practice to the project. 
+**Understanding the concepts used in this project will take you a long way to being able to understand and answer technical questions at interviews.** 
 
 ## Project requirements
 
@@ -33,6 +31,12 @@ You can follow the me building the tutorial in video here:
 https://www.youtube.com/playlist?list=PLoN_ejT35AEiSYr-OhYV-C6uWZgPLBMZM
 
 This video playlist covers the basic tutorial and goes into the following assignments also. 
+
+### What is going on here?
+
+The code in this tutorial is not particularly well written the code structures are not well thought out! There are even a few things that I would call errors, even though the code functions without throwing any errors. 
+
+Keep your eyes on the code! Ask yourself what is going on? It is important for you to understand how the code functions! You can copy and paste the code from the tutorial and it will work but if you do not understand the code you need to stop and read the code carfully to figure out how it works and what it is trying to do. Only by doing this will you be able to spot the "errors" and solve the stretch goals below!
 
 ### Deliverable
 
