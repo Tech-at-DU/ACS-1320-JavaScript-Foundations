@@ -68,6 +68,10 @@ Use this rubric to assess how your understanding of the learning objectives. You
 
 ### Stretch Challenges 
 
+**Find problems with tutorial code**
+
+The tutorial has a couple problems. Examine the code and see how many issues you can find. 
+
 **Change the colors**
 
 Everything is currently blue and gray. Choose some new colors to customize the game. Change the colors of these elements: 
