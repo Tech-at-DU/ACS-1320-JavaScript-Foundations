@@ -1,31 +1,30 @@
 # Class - Breakout - Bundling
 
-## Description 
+## Description
 
-Modern professional JavaScript it processed and prepared for distribution. The files you create are not distributed directly. Instead these working/developer files are processed first. 
+Modern professional JavaScript it processed and prepared for distribution. The files you create are not distributed directly. Instead these working/developer files are processed first.
 
-In this assignment you will set up a build system that will process the files from the Breal Out project and create files for distribution. 
+In this assignment you will set up a build system that will process the files from the Breal Out project and create files for distribution.
 
 ### Why this assignment?
 
-This is common process used in industry you should know how this works and whgy it's used. The best way to do that is to implement the process yourself. 
+This is common process used in industry you should know how this works and whgy it's used. The best way to do that is to implement the process yourself.
 
 ## Project requirements
 
-Follow the instructions from class and create a bundle JS. 
+Follow the instructions from class and create a bundle JS.
 
-Commit and push your changes to GitHub. 
+Commit and push your changes to GitHub.
 
-### Challenges 
+### Challenges
 
 **Challenege 1** Bundle your code
 
-Follow the tutorial to bundle your code with Webpack. Push your bundled code to GitHub. 
-
+Follow the tutorial to bundle your code with Webpack. Push your bundled code to GitHub.
 
 **Challenge 2** Document your work
 
-Create a Readme that documents your work process from start to finish. Describe where you started, and the changes that you made to come up with the completed game. Include the following sections in your Readme. 
+Create a Readme that documents your work process from start to finish. Describe where you started, and the changes that you made to come up with the completed game. Include the following sections in your Readme.
 
 - What is your project
 - Why you made it
@@ -35,7 +34,7 @@ Create a Readme that documents your work process from start to finish. Describe 
 
 ### Deliverable
 
-Submit your work on [GradeScope](https://www.gradescope.com/courses/202953). 
+Submit your work on [GradeScope](https://www.gradescope.com/courses/202953).
 
 ## Assessing the assignment
 
