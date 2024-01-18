@@ -36,7 +36,7 @@ Pair up and discuss code quality. Answer these questions:
   - Reads well to Everyone on your team 
   - Uses consistent syntax
 - Uses best practices ⭐️
-  - e.g. `const` > `let` > `var`
+  - e.g. `const` > `let` > ~~`var`~~
   - Deconstruction `const { a } = Obj`
 - DRY
 
