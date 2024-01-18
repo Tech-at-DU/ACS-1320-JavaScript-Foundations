@@ -1,6 +1,6 @@
 # Class - Breakout - Inheritance
 
-## Description 
+## Description
 
 Digging deeper into OOP we find classes can inherit properties and methods from a super class. This assignment gives you the opportunity to apply this concept to Break Out.
 
@@ -10,9 +10,9 @@ OOP is an important piece of programming and software development. You need to p
 
 ## Project requirements
 
-Coplete the challenges below and commit them to your Break Out project. 
+Complete the challenges below and commit them to your Break Out project.
 
-### Challenges 
+### Challenges
 
 **Challenge 1:** Create a Sprite Subclass
 
@@ -24,29 +24,28 @@ Notice that many of the game objects (ball, paddle, brick etc.) share similar pr
 - `height`
 - `color`
 
-Some of the classes share similar methods: 
+Some of the classes share similar methods:
 
 - `render(ctx)` - This method should take a canvas context as a parameter and draw a rectangle at x and y with the width, height and color.
 
-some of these classes might be easier to work with if they had access to some helper methods. 
+Some of these classes might be easier to work with if they had access to some helper methods.
 
-- `moveTo(x, y)` - The moveTo() method sets the absolute position of a sprite. It should set the the object's this.x and this.y to x and y parameters. 
-- `moveBy(x, y)` - The moveBy() method should translate the Spite by the amount of the x and y parameters. It should add x to this.x and do the same to this.y. 
+- `moveTo(x, y)` - The moveTo() method sets the absolute position of a sprite. It should set the the object's this.x and this.y to x and y parameters.
+- `moveBy(x, y)` - The moveBy() method should translate the Spite by the amount of the x and y parameters. It should add x to this.x and do the same to this.y.
 
-
-When classes share the same properties or methods and the implementation is the same that's a prime candiadate for creating a super class!
+When classes share the same properties or methods and the implementation is the same that's a prime candidate for creating a super class!
 
 The Sprite class is an example of a super class that the game objects can inherit from. Sprite has properties that set it's position, size, and color, and a render method that draws itself as a rectangle.
 
 In the case of Break Out these classes all share the x, y, moveTo, and moveBy methods.
 
-- Ball 
-- Brick 
+- Ball
+- Brick
 - Paddle
 - Lives
 - Score
 
-Create a new class Sprite which will implement the properties and methods: 
+Create a new class Sprite which will implement the properties and methods:
 
 - x
 - y
@@ -82,7 +81,7 @@ class Sprite {
 }
 ```
 
-When you initialize a Sprite you'll supply arguments for each of it's parameters in order: 
+When you initialize a Sprite you'll supply arguments for each of it's parameters in order:
 
 ```JS
 const box = new Sprite(10, 20, 30, 40, 'blue')
@@ -90,16 +89,16 @@ const box = new Sprite(10, 20, 30, 40, 'blue')
 
 The box created above might look like: `{ x: 10, y: 20, width: 30, height: 40, color: 'blue' ... }`.
 
-Any of the objects that draw themselves on the canvas can extend the sprite class and share the properties and methods defined by Sprite. 
+Any of the objects that draw themselves on the canvas can extend the sprite class and share the properties and methods defined by Sprite.
 
-**Challenge 2: Class Ball** create classes that extend the Sprite class. 
+**Challenge 2: Class Ball** create classes that extend the Sprite class.
 
-The goal of this challenge is to define a Ball Class that extends Sprite. The Ball class will add three new properties: `dx`, `dy`, and `radius`. It will also override the `render()` method. 
+The goal of this challenge is to define a Ball Class that extends Sprite. The Ball class will add three new properties: `dx`, `dy`, and `radius`. It will also override the `render()` method.
 
 ```JavaScript
 class Ball extends Sprite {
   constructor(x, y, radius, color) {
-    super(x, y, radius * 2, radius * 2, color) // Must pass params to super when extending a class! 
+    super(x, y, radius * 2, radius * 2, color) // Must pass params to super when extending a class!
 
     this.radius = radius;
     this.dx = 2
@@ -116,7 +115,7 @@ class Ball extends Sprite {
 }
 ```
 
-To use the Ball class you might: 
+To use the Ball class you might:
 
 ```JS
 const ball = new Ball(100, 300, 10, 'orange')
@@ -128,11 +127,11 @@ The above creates a ball with: `{ x: 100, y: 300, width: 20, height: 20, radius:
 
 **What's an Override?** The Ball Overrides the `render()` of it's super class by implementing it's own render method.
 
-**Challenge 3: Class Brick** create a class for a Brick. 
+**Challenge 3: Class Brick** create a class for a Brick.
 
-The Brick is a Sprite, it draws as a rectangle. So the Brick is mostly a sprite. It has one new property that sprites don't have: status. 
+The Brick is a Sprite, it draws as a rectangle. So the Brick is mostly a sprite. It has one new property that sprites don't have: status.
 
-```JS`
+```JS
 class Brick extends Sprite {
   // Todo:
   // add the constructor
@@ -141,7 +140,7 @@ class Brick extends Sprite {
 }
 ```
 
-To use the Brick class you'll call it with x, y, width, and height. 
+To use the Brick class you'll call it with x, y, width, and height.
 
 ```JS
 // make a new instance of a brick
@@ -152,27 +151,27 @@ someBrick.render(ctx)
 
 This should make a brick object with these properties: `{ x: 15, y: 30, width: 75, height: 20, color: 'fuchsia', status: true }`
 
-Brick only adds the status property but it inherits the properties an methods of Sprite. 
+Brick only adds the status property but it inherits the properties and methods of Sprite.
 
-**Challenge 4: Class GameLabel** create a class to display score and lives. 
+**Challenge 4: Class GameLabel** create a class to display the score and lives.
 
-The Score and Lives are mostly the same. They display text at a position on the screen. A GamLabel can extend Sprite to inherit the x, y properties, and the moveTo() and moveBy() methods. 
+The Score and Lives are mostly the same. They display text at a position on the screen. A GamLabel can extend Sprite to inherit the x, y properties, and the moveTo() and moveBy() methods.
 
-Here is a stub for the label class. You should fill in the constructor (don't forget to call super!) You should also fill in the override for the render method. 
+Here is a stub for the label class. You should fill in the constructor (don't forget to call super!) You should also fill in the override for the render method.
 
-Notice you're pass `text` as the second parameter. This will be the text that Label displays. 
+Notice you're passing `text` as the second parameter. This will be the text that Label displays.
 
 ```JS
 class GameLabel extends Sprite {
   constructor(x, y, text, font='16px Helvetica', color = 'red', align = 'left') {
-    // call super with properties as you would initialize sprite
-    // define the new properties here on this: this.text and this.font
+    // Call super with properties as you would initialize sprite
+    // Define the new properties here on this: this.text and this.font
 
   }
 
   render(ctx) {
     // Add the code here to draw your text label
-    // set the font: with ctx.font = this.font
+    // Set the font: with ctx.font = this.font
     // Align the text with ctx.textAlign = this.align
     // ...
   }
@@ -182,9 +181,9 @@ class GameLabel extends Sprite {
 You should be able to work with the GameLabel like this:
 
 ```JS
-// make an instance of GameLabel
+// Make an instance of GameLabel
 const scoreLabel = new GameLabel(10, 30, 'Score: 0')
-// set the text property: 
+// Set the text property:
 scoreLabel.text = 'Score: 100'
 // Update the score on the canvas
 scoreLabel.render(ctx)
@@ -192,9 +191,9 @@ scoreLabel.render(ctx)
 
 **Challenge 5: Bricks class** make a class that manages the bricks
 
-This class will hold the array of bricks. It's also responsible for creating the array of bricks. 
+This class will hold the array of bricks. It's also responsible for creating the array of bricks.
 
-Here is a stub for the Bricks class. Notice this class doesn't extend another class! It does import the Brick class since it's going to be creating instances of Brick. 
+Here is a stub for the Bricks class. Notice this class doesn't extend another class! It does import the Brick class since it's going to be creating instances of Brick.
 
 ```JS
 class Bricks {
@@ -229,48 +228,58 @@ class Bricks {
 }
 ```
 
-**Stretch Challenge** 
+**Stretch Challenge**
 
-**Stretch Challenge 1: Divide code into modules** 
+**Stretch Challenge 1: Divide code into modules**
 
-Move each class into it's own js file and export that class as the default export. 
+Move each class into its own js file and export that class as the default export.
 
+Import these modules where they are used. For example:
 
- Import these modules where they are used. For example: 
+```JS
+// Sprite.js
+class Sprite { ... }
 
- ```JS
- // Sprite.js
- class Sprite { ... }
+export default Sprite
+```
 
- export default Sprite
- ```
+```JS
+// Ball.js
+import Sprite from './Sprite.js'
 
- ```JS
- // Ball.js
- import Sprite from './Sprite.js'
+class Ball extends Sprite { ... }
 
- class Ball extends Sprite { ... }
+export default Ball
+```
 
- export default Ball
- ```
+**Stretch Challenge 2: Improve data structure**
 
- **Stretch Challenge 2: improve data structure**
+The bricks are in a two dimensional array. This sounds like a good idea but it adds more problems than it solves. A single array would be a better solution.
 
-The bricks are in a two dimensional array. This sounds like a good idea but adds it more problems than it solves. A single array would be a better solution. 
+How would a single array track rows and columns?
 
-How would a single array track rows and columns? 
-
-if you know the number of rows and columns the total number of bricks is: 
+If you know the number of rows and columns the total number of bricks is:
 
 ```JS
 const totalBricks = rows * cols
 ```
 
-If you're looping over 
+If you're looping over:
+
+```JS
+  for (let c = 0; c < this.cols; c += 1) {
+    for (let r = 0; r < this.rows; r += 1) {
+      const brickX = c * (75 + 10) + 30;
+      const brickY = r * (20 + 10) + 30;
+      const brick = new Brick(brickX, brickY, 75, 20, 'fuchsia');
+      this.bricks.push(brick); // Store the brick in the single array
+    }
+  }
+```
 
 ### Deliverable
 
-Submit your work on [GradeScope](https://www.gradescope.com/courses/202953). 
+Submit your work on [GradeScope](https://www.gradescope.com/courses/202953).
 
 ## Assessing the assignment
 
@@ -278,19 +287,18 @@ Use this rubric to measure the success of your work against the expectations of 
 
 | Aspect | Does not meet (0) | Meets (1) | Exceeds (2) |
 |:-------------|:--------------|:-----|:---------|
-| **Completion** | Did not complete all challenges | Completed all challenges | Completed challenegs and stretch challenges |
-| **Code Quality** | Code shows linter errors | Code is profesional quality as confirmed by the linter | Code has comments and uses well named self documenting identifier names |
+| **Completion** | Did not complete all challenges | Completed all challenges | Completed challenges and stretch challenges |
+| **Code Quality** | Code shows linter errors | Code is professional quality as confirmed by the linter | Code has comments and uses well named self documenting identifier names |
 | **Work Ethic** | Less than 3 commits | 3+ commits | Used a branch for the changes made for these challenges |
 
 ## Assessing your knowledge
 
-Use this rubric to assess how your understanding of the learning objectives. You should be striving for an average score of 1 or greater
+Use this rubric to assess your understanding of the learning objectives. You should be striving for an average score of 1 or greater
 
 | Expectations | Does not meet (0) | Meets (1) | Exceeds (2) |
 |:-------------|:--------------|:-----|:---------|
 | **OOP theory** | Can't explain the OOP in JS | Can explain OOP in JS | Can provide use cases and hypothetical examples for OOP in JS |
-| **OOP Practice** | Can't create classes and sub classes without the documentation | Can create classes and sub classes without the documentation | Can use `super()` to call methods ont he super class, or override those methods when needed |
-
+| **OOP Practice** | Can't create classes and sub classes without the documentation | Can create classes and sub classes without the documentation | Can use `super()` to call methods on the super class, or override those methods when needed |
 
 ```JS
 // Define an Object
