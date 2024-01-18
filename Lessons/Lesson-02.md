@@ -38,6 +38,7 @@ Pair up and discuss code quality. Answer these questions:
 - Uses best practices ⭐️
   - e.g. `const` > `let` > ~~`var`~~
   - Deconstruction `const { a } = Obj`
+  - Template strings: ``Score: ${score}``
 - DRY
 
 <!-- > -->
