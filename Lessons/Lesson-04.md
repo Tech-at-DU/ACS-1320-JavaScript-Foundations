@@ -1,5 +1,5 @@
 <!-- .slide: data-background="./Images/header.svg" data-background-repeat="none" data-background-size="40% 40%" data-background-position="center 10%" class="header" -->
-# ACS 1320 - Lesson 4 - OOP
+# ACS 1320 - Lesson 3 - OOP
 
 <!-- Put a link to the slides so that students can find them -->
 
