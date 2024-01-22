@@ -30,7 +30,7 @@ The goal of [refactoring code](https://en.wikipedia.org/wiki/Code_refactoring) i
 
 <!-- > -->
 
-Refactoring is not about adding new features. Instead, you want to have the **same functionality** with an **improved codebase** underneath it.
+Refactoring is not about adding new features! Instead, you want to have the **same functionality** with an **improved codebase** underneath it.
 
 🏆
 
@@ -40,7 +40,7 @@ Refactoring is not about adding new features. Instead, you want to have the **sa
 
 <!-- > -->
 
-In JavaScript a Class is really a function and a function is really an object. All functions are just objects. Seriously try this: 
+In JavaScript a Class starts as a function and a function is an object. Seriously, try this: 
 
 ```JS
 function FunkyTown() {
@@ -59,11 +59,14 @@ A function is also a class! Yep, it sure is. Try this:
 
 ```JS
 const myTown = new FunkyTown()
+console.log(myTown) // {} <-- logs an empty object
 ```
+
+Using the key word `new` in front of the function name returns a new empty object!
 
 <!-- > -->
 
-Wait we need to add some properties to our object. Let's make a dog! 🐶
+Wait, don't instances need some properties? Let's make a dog! 🐶
 
 ```JS 
 function Dog(name) {
@@ -76,8 +79,6 @@ console.log(myDog.name) // Spot
 
 <!-- > -->
 
-We use the `new` keyword when creating instances. 
-
 This creates a new object and assigns it to `this`. 
 
 ```js
@@ -87,7 +88,7 @@ new Dog() // this = {}
 
 See how name got assigned to `this` in the Dog function? 
 
-The Dog function is the constructor for our class.
+The Dog function is the constructor for your class.
 
 <!-- > -->
 
@@ -107,7 +108,7 @@ console.log(myDog.name) // Spot
 myDog.bark() // Spot says: gimme a biscuit!
 ```
 
-Methods are added to the prototype property! 
+Methods are added to the prototype property! You must use a `function` type function. Arrow functions don't work here! 
 
 <!-- > -->
 
@@ -136,7 +137,7 @@ class Dog {
   }
 }
 
-const myDog = new Dog('Spot')
+const myDog = new Dog('Spot') // creates a new dog instance and calls the constructor. 
 console.log(myDog.name) // Spot
 myDog.bark() // Spot says: gimme a biscuit!
 ```
@@ -145,7 +146,7 @@ myDog.bark() // Spot says: gimme a biscuit!
 
 NOTE! We used the `constructor()` function to initialize the class. 
 
-Notice that all of the initial property values (`name`) are passed into the function here and assigned to `this`. **You must do this to store a value on the newly created class instance.**
+Notice that all of the initial property values (`name`) are passed into the constructor function and assigned to `this`. **You must assign values to this to store a value on the newly created class instance.**
 
 <!-- > -->
 
@@ -176,7 +177,7 @@ spaceDog.planet // Mars
 
 <!-- > -->
 
-We use the extends keyword to create a subclass of a prarent or super class. 
+We use the `extends` keyword to create a subclass of a prarent or super class. 
 
 <!-- > -->
 
@@ -187,6 +188,8 @@ Note! Calling `super()` you must pass any properties required by consructor of t
 <!-- > -->
 
 ## Modules 📦
+
+Modules allow you to organize code. Modules allow us to import and export elements. Without modules all of your code is global! 
 
 <!-- > -->
 
@@ -210,14 +213,14 @@ Export your Dog from Dog.js:
 //Dog.js
 class Dog() { ... }
 
-export default Dog
+export default Dog // Exports Dog from this module
 ```
 
 Import your Dog into main.js:
 
 ```JS
 //main.js
-import Dog from './Dog.js'
+import Dog from './Dog.js' // Imports Dog from Dog.js
 ```
 
 <!-- > -->
@@ -234,7 +237,7 @@ The engineering team has decided to **OOP**ify the whole game.
 
 <!-- > -->
 
-You need to make this game **Object Oriented**.
+You need to refactor this game as **Object Oriented**. This will allow us to add new features in the future. 
 
 <!-- > -->
 
@@ -248,13 +251,11 @@ You need to make a class for each of the game objects.
 
 <!-- > -->
 
-Objects give you an **abstract way to think about and visualize your code**. 
+Objects give you an **abstract way to think about and visualize your code**. Rather than having global variables that represent the ball and the paddle you will have objects that represent these and the variables that control their behavior now exist inside instances of these classes. 
 
 <!-- > -->
 
-You'll be making a **Class for each** of these. 
-
-Define properties in each class with the values that the object needs to do it's job. 
+You'll be making a **Class for each**. Define properties in each class with the values that the object needs to do it's job. 
 
 <!-- > -->
 
@@ -262,15 +263,15 @@ Define properties in each class with the values that the object needs to do it's
 
 <!-- > -->
 
-A Sprite is a game object. Think about it like a rectangle on the screen. The game is built with Sprites. 
+A Sprite is a game object. Think about it like a rectangle on the screen. The game is built with Sprites. A rectangle has a location, size and color. 
 
-Everything on the screen has an x and y position and most things have a width and height and a color. 
+Everything on the screen has an x and y position and most things have a width and height and a color. Sprite class should define the properties: 
 
-- x
-- y
-- width
-- height
-- color
+- `x`
+- `y`
+- `width`
+- `height`
+- `color`
 
 <!-- > -->
 
@@ -290,7 +291,7 @@ export default Sprite
 
 <!-- > -->
 
-A Sprite class should have a `render()` method. This method needs to take in the ctx as a parameter. 
+A Sprite class should have a `render()` method. This method needs to take in the canvas context as a parameter since this is required to draw the object. 
 
 ```JS
 class Sprite {
@@ -316,7 +317,7 @@ It also means the code only works when this mysterious value `ctx` happens to be
 
 <!-- > -->
 
-Passing `ctx` as a parameter is safe and reliable. The variable is scoped to this method. Any programmer can see where it is defined and decide how they will provide it. 
+Passing `ctx` as a parameter is safe and reliable, the variable is scoped to this method, any programmer can see where it is defined and decide how they will provide it. 
 
 <!-- > -->
 
@@ -324,7 +325,7 @@ Passing `ctx` as a parameter is safe and reliable. The variable is scoped to thi
 
 <!-- > -->
 
-The Brick class can extend the Sprite class. Brick only adds a single new property. A brick can also initialize itself to fixed expected values. See the width, height, and color. 
+The Brick class can extend the Sprite class. Brick adds a new property `status` to `Sprite`. A brick can also initialize itself to fixed expected values. See the width, height, and color. 
 
 ```JS
 class Brick extends Sprite {
@@ -344,6 +345,7 @@ A brick is just a Sprite with an extra property called `status` and some standar
 Use the brick class! The bricks are stored in an array and initialized like this in the original code: 
 
 ```JS
+// original code 
 var bricks = [];
 for (var c = 0; c < brickColumnCount; c++) {
   bricks[c] = [];
@@ -372,7 +374,8 @@ The Object here has the properties: x, y, status.
 We can now replace this with: 
 
 ```JS
-bricks[c][r] = new Brick(0, 0)
+// New code! 
+bricks[c][r] = new Brick(0, 0) // Make an instance of Brick
 ```
 
 Here the two parameters are the x and y.
@@ -395,12 +398,14 @@ Make an object with the same properties.
 
 ### Ball class ⚽️
 
+A `Ball` class might add properties of `dx`, `dy`, and `radius` to Sprite. 
+
 <!-- > -->
 
-For example, the Ball class might look like this: 
+The Ball class might look like this: 
 
 ```JavaScript
-class Ball extends Sprite{
+class Ball extends Sprite {
   constructor(x = 0, y = 0, radius = 10, color = "#0095DD") {
     super(x, y, 0, 0, color)
     this.radius = radius;
@@ -432,6 +437,8 @@ Here `Ball` Class defines instances which will have four properties. Two of the 
 - `x`: the position of the ball on the x-axis of a canvas
 - `y`: the position of the ball on the y-axis of a canvas
 
+Notice the Ball Overrides the render method since it must draw itself as a circle! Remember Sprites only draw a rectangle. 
+
 <!-- > -->
 
 ### Making an instance
@@ -454,7 +461,7 @@ console.log( ball.radius ) // 10
 
 <!-- > -->
 
-Objects like: Ball, Brick, and Paddle own all of the properties they need to render themselves on canvas. 
+Objects like: `Ball`, `Brick`, and `Paddle` own all of the properties they need to render themselves on canvas. 
 
 It makes sense they should own their render method. 
 
@@ -503,6 +510,9 @@ class Ball {
     ctx.closePath();
   }
 }
+
+const ball = new Ball()
+ball.render(ctx) // pass the global ctx to ball.render()
 ```
 
 <!-- > -->
