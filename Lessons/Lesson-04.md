@@ -168,7 +168,7 @@ class SpaceDog extends Dog {
   }
 }
 
-const spaceDog = new SapceDog('Rocko', 'Mars')
+const spaceDog = new SpaceDog('Rocko', 'Mars')
 console.log(spaceDog.name) // Rocko
 spaceDog.bark() // Rocko says: gimme a biscuit!
 spaceDog.shootLaser() // Rocko shoots lasers!
