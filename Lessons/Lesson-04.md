@@ -201,7 +201,7 @@ Edit index.html:
 <script src="main.js" type="module"></script>
 ```
 
-Add type="module"
+Add `type="module"`
 
 <!-- > -->
 
