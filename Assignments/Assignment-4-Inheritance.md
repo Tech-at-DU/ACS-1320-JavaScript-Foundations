@@ -254,7 +254,7 @@ export default Ball
 
 **Stretch Challenge 2: Improve data structure**
 
-The bricks are in a two dimensional array. This sounds like a good idea but it adds more problems than it solves. A single array would be a better solution.
+The bricks are in a two dimensional array. This sounds like a good idea but it adds more problems than it solves. A single array (one dimensional) would be a better solution.
 
 How would a single array track rows and columns?
 
