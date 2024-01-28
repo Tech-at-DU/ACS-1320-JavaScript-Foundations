@@ -264,18 +264,22 @@ If you know the number of rows and columns the total number of bricks is:
 const totalBricks = rows * cols
 ```
 
-If you're looping over:
+That means if you're only using one loop, it should loop `totalBricks` times:
 
 ```JS
-  for (let c = 0; c < this.cols; c += 1) {
-    for (let r = 0; r < this.rows; r += 1) {
-      const brickX = c * (75 + 10) + 30;
-      const brickY = r * (20 + 10) + 30;
-      const brick = new Brick(brickX, brickY, 75, 20, 'fuchsia');
-      this.bricks.push(brick); // Store the brick in the single array
-    }
-  }
+for (let i = 0; i < totalBricks; i++) {
+  // ...
+}
 ```
+
+But how do you know which row and column you're on? We can use something like this to find it:
+
+```JS
+let row = Math.floor(i / this.cols)
+let col = i % this.cols
+```
+
+Update your code to use a single array to store the bricks and use the above to find the row and column in one loop.
 
 ### Deliverable
 
