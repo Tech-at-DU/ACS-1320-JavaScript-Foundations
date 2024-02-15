@@ -51,11 +51,11 @@ You should try it for yourself with these challenges.
 
 When using input fields/form elements with React you'll use a special pattern called the controlled component pattern. 
 
-https://reactjs.org/docs/forms.html
+https://react.dev/learn/sharing-state-between-components#controlled-and-uncontrolled-components
 
 <!-- > -->
 
-The idea is that the value you enter into a form element is stored in state and it's that value that is displayed by the form element. 
+The idea is that the value you enter into a form element is stored in state and it'sthat value that is displayed by the form element. 
 
 <!-- > -->
 
@@ -189,7 +189,7 @@ If you've got the tip calculator working try these stretch goals.
 
 ## Additional Resources
 
-1. Links to additional readings and videos
+1. https://react.dev/learn/sharing-state-between-components#controlled-and-uncontrolled-components
 
 <!-- > -->
 
