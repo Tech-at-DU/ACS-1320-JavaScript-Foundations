@@ -29,26 +29,26 @@ By the end of the course will be able to:
 
 ## Schedule
 
-**Course Dates:** Spring A 2024 1/15/24 to 3/4/24
+**Course Dates:** Spring A 2024 1/21/24 to 3/7/24
 
-**Class Times:** Tuesday and Thursday 9:30 AM to 12:15 PM
+**Class Times:** Tuesday and Thursday 1:00 PM to 3:45 PM
 
 | Class | Date | Topics | Assignment |
 |:-----:|:-----|:-------|:-----------|
-|  1 | Tue, Jan 16 | [JavaScript Basics] | [Break Out: Tutorial] | 
-|  2 | Thr, Jan 18 | [JavaScript Professional Best Practice] | [Break Out: ESLint] |
-|  3 | Tue, Jan 23 | [JavaScript OOP] | [Break Out: OOP] |
-|  4 | Thr, Jan 25 | [OOP and Classes Lab] | (optional [Functional Breakout]) |
-|  5 | Tue, Jan 30 | [JS OOP Inheritence] | [Break Out: OOP Inheritance] |
-|  6 | Thr, Feb  1 | [Bundling JS] | [Break out: Bundling JavaScript] |
-|  7 | Tue, Feb  6 | [breakout-typescript] | [breakout-typescript] |
-|  8 | Thr, Feb  8 | [Single Page Applications] | [React: Fundamentals Tutorial] |
-|  9 | Tue, Feb 13 | [Component Architecture] | [Final Project: Getting started] |
-| 10 | Thr, Feb 15 | [Components and State] | - | 
-| 11 | Tue, Feb 20 | [Forms and user input] | - |
-| 12 | Thr, Feb 22 | [Building and Publishing] | - |
-| 13 | Tue, Feb 27 | [Tailwind] | - |
-| 14 | Thr, Feb 29 | [Final Assessment: Test your Knowledge] |  |
+|  1 | Tue, Jan 21 | [JavaScript Basics] | [Break Out: Tutorial] | 
+|  2 | Thr, Jan 23 | [JavaScript Professional Best Practice] | [Break Out: ESLint] |
+|  3 | Tue, Jan 28 | [JavaScript OOP] | [Break Out: OOP] |
+|  4 | Thr, Jan 30 | [OOP and Classes Lab] | (optional [Functional Breakout]) |
+|  5 | Tue, Feb  4 | [JS OOP Inheritence] | [Break Out: OOP Inheritance] |
+|  6 | Thr, Feb  6 | [Bundling JS] | [Break out: Bundling JavaScript] |
+|  7 | Tue, Feb 11 | [breakout-typescript] | [breakout-typescript] |
+|  8 | Thr, Feb 13 | [Single Page Applications] | [React: Fundamentals Tutorial] |
+|  9 | Tue, Feb 18 | [Component Architecture] | [Final Project: Getting started] |
+| 10 | Thr, Feb 20 | [Components and State] | - | 
+| 11 | Tue, Feb 25 | [Forms and user input] | - |
+| 12 | Thr, Feb 27 | [Building and Publishing] | - |
+| 13 | Tue, Mar  4 | [Tailwind] | - |
+| 14 | Thr, Mar  6 | [Final Assessment: Test your Knowledge] |  |
 
 <!-- Lesson 1 -->
 [JavaScript Basics]: Lessons/Lesson-01.md
