@@ -6,7 +6,7 @@ Build and expand your understanding of JS one of the most important languages in
 
 During this course you will build three games with the mindset of someone working on, maintaining, and updating a codebase that you are responsible for. Along the way, you will work with many core features of the JavaScript language.
 
-The course will cover foundational JavaScript, debugging JavaScript and working with various JavaScript Libraries to build applications and games. Classes and Object Oriented Programming (OOP) are introduced with a closer look at how OOP is uniquely implemented in JavaScript.  
+The course will cover foundational JavaScript, debugging JavaScript and working with various JavaScript Libraries to build applications and games. Classes and Object Oriented Programming (OOP) are introduced with a closer look at how OOP is uniquely implemented in JavaScript.
 
 ### Why you should take this course
 
