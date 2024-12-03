@@ -35,7 +35,7 @@ By the end of the course will be able to:
 
 | Class | Date | Topics | Assignment |
 |:-----:|:-----|:-------|:-----------|
-|  1 | Tue, Jan 21 | [JavaScript Basics] | [Break Out: Tutorial] | 
+|  1 | Tue, Jan 21 | [JavaScript Basics] | [Break Out: Tutorial] |
 |  2 | Thr, Jan 23 | [JavaScript Professional Best Practice] | [Break Out: ESLint] |
 |  3 | Tue, Jan 28 | [JavaScript OOP] | [Break Out: OOP] |
 |  4 | Thr, Jan 30 | [OOP and Classes Lab] | (optional [Functional Breakout]) |
@@ -44,7 +44,7 @@ By the end of the course will be able to:
 |  7 | Tue, Feb 11 | [breakout-typescript] | [breakout-typescript] |
 |  8 | Thr, Feb 13 | [Single Page Applications] | [React: Fundamentals Tutorial] |
 |  9 | Tue, Feb 18 | [Component Architecture] | [Final Project: Getting started] |
-| 10 | Thr, Feb 20 | [Components and State] | - | 
+| 10 | Thr, Feb 20 | [Components and State] | - |
 | 11 | Tue, Feb 25 | [Forms and user input] | - |
 | 12 | Thr, Feb 27 | [Building and Publishing] | - |
 | 13 | Tue, Mar  4 | [Tailwind] | - |
@@ -97,9 +97,9 @@ Assignments **must be turned in via [Gradescope](https://gradescope.com) for cre
 
 | Topic | Due Date | Assignment |
 |:-----:|:---------|:-----------|
-| 1 | Tue, Oct 26| [Break Out: Tutorial](Assignments/Assignment-1-Break-Out.md) Your completed breakout game linted! | 
-| 2 | Thu, Nov  4 | [Break Out: OOP Inheritance](Assignments/Assignment-4-Inheritance.md) Your completed breakout game updated with OOP and inheritence |
-| 3 | Tue, Nov  9 | [Break out: Bundling JavaScript](Assignments/Assignment-5-bundling.md) |
+| 1 | Thr, Jan 23  | [Break Out: Tutorial](Assignments/Assignment-1-Break-Out.md) Your completed breakout game linted! | 
+| 2 | Tue, Feb 4   | [Break Out: OOP Inheritance](Assignments/Assignment-4-Inheritance.md) Your completed breakout game updated with OOP and inheritence |
+| 3 | Thr, Feb 11  | [Break out: Bundling JavaScript](Assignments/Assignment-5-bundling.md) |
 | 4 | Tue, Nov 23 | [React: Fundamentals Tutorial](Assignments/Assignment-6-react-fundamentals.md) |
 | 5 | Thu, Dec  9 | [Final Project: Getting started](Assignments/Assignment-7-final-project.md) |
 

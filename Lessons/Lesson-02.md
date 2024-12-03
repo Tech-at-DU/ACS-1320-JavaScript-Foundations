@@ -205,13 +205,12 @@ In a professional environment you would be required to use a linter!
 
 <!-- > -->
 
-<!-- .slide: data-background="#087CB8" -->
-## [**10m**] BREAK 🦜
-
-<!-- > -->
+## Discussion
+Answer these questions to test your understanding.
 
 ### JS - Const, Let and Var
-
+- Q: Why does the linter suggest using `const` and `let` and not `var`?
+- Q: What is difference between `const`, `let` and `var`?
 
 Bad 
 
@@ -233,7 +232,10 @@ https://javascript.info/variables
 
 <!-- > -->
 
-### JS - Functions and Hoisting
+### Hoisting
+- Q: What is hoisting? (look it up!)
+- Q: Does hoisting affect this tutorial?
+- Q: Does hoisting affect `const`, `let`, and `var`?
 
 <!-- > -->
 
@@ -250,7 +252,9 @@ https://javascript.info/var
 
 <!-- > -->
 
-### JS - Template Strings 
+### Template Strings 
+- Q: What is a template string? 
+- Q: Were template strings used in the tutorial?
 
 Best Practice use template literal over the + for concatenation. 
 
@@ -280,23 +284,15 @@ This makes it ambiguous sometimes and might confuse or generate errors.
 const str = "Score:" + score + 10 // Score:1010
 ```
 
-✚ is a common source of problems in JS
+**✚ is a common source of problems in JS**
 
 https://javascript.info/string
 
 <!-- > -->
 
-## Wrap up
-
-List linter suggestions on the board. Split into groups of 4 to discuss these. Each group decides why these suggestions were included in the style guide. 
-
-- What changes did the linter ask for? 
-- Why do you think these changes? 
-- Were linter errors that could not be solved?
-
-<!-- > -->
-
-## Use Destructuring
+## Object Destructuring
+- Q: What is Object Destructuring? (Look it up: https://javascript.info/destructuring-assignment)
+- Q: Did the linter ask you to use this? 
 
 Any time you have an object you use the dot to access one of its properties. All of these dots make code harder to read. Use destructuring to make code easier to read. 
 

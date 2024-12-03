@@ -264,3 +264,11 @@ Feel free to check out the [TypeScript ESLint docs](https://typescript-eslint.io
 You'll need to refer to the TypeScript docs in some cases. Take a look at them here:
 
 https://www.typescriptlang.org/docs/
+
+## Discussion
+Answer these questions about TypeScript. 
+
+- Q: What is TypeScript?
+- Q: What changes did the TypeScript linter ask you to make to the Break Out game? 
+- Q: Did TypeScript improve your code? 
+- Q: Write a for loop with TypeScript? 

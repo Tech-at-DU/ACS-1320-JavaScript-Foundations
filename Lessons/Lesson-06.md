@@ -1,12 +1,6 @@
 <!-- .slide: data-background="./Images/header.svg" data-background-repeat="none" data-background-size="40% 40%" data-background-position="center 10%" class="header" -->
 # ACS 1320 - Lesson 5 - Bundling JS
 
-<!-- Put a link to the slides so that students can find them -->
-
-<!-- ➡️ [**Slides**](/Syllabus-Template/Slides/Lesson1.html ':ignore') -->
-
-<!-- > -->
-
 # Overview
 
 Bundling 🎁 is a common practice used across the JS ecosystem. While JS is not compiled to machine code like other languages, JS files are processed heavily in modern applications. 
@@ -410,32 +404,17 @@ Take a look at the distribution code in `bundle.js`. What happened? The code her
 
 The code here is not human reable. Take a look at it. 
 
-<!-- .slide: data-background="#087CB8" -->
-# BREAK
-
-Take a 10-minute break
-
 <!-- > -->
 
-# Lab
+# Discussion
+lets talk about bundling. 
 
-Use the lab time to complete your project. 
-
-- Solve any final errors
-- Write a readme
-- Publish your work to GitHub Pages
-- Post a link to the Project tab in the Progress Tracker
-
-<!-- > -->
-
-# Wrap Up and review
-
-- What is bundling? 
-- Why use it? 
-- Your thoughts? 
-- Use cases? 
-- What problems did you encounter? 
-- How did you solve them?
+- Q: What is bundling? 
+- Q: Why bundle your code?
+- Q: What did your code look like before it was bundled? 
+- Q: Did you have to make any changes after you bundled it? 
+- Q: Write a loop that iterates over an Array of values. 
+- Q: Look up `Array.forEach()`. Loop over your Array with `forEach`. Was this better than using a for loop? 
 
 <!-- > -->
 

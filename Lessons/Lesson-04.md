@@ -1,12 +1,6 @@
 <!-- .slide: data-background="./Images/header.svg" data-background-repeat="none" data-background-size="40% 40%" data-background-position="center 10%" class="header" -->
 # ACS 1320 - Lesson 3 - OOP
 
-<!-- Put a link to the slides so that students can find them -->
-
-<!-- ➡️ [**Slides**](https://docs.google.com/presentation/d/1nheTZgY5fXrCbiw9hst0XGkr_fpnlAq44y7o5GrYvS4/edit?usp=sharing) -->
-
-<!-- > -->
-
 ## Overview 🌏
 
 Class Objects and OOP. Use Object Oriented programming techniques to make your code modular and organized. 
@@ -486,7 +480,11 @@ class Ball {
 
 <!-- > -->
 
-### What about this global references?
+### What about global vars?
+You should try to minimize the use of global vars. The original tutorial used many global variables. 
+
+- Q: What global variables were used in the original tutorial?
+- Q: Where are these values now that you have refactored your code into classes? 
 
 <!-- > -->
 
@@ -518,6 +516,7 @@ ball.render(ctx) // pass the global ctx to ball.render()
 <!-- > -->
 
 ### Dependency Injection 💉
+
 
 <!-- > -->
 

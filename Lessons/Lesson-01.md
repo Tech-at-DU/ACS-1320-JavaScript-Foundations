@@ -95,17 +95,11 @@ After completing the tutorial you will improve the code by applying modern techn
 - **Linting** to professional standards 
 - Using build systems and **bundling**
 
-<!-- > -->
-
-### Contractor/Custom project 
-
-The Custom/Contractor project will be built with React. 
-
-Here you will put all of the things from the first project into something that is built using one of the most common and popular libraries in use today.
+[Assignment 1 - Break Out](../Assignments/Assignment-1-Break-Out.md)
 
 <!-- > -->
 
-## Break Out 🧱
+### Break Out 🧱
 
 <!-- > -->
 
@@ -124,7 +118,20 @@ It looked like this.
 
 <!-- > -->
 
-## Canvas 
+## Discussion
+
+Answer these questions to check your understanding what is in the Break Out tutorial. 
+
+<!-- > -->
+
+### Defining Variables with JS
+- Q: How are variables declared? 
+- Q: What are the variables used in Break Out?
+- Q: What value types are used in the Break Out tutorial? 
+
+<!-- > -->
+
+### Canvas 
 
 Canvas is a JS API that allows you to draw bitmapped graphics. Use it to draw pictures. It's good for games. 
 
@@ -250,19 +257,35 @@ ctx.clearRect(x, y, width, height)
 ```
 
 - **Q:** What area of the screen is being cleared? 
-<!-- 
-<!-- > -->
-
-Million Dollar Homepage! Canvas Practice.
-
-https://github.com/soggybag/canvas-practice 
--->
 
 <!-- > -->
 
-## Break
+### Defining Functions in JS
+- Q: How are functions defined in JS? 
+- Q: What functions are defined in the Break Out tutorial? 
+- Q: What do these functions do? 
 
-Take a 10-minute break and measure the world in pixels. 
+<!-- > -->
+
+### if else in JS
+- Q: How is an if else structure written in JS?
+- Q: What is this logical operator `||`?
+- Q: Where is `if` and `if else` used in the tutorial? 
+
+<!-- > -->
+
+### Arrays in JS? 
+- Q: What is an Array? 
+- Q: Where are Arrays used in the tutorial? 
+- Q: What is stored in the array in the tutorial? 
+
+<!-- > -->
+
+### Objects in JS
+- Q: What is a Object in JS? 
+- Q: Where are Objects used in the tutorial? 
+- Q: What do thes objects represent? 
+- Q: What are the properties of these objects? 
 
 <!-- > -->
 
