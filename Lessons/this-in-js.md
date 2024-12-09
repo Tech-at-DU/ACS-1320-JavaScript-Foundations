@@ -226,8 +226,57 @@ button.addEventListener('click', obj.handleClick.bind(obj));
 
 // Alternatively wrap the handler in an arrow function
 button.addEventListener('click', e => obj.handleClick());
-
 ```
 
 --- 
 
+**`this` and arrow functions**
+
+Arrow functions do not have their own this, so they inherit it from the surrounding context.
+
+```JS
+const button = document.querySelector('#myButton');
+
+const obj = {
+    text: 'Hello from obj!',
+    setupListener: function () {
+        button.addEventListener('click', () => {
+            console.log(this.text);
+        });
+    }
+};
+
+obj.setupListener();
+// Output: 'Hello from obj!'
+// Arrow function inherits `this` from `setupListener`, which refers to `obj`.
+```
+
+**Losing context in callbacks**
+
+When passing a method to an event listener, this often loses its original reference.
+
+```JS
+const obj = {
+    text: 'Lost context!',
+    showText: function () {
+        console.log(this.text);
+    }
+};
+
+document.querySelector('#myButton').addEventListener('click', obj.showText);
+// Output: undefined (or error in strict mode)
+```
+
+Solution 1: Use .bind() to preserve the context.
+
+```JS
+document.querySelector('#myButton').addEventListener('click', obj.showText.bind(obj));
+// Output: 'Lost context!'
+```
+
+Solution 2: Use an arrow function to wrap the method.
+
+```JS
+document.querySelector('#myButton').addEventListener('click', () => obj.showText());
+// Output: 'Lost context!'
+```
