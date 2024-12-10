@@ -145,20 +145,20 @@ What will be logged to the console and why?
 
 ```JS
 const obj = {
-    name: 'Bound Object',
-    greet: function () {
+  name: 'Bound Object',
+  greet: function () {
 
-        const arrowGreet = () => {
-            console.log(this.name);
-        };
+    const arrowGreet = () => {
+      console.log(this.name);
+    };
 
-        const regularGreet = function () {
-            console.log(this.name);
-        }.bind(this);
+    const regularGreet = function () {
+      console.log(this.name);
+    }.bind(this);
 
-        arrowGreet();
-        regularGreet();
-    }
+    arrowGreet();
+    regularGreet();
+  }
 };
 
 obj.greet();
@@ -172,23 +172,23 @@ What is the value of this in each case and why?
 
 ```JS
 class Animal {
-    constructor(name) {
-        this.name = name;
-    }
+  constructor(name) {
+    this.name = name;
+  }
 
-    speak() {
-        console.log(`${this.name} says hello!`);
-    }
+  speak() {
+    console.log(`${this.name} says hello!`);
+  }
 
-    delayedSpeak() {
-        setTimeout(function () {
-            console.log(`${this.name} is thinking...`);
-        }, 500);
+  delayedSpeak() {
+    setTimeout(function () {
+      console.log(`${this.name} is thinking...`);
+    }, 500);
 
-        setTimeout(() => {
-            console.log(`${this.name} is done thinking!`);
-        }, 1000);
-    }
+    setTimeout(() => {
+      console.log(`${this.name} is done thinking!`);
+    }, 1000);
+  }
 }
 
 const dog = new Animal('Buddy');
@@ -206,10 +206,10 @@ A common mistake is assuming this will refer to the enclosing object inside an e
 const button = document.querySelector('#myButton');
 
 const obj = {
-    text: 'Hello, World!',
-    handleClick: function () {
-        console.log(this.text);
-    }
+  text: 'Hello, World!',
+  handleClick: function () {
+    console.log(this.text);
+  }
 };
 
 button.addEventListener('click', obj.handleClick);
@@ -238,12 +238,12 @@ Arrow functions do not have their own this, so they inherit it from the surround
 const button = document.querySelector('#myButton');
 
 const obj = {
-    text: 'Hello from obj!',
-    setupListener: function () {
-        button.addEventListener('click', () => {
-            console.log(this.text);
-        });
-    }
+  text: 'Hello from obj!',
+  setupListener: function () {
+    button.addEventListener('click', () => {
+      console.log(this.text);
+    });
+  }
 };
 
 obj.setupListener();
@@ -257,10 +257,10 @@ When passing a method to an event listener, this often loses its original refere
 
 ```JS
 const obj = {
-    text: 'Lost context!',
-    showText: function () {
-        console.log(this.text);
-    }
+  text: 'Lost context!',
+  showText: function () {
+    console.log(this.text);
+  }
 };
 
 document.querySelector('#myButton').addEventListener('click', obj.showText);
