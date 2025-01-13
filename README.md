@@ -38,7 +38,7 @@ By the end of the course will be able to:
 |  1 | Tue, Jan 21 | [JavaScript Basics] | [Break Out: Tutorial] |
 |  2 | Thr, Jan 23 | [JavaScript Professional Best Practice] | [Break Out: ESLint] |
 |  3 | Tue, Jan 28 | [JavaScript OOP] | [Break Out: OOP] |
-|  4 | Thr, Jan 30 | [OOP and Classes Lab] | (optional [Functional Breakout]) |
+|  4 | Thr, Jan 30 | [OOP and Classes Lab] | - |
 |  5 | Tue, Feb  4 | [JS OOP Inheritence] | [Break Out: OOP Inheritance] |
 |  6 | Thr, Feb  6 | [Bundling JS] | [Break out: Bundling JavaScript] |
 |  7 | Tue, Feb 11 | [breakout-typescript] | [breakout-typescript] |
