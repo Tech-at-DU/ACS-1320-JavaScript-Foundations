@@ -329,7 +329,18 @@ Remember that `makeBo(x, y, width, height, color)` function? It might be useful 
 
 ### Challenge 3 
 
+The game is very predictable! Notice that the ball always starts at the same angle every time! You can make vary this by using a random number! Here are a couple things to keep in mind. 
 
+- Use `Math.random()` to generate a random number between 0 and 1. You can multiply this by another number to scale it to a range you like. For example `Math.random() * 10` would give a random number between 0 and 10.
+- `dx` and `dy` set the speed and direction of the ball. The default values are 2 and -2.
+- `dx` can be any number between 2 and -2.
+- `dy` should always be negative, since the ball needs to start moving up the screen!
+
+**Advanced!** The speed is a vector. If the ball is moving 2 on the x and 2 on the y the total distance moved is 2.83. Remember Pythagoras! Look up hypotenuse. 
+
+To calculate the distance the ball should move at any angle, you can: 
+- Generate an angle in randians, something like: `angle = Math.random() * Math.PI * 2`
+- Use sine and cosine to get the `dx` and `dy` values something like: `Math.sin(angle) * speed` and `Math.cos(angle) * speed` where speed is the speed of the ball. In the original code the ball speed is 2. 
 
 ## Homework
 
