@@ -98,6 +98,12 @@ You will set up ESLint with a Style guide used by professionals.
 
 https://eslint.org/docs/user-guide/getting-started
 
+### 0. **init npm**
+Create a package.json:
+```bash
+npm init -y
+```
+
 ### 1. **Install ESLint**
 First, install ESLint if you haven't already:
 ```bash
