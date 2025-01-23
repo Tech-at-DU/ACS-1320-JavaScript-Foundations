@@ -313,6 +313,24 @@ https://javascript.info/destructuring-assignment
 
 <!-- > -->
 
+## Challenge Problems
+
+### Challenge 1
+
+The tutorial works but isn't written well. Notice that the array that holds the list of brick objects. Look closely. Each of these objects stores the x and y position as 0 and 0. This doesn't make any sense!
+
+Now look at the draw the `drawBricks` fucntion. This is called every "frame" as the canvas is updated. Here the x and y properties are set. They are constantly calculated and set to the same value! 
+
+More effecient would be to set the initial values to the correct x and y positions when the array is created, and not update the values in `drawBricks`. 
+
+### Challenge 2
+
+Remember that `makeBo(x, y, width, height, color)` function? It might be useful in the Break Game! Implement it there! 
+
+### Challenge 3 
+
+
+
 ## Homework
 
 - [Assignment 2 ESLint.md](Assignments/Assignment-2-ESLint.md)
