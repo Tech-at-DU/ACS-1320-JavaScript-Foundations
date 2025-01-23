@@ -98,42 +98,40 @@ You will set up ESLint with a Style guide used by professionals.
 
 https://eslint.org/docs/user-guide/getting-started
 
-<!-- > -->
-
-1️⃣ **Setup npm**
-
-```
-npm init -y
+### 1. **Install ESLint**
+First, install ESLint if you haven't already:
+```bash
+npm install --save-dev eslint
 ```
 
-
-2️⃣ **Install ESLint** 
-
-```
-npm install eslint -g
-```
-
-3️⃣ **Setup a config file**
-
-```
-npx eslint --init
+### 2. **Install the Airbnb Style Guide**
+Use `install-peerdeps` to install the Airbnb configuration along with its required peer dependencies:
+```bash
+npx install-peerdeps --dev eslint-config-airbnb
 ```
 
-Use the answers below as you follow the setup process. 
+This command will install `eslint-config-airbnb` and all its required peer dependencies, such as `eslint-plugin-import`, `eslint-plugin-react`, and others.
 
-<!-- > -->
+### 3. **Manually Configure ESLint**
+If `npx eslint --init` does not handle the Airbnb configuration automatically, you can add it manually to your ESLint configuration file.
 
-**Choose these options:**
+1. Open or create the `.eslintrc` file in your project root.
+2. Add the Airbnb style guide under the `extends` property. For example:
+   ```json
+   {
+     "extends": ["airbnb"]
+   }
+   ```
 
-- How would you like to use ESLint? To check syntax, find problems, and enforce code style
-- What type of modules does your project use? None of these
-- Which framework does your project use? None of these
-- Does your project use TypeScript? No
-- Where does your project run? Browser
-- How would you like to define a style for your project? Use a popular style guide
-- Which style guide do you want to follow? Airbnb: https://github.com/airbnb/javascript 
-- What format do you want your config file to be in? JavaScript
-- Would you like to install them now with npm? Yes
+### 4. **Lint Your Code**
+Run ESLint to verify everything is working:
+```bash
+npx eslint .
+```
+
+### **Additional Tips**
+- If you're using a specific framework like React, ensure you include the necessary plugins, which should already be installed with `eslint-config-airbnb`.
+- If you prefer a specific configuration format (e.g., `.eslintrc.js` or `.eslintrc.yml`), adjust accordingly.
 
 <!-- > -->
 
