@@ -288,6 +288,18 @@ class Ball extends Sprite {
 }
 ```
 
+**Challenge Label Class**
+
+The `Label` class might extend `Sprite` and have a `text` or `label` property that sets the text it displays. The label would override the `render()` method to draw its text instead of drawing a rectangle. 
+
+You can use the `Label` to draw text onto the canvas in your game. 
+
+Note: width and height properties would be 0. These properties will be an imperfection but that's okay. 
+
+**Challenge Score and Lives classes**
+
+These classes could extend the `Label` class. These classes can have properties that display a fiexed string and a number. 
+
 <!-- > -->
 
 ![Inheritence Methods](Images/inheritence-methods.png)
