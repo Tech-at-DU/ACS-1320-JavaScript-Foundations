@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -9,10 +9,9 @@
     <link rel="stylesheet" href="./dist/reset.css" />
     <link rel="stylesheet" href="./dist/reveal.css" />
     <link rel="stylesheet" href="./dist/theme/black.css" id="theme" />
-    <link rel="stylesheet" href="./css/highlight/zenburn.css" />
+    <link rel="stylesheet" href="./css/highlight/base16/zenburn.css" />
 
     <link rel="stylesheet" href="./assets/Reveal/makeschool.css" />
-
 
     <script>
       document.write(
@@ -25,13 +24,18 @@
   </head>
   <body>
     <div class="reveal">
-      <div class="slides"><section  data-markdown><script type="text/template"><!-- .slide: data-background="./Images/header.svg" data-background-repeat="none" data-background-size="40% 40%" data-background-position="center 10%" class="header" -->
+      <div class="slides">
+        <section data-markdown data-separator="^\n<!-- > -->\n" data-separator-vertical="^\n<!-- v -->\n">
+          <textarea data-template>
+            <!-- .slide: data-background="./Images/header.svg" data-background-repeat="none" data-background-size="40% 40%" data-background-position="center 10%" class="header" -->
 # FEW 1.2 - Lesson 9 - Styling Components
 
 <!-- Put a link to the slides so that students can find them -->
 
 <!-- ➡️ [**Slides**](/Syllabus-Template/Slides/Lesson1.html ':ignore') -->
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ## Minute-by-Minute
 
 | **Elapsed** | **Time** | **Activity** |
@@ -42,18 +46,24 @@
 | 0:50 | 0:10 | BREAK |
 | 1:00 | 0:45 | In Class Activity II |
 | 1:45 | 0:05 | Wrap up review objectives |
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ## Why you should know this?
 
 Components can be styled with CSS. The component architecture and virtual DOM mean styles need to be handled a little differently with React projects.
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ## Learning Objectives
 
 1. Use CSS with React
 1. Organize CSS with Components 
 1. Describe BEM (Block Element Modifer) naming
 1. Use BEM
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ## Using Sketch 
 
 Sketch can be a valuable tool for designing websites. I recommend you plan your project with Sketch before starting to code. 
@@ -111,7 +121,9 @@ Do your best to style elements as closely as you can to what you want in your we
 - Set the fonts
 
 Later when you are applying styles right click elements in sketch and choose "Copy CSS Styles". While this will do all of the work it migth help you respolve the style properties needed for various elements. 
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ## Styling Comoponents
 
 https://reactjs.org/docs/faq-styling.html
@@ -191,7 +203,9 @@ Import that style sheet at the top of the component:
 - Cons: 
   - Has potential for name clashes
   - Requires careful naming of classes in style sheet
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ## Defining your Final Project
 
 Your final project should
@@ -199,28 +213,41 @@ Your final project should
 - Use react
 - Use React Router
 - Be worth putting in your portfolio
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 <!-- .slide: data-background="#087CB8" -->
 ## [**10m**] BREAK
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ## Lab
 
 
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ## Wrap Up (5 min)
 
 - Continue working on your current tutorial
 - Complete reading
 - Complete challenges
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ## Additional Resources
 
 1. Links to additional readings and videos
 
-</script></section></div>
+
+          </textarea>
+        </section>
+      </div>
     </div>
 
     <script src="./dist/reveal.js"></script>
+
+    <script src="./mermaid/dist/mermaid.min.js"></script>
 
     <script src="./plugin/markdown/markdown.js"></script>
     <script src="./plugin/highlight/highlight.js"></script>
@@ -248,6 +275,10 @@ Your final project should
         history: true,
         center: true,
         transition: 'default', // none/fade/slide/convex/concave/zoom
+        slideNumber: true,
+        highlight: {
+          highlightOnLoad: false
+        },
         plugins: [
           RevealMarkdown,
           RevealHighlight,
@@ -260,12 +291,29 @@ Your final project should
       // options from URL query string
       var queryOptions = Reveal().getQueryHash() || {};
 
-      var options = extend(defaultOptions, {"controls":true,"progress":true,"autoPlayMedia":false,"slideNumber":"c/t","showSlideNumber":"all","controlsTutorial":true,"controlsLayout":"edges","transition":"slide","transitionSpeed":"medium","minScale":0.5,"maxScale":3}, queryOptions);
+      var options = extend(defaultOptions, {"controls":true,"progress":true,"autoPlayMedia":false,"slideNumber":"c/t","showSlideNumber":"all","controlsTutorial":true,"controlsLayout":"edges","transition":"slide","transitionSpeed":"medium","minScale":0.5,"maxScale":3,"_":["Lessons/"],"static":"Slides"}, queryOptions);
     </script>
 
 
     <script>
       Reveal.initialize(options);
+      Reveal.addEventListener('ready', function (event) {
+        const blocks = Reveal.getRevealElement().querySelectorAll('pre code:not(.mermaid)');
+        const hlp = Reveal.getPlugin('highlight');
+        blocks.forEach(hlp.highlightBlock);
+      });
+    </script>
+
+    <script>
+      const mermaidOptions = extend({ startOnLoad: false }, {});
+      mermaid.startOnLoad = false;
+      mermaid.initialize(mermaidOptions);
+      const cb = function (event) {
+        mermaid.init(mermaidOptions, '.stack.present > .present pre code.mermaid');
+        mermaid.init(mermaidOptions, '.slides > .present:not(.stack) pre code.mermaid');
+      }
+      Reveal.addEventListener('ready', cb);
+      Reveal.addEventListener('slidetransitionend', cb);
     </script>
   </body>
 </html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -9,10 +9,9 @@
     <link rel="stylesheet" href="./dist/reset.css" />
     <link rel="stylesheet" href="./dist/reveal.css" />
     <link rel="stylesheet" href="./dist/theme/black.css" id="theme" />
-    <link rel="stylesheet" href="./css/highlight/zenburn.css" />
+    <link rel="stylesheet" href="./css/highlight/base16/zenburn.css" />
 
     <link rel="stylesheet" href="./assets/Reveal/makeschool.css" />
-
 
     <script>
       document.write(
@@ -25,22 +24,31 @@
   </head>
   <body>
     <div class="reveal">
-      <div class="slides"><section  data-markdown><script type="text/template"><!-- .slide: data-background="./Images/header.svg" data-background-repeat="none" data-background-size="40% 40%" data-background-position="center 10%" class="header" -->
+      <div class="slides">
+        <section data-markdown data-separator="^\n<!-- > -->\n" data-separator-vertical="^\n<!-- v -->\n">
+          <textarea data-template>
+            <!-- .slide: data-background="./Images/header.svg" data-background-repeat="none" data-background-size="40% 40%" data-background-position="center 10%" class="header" -->
 # ACS 1320 - Lesson 3 - Code Structure
 
 <!-- Put a link to the slides so that students can find them -->
 
 ➡️ [**Slides**](https://docs.google.com/presentation/d/1hHmOvX6HLqNt-8E94Rj-N_t7z-QUAVQ1rii_cQIIthw/edit?usp=sharing)
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ## Class Learning Objectives
 
 1. Use for Loops 
 1. Use Arrays
 1. Use Objects
 1. Use Conditional statements
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 # Discuss Breakout tutorial
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 Discuss these questions with someone else in class:
 
 - How does the break out game work? (general overview)
@@ -48,15 +56,23 @@ Discuss these questions with someone else in class:
 - The application state is the data that describes the state of your application. 
  - How does break out define its application state?
  - The values stored by the game and how are they updated?
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ## How does Break Out work? 
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 The MDN break out code organizes its code in the following areas. 
 
 It uses variable to hold values, constants are values that don't change, functions encapsulate blocks of code and some code that initializes the game. 
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ### Variables
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 These variables hold values that are used by the game to control and display game elements. 
 
 - `bricks` - an **array** of objects `{ x, y, status }`
@@ -66,9 +82,13 @@ These variables hold values that are used by the game to control and display gam
 - `leftPressed`, `rightPressed` - **boolean** tracks when the arrow keys are pressed. 
 - `score` - **number** holds the score
 - `lives` - **number** holds lives 
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ### Constants 
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 Constants are fixed values used by the game that don't change. 
 
 - `canvas` - a reference to the canvas
@@ -76,7 +96,9 @@ Constants are fixed values used by the game that don't change.
 - `ballRadius` - 
 - `paddleHeight` - 
 - `paddleWidth` - 
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 - `brickRowCount` - Number of rows of bricks
 - `brickColumnCount` - Number columns of bricks
 - `brickWidth` - 
@@ -84,9 +106,13 @@ Constants are fixed values used by the game that don't change.
 - `brickPadding` - 
 - `brickOffsetTop` - space between the bricks 
 - `brickOffsetLeft` - Space between the bricks
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ### Functions 
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 - `drawScore()` - Draws the score
 - `drawLives()` - Draws lives 
 - `drawBricks()` - Draws bricks 
@@ -94,10 +120,14 @@ Constants are fixed values used by the game that don't change.
 - `keyDownHandler()` - looks for right or left arrow pressed down
 - `keyUpHandler()` - Looks for the left or right arrow key released. 
 - `mouseMoveHandler()` - Looks for mouse move events and sets the paddle position. 
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 - `drawBall()` - Draws the ball 
 - `drawPaddle()` - draws the paddle 
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 - `draw()` - Does a lot
   - clears the canvas
   - moves the ball 
@@ -106,9 +136,13 @@ Constants are fixed values used by the game that don't change.
   - moves the paddle if the arrow keys are pressed 
   - calls all of the other functions: `drawBricks()`, `drawBall()`, `drawPaddle()`, `drawScore()`, `drawLives()`, `collisionDetection()`
   - Calls `requestAnimationFrame(draw)` which runs the draw function on the frame update. 
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ### Code just hanging out 
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 Some of the code is not in a function and is not a variable declaration and initialization. 
 
 This code is run once when the page is loaded. You can think of it as initializing the program. 
@@ -116,9 +150,13 @@ This code is run once when the page is loaded. You can think of it as initializi
 - For loop initializes bricks array
 - Adding event listeners
 - Starting the game loop by calling `draw()`
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ### Breakout Flow
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 Discuss the flow of code. 
 
 - Initialization
@@ -127,7 +165,9 @@ Discuss the flow of code.
  - Define functions
  - Populate the bricks array 
  - Start the game
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 - Game Loop
  - Clear canvas
  - drawBricks()
@@ -146,11 +186,17 @@ Discuss the flow of code.
  - Move Ball
  - Check for keyboard input
  - Registers `draw()` to be called again when the screen refreshes. The program continues by repeating everything from Game Loop down.
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ## Challenges
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 Try these challenges to improve your understanding of the breakout code by improving the code.
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ### Challenge 1 - Organize Code 
 
 Code works better and is easier to understand when it is organized.
@@ -162,13 +208,17 @@ Code works better and is easier to understand when it is organized.
  - initialization code
 
 Use comments to mark each of the areas above. 
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ### Challenge 2 - Make Constants
 
 Identify values that could be constants. These would be any value that you might want to change in the future. Making it a constant and defining it at the top will make it easy to find and change in the future.
 
 - color values are a good example. Move these into your constants section
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 What should you define as new constants? Anything that is a string, especially if it appears more than once. Here are some suggestions: 
 
 ```
@@ -178,20 +228,28 @@ const ARROW_LEFT = 'ArrowLeft'
 const RIGHT = 'RIGHT'
 condst LEFT = 'LEFT'
 ```
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ### Challenge 3 - Define new functions 
 
 Storing your code in functions is a best practice. The tutorial code does an okay job but doesn't go far enough, you can improve on this! 
 
 - Define an initialization function and move all of the initialization code here. 
 - You'll need to call your initialization function to initialize the game. 
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ### Challenge 4 - Define new functions 
 
 Functions are best when they do one thing. When a function does too much it's a sign of poor quality code. 
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 The `draw()` function does too much. Functions like `drawPaddle()`, `drawBall()`, `drawBricks()` are good they have one job that they do. Notice these functions are generally shorter. 
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 The draw function currently does all of this: 
 
 - Clear canvas
@@ -211,7 +269,9 @@ The draw function currently does all of this:
 - Move Ball
 - Check for keyboard input
 - Registers `draw()` to be called again when the screen refreshes.
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 Notice that one of the things the draw function is responsible for is calling other functions. 
 
 Your job is to extract code from the draw function and create some new functions. Make the following functions using code you remove from draw then add a call to the new function inside draw. 
@@ -220,13 +280,19 @@ Your job is to extract code from the draw function and create some new functions
 - `function collisionCanvas()` - Checks for collision of the ball with the edges of the canvas. 
 - `function collisionPaddle()` - Checks for collision with between the ball and the paddle.
 - `function checkKeys()` - Moves the paddle if the left or right arrow is pressed. 
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ### Challenge 5 - Identify duplicate code
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 Identify Duplicate code. Any time you are doing the same operation more than once you should make a function. This will avoid errors in the future and make it easier to make changes and find problems.
 
 - Look at the array where the bricks array is initialized. Each brick has an x and y of 0. Now, look at the `drawBricks` function. Here the x and y of each brick is calculated each time the bricks are drawn. Your goal is to initialize bricks with the correct x and y. Now just use the x and y of each in `drawBricks`.
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ### Challenge 6 - Store bricks in a single Array
 
 Currently the bricks are stored in a two dimentional array. This is adds complexity for little return. It migth be better to have all bricks in a single array. 
@@ -280,7 +346,9 @@ const c = i % brickColumnCount
 const r = Math.floor(i / brickColumnCount) 
 // ...
 ```
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ### Challenge 6 - More Challenges 
 
 - Change the color of the game elements. Use a different color for the ball, paddle, bricks, and background. 
@@ -288,13 +356,17 @@ const r = Math.floor(i / brickColumnCount)
 - Make the ball change color each time it hits a brick
 - Change the number of rows and columns of bricks. For example, make 4 rows or 6 columns of bricks. 
 - Make bricks 
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ### Challenge 7 - Draw something on the background
 
 The game currently fills the canvas with a light gray then draws the game objects.
 
 your goal with this challenge is to draw something interesting on the background. do this by creating a function that draws the background, call this new function from at the top of the draw function. 
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ### More Challenges
 
 How would you solve these problems? Discuss these with someone else in the class. 
@@ -306,11 +378,15 @@ How would you solve these problems? Discuss these with someone else in the class
 5. Imagine each time all the bricks are cleared a new row of bricks is added?
 6. Imagine bricks take more than one hit to remove? 
 7. One brick is special when hit it releases a second ball? 
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ## Wrap Up (5 min)
 
 - Review
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ## Additional Resources
 
 1. 
@@ -605,10 +681,15 @@ draw();
 | 0:10 | 1:10 | [Expanding the game](#expanding-the-game) |
 | 0:10 | 1:20 | [OOP](#oop) |
 | 0:60 | 2:20 | [Challenges](#challenges) | -->
-</script></section></div>
+
+          </textarea>
+        </section>
+      </div>
     </div>
 
     <script src="./dist/reveal.js"></script>
+
+    <script src="./mermaid/dist/mermaid.min.js"></script>
 
     <script src="./plugin/markdown/markdown.js"></script>
     <script src="./plugin/highlight/highlight.js"></script>
@@ -636,6 +717,10 @@ draw();
         history: true,
         center: true,
         transition: 'default', // none/fade/slide/convex/concave/zoom
+        slideNumber: true,
+        highlight: {
+          highlightOnLoad: false
+        },
         plugins: [
           RevealMarkdown,
           RevealHighlight,
@@ -648,12 +733,29 @@ draw();
       // options from URL query string
       var queryOptions = Reveal().getQueryHash() || {};
 
-      var options = extend(defaultOptions, {"controls":true,"progress":true,"autoPlayMedia":false,"slideNumber":"c/t","showSlideNumber":"all","controlsTutorial":true,"controlsLayout":"edges","transition":"slide","transitionSpeed":"medium","minScale":0.5,"maxScale":3}, queryOptions);
+      var options = extend(defaultOptions, {"controls":true,"progress":true,"autoPlayMedia":false,"slideNumber":"c/t","showSlideNumber":"all","controlsTutorial":true,"controlsLayout":"edges","transition":"slide","transitionSpeed":"medium","minScale":0.5,"maxScale":3,"_":["Lessons/"],"static":"Slides"}, queryOptions);
     </script>
 
 
     <script>
       Reveal.initialize(options);
+      Reveal.addEventListener('ready', function (event) {
+        const blocks = Reveal.getRevealElement().querySelectorAll('pre code:not(.mermaid)');
+        const hlp = Reveal.getPlugin('highlight');
+        blocks.forEach(hlp.highlightBlock);
+      });
+    </script>
+
+    <script>
+      const mermaidOptions = extend({ startOnLoad: false }, {});
+      mermaid.startOnLoad = false;
+      mermaid.initialize(mermaidOptions);
+      const cb = function (event) {
+        mermaid.init(mermaidOptions, '.stack.present > .present pre code.mermaid');
+        mermaid.init(mermaidOptions, '.slides > .present:not(.stack) pre code.mermaid');
+      }
+      Reveal.addEventListener('ready', cb);
+      Reveal.addEventListener('slidetransitionend', cb);
     </script>
   </body>
 </html>

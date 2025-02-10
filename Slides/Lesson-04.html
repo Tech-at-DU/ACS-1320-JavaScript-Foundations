@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -9,10 +9,9 @@
     <link rel="stylesheet" href="./dist/reset.css" />
     <link rel="stylesheet" href="./dist/reveal.css" />
     <link rel="stylesheet" href="./dist/theme/black.css" id="theme" />
-    <link rel="stylesheet" href="./css/highlight/zenburn.css" />
+    <link rel="stylesheet" href="./css/highlight/base16/zenburn.css" />
 
     <link rel="stylesheet" href="./assets/Reveal/makeschool.css" />
-
 
     <script>
       document.write(
@@ -25,37 +24,46 @@
   </head>
   <body>
     <div class="reveal">
-      <div class="slides"><section  data-markdown><script type="text/template"><!-- .slide: data-background="./Images/header.svg" data-background-repeat="none" data-background-size="40% 40%" data-background-position="center 10%" class="header" -->
-# ACS 1320 - Lesson 4 - OOP
+      <div class="slides">
+        <section data-markdown data-separator="^\n<!-- > -->\n" data-separator-vertical="^\n<!-- v -->\n">
+          <textarea data-template>
+            <!-- .slide: data-background="./Images/header.svg" data-background-repeat="none" data-background-size="40% 40%" data-background-position="center 10%" class="header" -->
+# ACS 1320 - Lesson 3 - OOP
 
-<!-- Put a link to the slides so that students can find them -->
-
-➡️ [**Slides**](https://docs.google.com/presentation/d/1nheTZgY5fXrCbiw9hst0XGkr_fpnlAq44y7o5GrYvS4/edit?usp=sharing)
-</script></section><section  data-markdown><script type="text/template">
 ## Overview 🌏
 
 Class Objects and OOP. Use Object Oriented programming techniques to make your code modular and organized. 
 
 You've written lots of code so far you've probably incurred some [technical debt](https://en.wikipedia.org/wiki/Technical_debt). It's time to pay this off by refactoring. 
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ## Learning Objectives 🥸
 
 - Use Refactoring to improve code quality
 - Build systems with Objects 
 - Define classes 
 - Use dependency injection
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ## Refactoring Code 🍜
 
 The goal of [refactoring code](https://en.wikipedia.org/wiki/Code_refactoring) in short is to improve your existing code base and put it into a shape that will accept future updates. 
-</script></section><section  data-markdown><script type="text/template">
-Refactoring is not about adding new features. Instead, you want to have the **same functionality** with an **improved codebase** underneath it.
+
+<!-- > -->
+
+Refactoring is not about adding new features! Instead, you want to have the **same functionality** with an **improved codebase** underneath it.
 
 🏆
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ## Creating classes ⚒️
-</script></section><section  data-markdown><script type="text/template">
-In JavaScript a Class is really a function and a function is really an object. All functions are just objects. Seriously try this: 
+
+<!-- > -->
+
+In JavaScript a Class starts as a function and a function is an object. Seriously, try this: 
 
 ```JS
 function FunkyTown() {
@@ -67,14 +75,21 @@ FunkyTown.band = 'Lipps Inc'
 console.log(FunkyTown.band) // Lipps Inc
 console.log(FunkyTown())    // "Won't you take me to"
 ```
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 A function is also a class! Yep, it sure is. Try this: 
 
 ```JS
 const myTown = new FunkyTown()
+console.log(myTown) // {} <-- logs an empty object
 ```
-</script></section><section  data-markdown><script type="text/template">
-Wait we need to add some properties to our object. Let's make a dog! 🐶
+
+Using the key word `new` in front of the function name returns a new empty object!
+
+<!-- > -->
+
+Wait, don't instances need some properties? Let's make a dog! 🐶
 
 ```JS 
 function Dog(name) {
@@ -84,8 +99,8 @@ function Dog(name) {
 const myDog = new Dog('Spot')
 console.log(myDog.name) // Spot
 ```
-</script></section><section  data-markdown><script type="text/template">
-We use the `new` keyword when creating instances. 
+
+<!-- > -->
 
 This creates a new object and assigns it to `this`. 
 
@@ -96,8 +111,10 @@ new Dog() // this = {}
 
 See how name got assigned to `this` in the Dog function? 
 
-The Dog function is the constructor for our class.
-</script></section><section  data-markdown><script type="text/template">
+The Dog function is the constructor for your class.
+
+<!-- > -->
+
 How do we add a method? 
 
 ```JS 
@@ -114,16 +131,22 @@ console.log(myDog.name) // Spot
 myDog.bark() // Spot says: gimme a biscuit!
 ```
 
-Methods are added to the prototype property! 
-</script></section><section  data-markdown><script type="text/template">
-Q: I heard you could use the class keyword? 🤔
+Methods are added to the prototype property! You must use a `function` type function. Arrow functions don't work here! 
 
-A: Yes you can it's a new syntax. It's better, you should use it. 💪
-</script></section><section  data-markdown><script type="text/template">
-Q: Is it different? 🤔
+<!-- > -->
 
-A: Nope. It's the same thing but looks different. We call it "syntactical sugar." 🍰 It's a nicer flavor of the same old thing. 
-</script></section><section  data-markdown><script type="text/template">
+**Q:** I heard you could use the class keyword? 🤔
+
+**A:** Yes you can it's a new syntax. It's better, you should use it. 💪
+
+<!-- > -->
+
+**Q:** Is it different? 🤔
+
+**A:** Nope, it's the same thing. We call it "syntactical sugar." 🍰 It's a nicer flavor of the same old thing. 
+
+<!-- > -->
+
 How to make a Dog class 🐕 with the class keyword:
 
 ```JS 
@@ -137,17 +160,23 @@ class Dog {
   }
 }
 
-const myDog = new Dog('Spot')
+const myDog = new Dog('Spot') // creates a new dog instance and calls the constructor. 
 console.log(myDog.name) // Spot
 myDog.bark() // Spot says: gimme a biscuit!
 ```
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 NOTE! We used the `constructor()` function to initialize the class. 
 
-Notice that all of the initial property values (`name`) are passed into the function here and assigned to `this`. **You must do this to store a value on the newly created class instance.**
-</script></section><section  data-markdown><script type="text/template">
+Notice that all of the initial property values (`name`) are passed into the constructor function and assigned to `this`. **You must assign values to this to store a value on the newly created class instance.**
+
+<!-- > -->
+
 ### What about inheritence? 👩‍👧‍👦
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 You can do that with JS. SpaceDogs can shoot lasers from their eyes. 
 
 ```JS 
@@ -162,31 +191,43 @@ class SpaceDog extends Dog {
   }
 }
 
-const spaceDog = new SapceDog('Rocko', 'Mars')
+const spaceDog = new SpaceDog('Rocko', 'Mars')
 console.log(spaceDog.name) // Rocko
 spaceDog.bark() // Rocko says: gimme a biscuit!
 spaceDog.shootLaser() // Rocko shoots lasers!
 spaceDog.planet // Mars
 ```
-</script></section><section  data-markdown><script type="text/template">
-We use the extends keyword to create a subclass of a prarent or super class. 
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
+We use the `extends` keyword to create a subclass of a prarent or super class. 
+
+<!-- > -->
+
 NOTE! You must call `super()` in the constructor. 🦹‍♀️ 
 
 Note! Calling `super()` you must pass any properties required by consructor of the super class. This is how `name` is set in our super class `Dog`. 🦸‍♂️
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ## Modules 📦
-</script></section><section  data-markdown><script type="text/template">
+
+Modules allow you to organize code. Modules allow us to import and export elements. Without modules all of your code is global! 
+
+<!-- > -->
+
 Be sure to declare your script as a module: 
 
 Edit index.html:
 
 ```HTML
-<script src="main.js" type="module">__SCRIPT_END__
+<script src="main.js" type="module"></script>
 ```
 
-Add type="module"
-</script></section><section  data-markdown><script type="text/template">
+Add `type="module"`
+
+<!-- > -->
+
 Use import and export to share things between modules. 
 
 Export your Dog from Dog.js:
@@ -195,24 +236,34 @@ Export your Dog from Dog.js:
 //Dog.js
 class Dog() { ... }
 
-export default Dog
+export default Dog // Exports Dog from this module
 ```
 
 Import your Dog into main.js:
 
 ```JS
 //main.js
-import Dog from './Dog.js'
+import Dog from './Dog.js' // Imports Dog from Dog.js
 ```
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ### Creating Classes for Breakout
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 The engineering team has decided to **OOP**ify the whole game. 
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 **You** are in charge of the **refactor**. 
-</script></section><section  data-markdown><script type="text/template">
-You need to make this game **Object Oriented**.
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
+You need to refactor this game as **Object Oriented**. This will allow us to add new features in the future. 
+
+<!-- > -->
+
 You need to make a class for each of the game objects.
 
 - **Brick**
@@ -220,25 +271,33 @@ You need to make a class for each of the game objects.
 - **Paddle**
 - **Score**
 - **Lives**
-</script></section><section  data-markdown><script type="text/template">
-Objects give you an **abstract way to think about and visualize your code**. 
-</script></section><section  data-markdown><script type="text/template">
-You'll be making a **Class for each** of these. 
 
-Define properties in each class with the values that the object needs to do it's job. 
-</script></section><section  data-markdown><script type="text/template">
+<!-- > -->
+
+Objects give you an **abstract way to think about and visualize your code**. Rather than having global variables that represent the ball and the paddle you will have objects that represent these and the variables that control their behavior now exist inside instances of these classes. 
+
+<!-- > -->
+
+You'll be making a **Class for each**. Define properties in each class with the values that the object needs to do it's job. 
+
+<!-- > -->
+
 ### Sprite class
-</script></section><section  data-markdown><script type="text/template">
-A Sprite is a game object. Think about it like a rectangle on the screen. The game is built with Sprites. 
 
-Everything on the screen has an x and y position and most things have a width and height and a color. 
+<!-- > -->
 
-- x
-- y
-- width
-- height
-- color
-</script></section><section  data-markdown><script type="text/template">
+A Sprite is a game object. Think about it like a rectangle on the screen. The game is built with Sprites. A rectangle has a location, size and color. 
+
+Everything on the screen has an x and y position and most things have a width and height and a color. Sprite class should define the properties: 
+
+- `x`
+- `y`
+- `width`
+- `height`
+- `color`
+
+<!-- > -->
+
 ```JS
 class Sprite {
   constructor(x = 0, y = 0, width = 100, height = 100, color = '#f00') {
@@ -252,8 +311,10 @@ class Sprite {
 
 export default Sprite
 ```
-</script></section><section  data-markdown><script type="text/template">
-A Sprite class should have a `render()` method. This method needs to take in the ctx as a parameter. 
+
+<!-- > -->
+
+A Sprite class should have a `render()` method. This method needs to take in the canvas context as a parameter since this is required to draw the object. 
 
 ```JS
 class Sprite {
@@ -268,18 +329,26 @@ class Sprite {
   }
 }
 ```
-</script></section><section  data-markdown><script type="text/template">
-Q: Why pass the `ctx` as a parameter it's a global variable? 
 
-A: We want to avoid global variables! These open our code up to problems. 
+<!-- > -->
 
-It also means the code only works when this mysterious value `ctx` happens to be defined in the global scope. If you were to use this class in another project error messages would start asking you why the mysterious `ctx` is not defined. 
-</script></section><section  data-markdown><script type="text/template">
-Passing `ctx` as a parameter is safe and reliable. The variable is scoped to this method. Any programmer can see where it is defined and decide how they will provide it. 
-</script></section><section  data-markdown><script type="text/template">
+**Q:** Why pass the `ctx` as a parameter it's a global variable? 
+
+**A:** We want to avoid global variables! These open our code up to problems. 
+
+It also means the code only works when this mysterious value `ctx` happens to be defined in the global scope. If you were to use this class in another project error messages would start asking you why the mysterious `ctx` is not defined.
+
+<!-- > -->
+
+Passing `ctx` as a parameter is safe and reliable, the variable is scoped to this method, any programmer can see where it is defined and decide how they will provide it. 
+
+<!-- > -->
+
 ### Brick Class 🧱
-</script></section><section  data-markdown><script type="text/template">
-The Brick class can extend the Sprite class. Brick only adds a single new property. A brick can also initialize itself to fixed expected values. See the width, height, and color. 
+
+<!-- > -->
+
+The Brick class can extend the Sprite class. Brick adds a new property `status` to `Sprite`. A brick can also initialize itself to fixed expected values. See the width, height, and color. 
 
 ```JS
 class Brick extends Sprite {
@@ -289,12 +358,17 @@ class Brick extends Sprite {
   }
 }
 ```
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 A brick is just a Sprite with an extra property called `status` and some standard values for `width`, `height`, and `color`.
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 Use the brick class! The bricks are stored in an array and initialized like this in the original code: 
 
 ```JS
+// original code 
 var bricks = [];
 for (var c = 0; c < brickColumnCount; c++) {
   bricks[c] = [];
@@ -303,7 +377,9 @@ for (var c = 0; c < brickColumnCount; c++) {
   }
 }
 ```
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 The brick object is here: 
 
 ```JS
@@ -315,15 +391,20 @@ The Object here has the properties: x, y, status.
 ```JS
 { x: 0, y: 0, status: 1 }
 ```
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 We can now replace this with: 
 
 ```JS
-bricks[c][r] = new Brick(0, 0)
+// New code! 
+bricks[c][r] = new Brick(0, 0) // Make an instance of Brick
 ```
 
 Here the two parameters are the x and y.
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 Let's be clear! 
 
 ```JS
@@ -335,13 +416,19 @@ new Brick(0, 0)
 ```
 
 Make an object with the same properties. 
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ### Ball class ⚽️
-</script></section><section  data-markdown><script type="text/template">
-For example, the Ball class might look like this: 
+
+A `Ball` class might add properties of `dx`, `dy`, and `radius` to Sprite. 
+
+<!-- > -->
+
+The Ball class might look like this: 
 
 ```JavaScript
-class Ball extends Sprite{
+class Ball extends Sprite {
   constructor(x = 0, y = 0, radius = 10, color = "#0095DD") {
     super(x, y, 0, 0, color)
     this.radius = radius;
@@ -363,16 +450,24 @@ class Ball extends Sprite{
   }
 }
 ```
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 Here `Ball` Class defines instances which will have four properties. Two of the properties, `radius`, and `color` are assigned when the Ball is initialized. `color` has a default value. 
 
 - `color`: the color the ball will render as
 - `radius`: the size of the ball measured as it's radius
 - `x`: the position of the ball on the x-axis of a canvas
 - `y`: the position of the ball on the y-axis of a canvas
-</script></section><section  data-markdown><script type="text/template">
+
+Notice the Ball Overrides the render method since it must draw itself as a circle! Remember Sprites only draw a rectangle. 
+
+<!-- > -->
+
 ### Making an instance
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 Make instance of a class like this: 
 
 ```JS 
@@ -382,13 +477,19 @@ console.log( ball.x ) // 200
 console.log( ball.y ) // 200
 console.log( ball.radius ) // 10
 ```
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ### What about drawing the ball?
-</script></section><section  data-markdown><script type="text/template">
-Objects like: Ball, Brick, and Paddle own all of the properties they need to render themselves on canvas. 
+
+<!-- > -->
+
+Objects like: `Ball`, `Brick`, and `Paddle` own all of the properties they need to render themselves on canvas. 
 
 It makes sense they should own their render method. 
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 These objects should have a `render()` method.
 
 ```JS 
@@ -405,11 +506,21 @@ class Ball {
 ```
 
 **Important**: The render method should take the canvas context as a parameter. 
-</script></section><section  data-markdown><script type="text/template">
-### What about this global references?
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
+### What about global vars?
+You should try to minimize the use of global vars. The original tutorial used many global variables. 
+
+- Q: What global variables were used in the original tutorial?
+- Q: Where are these values now that you have refactored your code into classes? 
+
+<!-- > -->
+
 The canvas context `ctx` is a global variable in the original code. To reference a global variable in a class is bad practice. Imagine you needed to change the name of that variable, you'd have to make lots changes. What if you wanted to use this class in another project, that project would have to define a variable with the same name. 
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 A better way to handle this is to pass the *dependancy* into the class as a parameter. 
 
 ```JS 
@@ -426,10 +537,18 @@ class Ball {
     ctx.closePath();
   }
 }
+
+const ball = new Ball()
+ball.render(ctx) // pass the global ctx to ball.render()
 ```
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ### Dependency Injection 💉
-</script></section><section  data-markdown><script type="text/template">
+
+
+<!-- > -->
+
 Call this: *dependency injection* 
 
 ```JS 
@@ -450,7 +569,9 @@ class Ball {
 const b = new Ball(200, 200, 10)
 b.render(ctx) // pass the cts as an argument! 
 ```
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 **Calling methods and passing dependencies.**
 
 ```JS 
@@ -465,11 +586,15 @@ function draw() {
   ...
 }
 ```
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ### Lab
 
 Start working on [Assignment 3](../Assignments/Assignment-3-OOP.md)
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ### Classes
 
 Read up on classes in the JS docs: 
@@ -479,11 +604,15 @@ Read up on classes in the JS docs:
 ## After Class 
 
 - [Assignment 3 OOP](../Assignments/Assignment-3-OOP.md)
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ## Additional Resources
 
 1. Video Playlist walking through the entire assignment: https://www.youtube.com/playlist?list=PLoN_ejT35AEiSYr-OhYV-C6uWZgPLBMZM
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 <!-- ## Minute-by-Minute
 
 | **Elapsed** | **Time** | **Activity** |
@@ -499,10 +628,15 @@ Read up on classes in the JS docs:
 | 2:10 | 0:15 | [Post Lab Q & A](#after-lab) |
 | 2:35 | 0:15 | [Dependency Injection](#dependency-injection) |
 | 2:45 | 0:10 | Review Homework | -->
-</script></section></div>
+
+          </textarea>
+        </section>
+      </div>
     </div>
 
     <script src="./dist/reveal.js"></script>
+
+    <script src="./mermaid/dist/mermaid.min.js"></script>
 
     <script src="./plugin/markdown/markdown.js"></script>
     <script src="./plugin/highlight/highlight.js"></script>
@@ -530,6 +664,10 @@ Read up on classes in the JS docs:
         history: true,
         center: true,
         transition: 'default', // none/fade/slide/convex/concave/zoom
+        slideNumber: true,
+        highlight: {
+          highlightOnLoad: false
+        },
         plugins: [
           RevealMarkdown,
           RevealHighlight,
@@ -542,12 +680,29 @@ Read up on classes in the JS docs:
       // options from URL query string
       var queryOptions = Reveal().getQueryHash() || {};
 
-      var options = extend(defaultOptions, {"controls":true,"progress":true,"autoPlayMedia":false,"slideNumber":"c/t","showSlideNumber":"all","controlsTutorial":true,"controlsLayout":"edges","transition":"slide","transitionSpeed":"medium","minScale":0.5,"maxScale":3}, queryOptions);
+      var options = extend(defaultOptions, {"controls":true,"progress":true,"autoPlayMedia":false,"slideNumber":"c/t","showSlideNumber":"all","controlsTutorial":true,"controlsLayout":"edges","transition":"slide","transitionSpeed":"medium","minScale":0.5,"maxScale":3,"_":["Lessons/"],"static":"Slides"}, queryOptions);
     </script>
 
 
     <script>
       Reveal.initialize(options);
+      Reveal.addEventListener('ready', function (event) {
+        const blocks = Reveal.getRevealElement().querySelectorAll('pre code:not(.mermaid)');
+        const hlp = Reveal.getPlugin('highlight');
+        blocks.forEach(hlp.highlightBlock);
+      });
+    </script>
+
+    <script>
+      const mermaidOptions = extend({ startOnLoad: false }, {});
+      mermaid.startOnLoad = false;
+      mermaid.initialize(mermaidOptions);
+      const cb = function (event) {
+        mermaid.init(mermaidOptions, '.stack.present > .present pre code.mermaid');
+        mermaid.init(mermaidOptions, '.slides > .present:not(.stack) pre code.mermaid');
+      }
+      Reveal.addEventListener('ready', cb);
+      Reveal.addEventListener('slidetransitionend', cb);
     </script>
   </body>
 </html>

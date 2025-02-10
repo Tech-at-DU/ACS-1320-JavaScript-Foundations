@@ -237,11 +237,11 @@ You need to refactor this game as **Object Oriented**. This will allow us to add
 
 You need to make a class for each of the game objects.
 
-- **Brick**
-- **Ball**
-- **Paddle**
-- **Score**
-- **Lives**
+- **Brick** (draws a single brick)
+- **Ball** (draws the ball)
+- **Paddle** (draws the paddle)
+- **Score** (draws the score)
+- **Lives** (draws the lives left)
 
 <!-- > -->
 

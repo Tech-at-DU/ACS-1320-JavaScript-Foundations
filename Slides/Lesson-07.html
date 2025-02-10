@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -9,10 +9,9 @@
     <link rel="stylesheet" href="./dist/reset.css" />
     <link rel="stylesheet" href="./dist/reveal.css" />
     <link rel="stylesheet" href="./dist/theme/black.css" id="theme" />
-    <link rel="stylesheet" href="./css/highlight/zenburn.css" />
+    <link rel="stylesheet" href="./css/highlight/base16/zenburn.css" />
 
     <link rel="stylesheet" href="./assets/Reveal/makeschool.css" />
-
 
     <script>
       document.write(
@@ -25,17 +24,24 @@
   </head>
   <body>
     <div class="reveal">
-      <div class="slides"><section  data-markdown><script type="text/template"><!-- .slide: data-background="./Images/header.svg" data-background-repeat="none" data-background-size="40% 40%" data-background-position="center 10%" class="header" -->
+      <div class="slides">
+        <section data-markdown data-separator="^\n<!-- > -->\n" data-separator-vertical="^\n<!-- v -->\n">
+          <textarea data-template>
+            <!-- .slide: data-background="./Images/header.svg" data-background-repeat="none" data-background-size="40% 40%" data-background-position="center 10%" class="header" -->
 # ACS 1320 - Lesson 7 - Single Page Applications
 
 <!-- Put a link to the slides so that students can find them -->
 
 <!-- ➡️ [**Slides**](/Syllabus-Template/Slides/Lesson1.html ':ignore') -->
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 # Overview
 
 Today we will talk about Single Page Applications, what they are, and one of the frameworks/libraries used to make them: React.
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ## Learning Objectives
 
 By the end of the class you should be able to:
@@ -45,41 +51,63 @@ By the end of the class you should be able to:
 1. Use React and `Create React App` to create a single page application
 1. Use JSX to define UI
 1. Create components with JS
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ## Single Page Applications ☝️
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 A single application is a Single webpage that acts like a full application in your browser.
 
 ☝️ 🌏
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 Single Page Applications are web pages that act like multipage static sites but are built from a single HTML file. 
 
 ☝️ ➡️ 📄 📄 📄
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 **These pages don't load or reload new HTML files. Instead, they rewrite the content of the existing HTML page to show new content.**
 
 Read this:
 
 https://flaviocopes.com/single-page-application/
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 Discuss.
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 # React ⚛
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 React is a popular library/framework for making Single Page Applications.
 
 ☝️ ⚛️ 🌏
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 Here is what you need to know about React 🧐
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 React projects are written in JS
 
 ⚛️
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 React uses ES6 and must be compiled with webpack and babel
 
 ⚙️
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 React applications are built with components.
 
 🧱
@@ -87,16 +115,22 @@ React applications are built with components.
 Components are the building blocks of React Applications
 
 🏡
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 React uses JSX 🛠
 
 - JSX is an extension of the JavaScript language used to generate HTML
 - JSX has it's own syntax
 
 
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ## Getting started
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 Make your first React app.
 
 Use the Terminal to navigate a directory where you will build your first React Project.
@@ -104,7 +138,9 @@ Use the Terminal to navigate a directory where you will build your first React P
 ```
 npx create-react-app my-first-app
 ```
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 This command creates a new react starter project using the Create React tool.
 
 ```
@@ -112,7 +148,9 @@ my-first-app
 ``` 
 
 would be the name of your app.
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 Run your app by navigating to the folder with:
 
 ```
@@ -122,21 +160,31 @@ cd my-first-app
 Then launch the project with:
 
 ```
-yarn start
+npm start
 ```
 
 This runs the start script in package.json. You could alternately use:
 
 ```
-npm start
+yarn start
 ```
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 What's the difference between yarn and npm?
 
 https://stackshare.io/stackups/npm-vs-yarn
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
+If you forget the commands above they are all in the Readme.md that is included with the create-react-app starter code. Go find it now and take a look, there is a lot more useful info there. 
+
+<!-- > -->
+
 ### Tour the React Project
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 The React project is a folder with several files and folders.
 
 - **node_modules** - Contains all of the packages downloaded from npm
@@ -145,9 +193,13 @@ The React project is a folder with several files and folders.
 - **README.md** - A default Read for Create React App you should replace this!
 - **scr** - Your source code! You will do all of your work here
 - **yarn.lock** - ignore this it's auto-generated by yarn
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 You'll do all of your work in src take a look at it.
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 - **src**
   - **App.css** - CSS for App component
   - **App.js** - App Component
@@ -157,16 +209,22 @@ You'll do all of your work in src take a look at it.
   - **logo.svg** - It's the picture used in the default app
   - **serviceWorker.js** - optional code for special purposes ignore this
   - **setupTests.js** - more optional code testing, ignore this
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ## Components and JSX
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 Edit the existing components.
 
 Look at **App.js**. This is a function that returns some HTML. Make a few changes:
 
 - add an h1 tag - `<h1>Hello World</h1>`
 - add another - `<h2>Foo Bar</h2>`
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 What's going on here? **This is JSX.** It looks like HTML.
 
 - JSX is an extension of the HTML language
@@ -177,14 +235,20 @@ What's going on here? **This is JSX.** It looks like HTML.
 Take a quick look at the reference:
 
 https://reactjs.org/docs/jsx-in-depth.html
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ### Defining your own components 🧱
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 When creating components, you have the choice between two different ways:
 
 1. Class-based components
 2. Functional components
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 A Class-based component has a render method that returns JSX.
 
 ```JS
@@ -194,7 +258,9 @@ class Heading extends React.Component {
   }
 }
 ```
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 A functional component is just a function that returns JSX.
 
 ```JS
@@ -202,13 +268,17 @@ const Heading = () => {
   return <h1>Hello World</h1>
 }
 ```
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 Use either component in your app like this:
 
 ```JSX
 <Heading />
 ```
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 Use a variable in a component:
 
 ```JS
@@ -218,17 +288,25 @@ const Heading = () => {
   return <h1>{str}</h1>
 }
 ```
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 When writing JS expressions (JS code) inside a block of JSX you must wrap is in the curly braces
 
 ```JSX
 <h1>{str}</h1>
 ```
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ### Props
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 Props are an important part of components. **Props are attributes passed into a component. The component then receives the attributes as a prop object**
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 In class-based components:
 
 ```JS
@@ -238,7 +316,9 @@ class Heading extends React.Component {
   }
 }
 ```
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 In functional components:
 
 ```JS
@@ -246,7 +326,9 @@ const Heading = props => {
   return <h1>{props.str}</h1>
 }
 ```
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 Pass props to your component through attributes:
 
 ```JSX
@@ -254,7 +336,9 @@ Pass props to your component through attributes:
 ```
 
 Any attribute passed into a component will be available to the component through the **props object**.
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 Now the component can be reused and configured to display any string.
 
 ```JS
@@ -265,16 +349,22 @@ Now the component can be reused and configured to display any string.
 <Heading str='Hello foo' />
 <Heading str='Foo Hello' />
 ```
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 Usually, you'll want to put each component into it's own file. Do that with the `Heading` component.
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 - Make a new file named: Heading.js (best practice: use the Component name as the file name)
 - Save the file to the src directory (all of your files go into src)
 - `import React from 'react'` goes at the top of the component
 - Write your component code...
 - `export default Heading` goes at the bottom of the component
 - In App.js import your Heading component: `import Heading from './Heading'`
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ```JS
 import React from 'react'
 
@@ -284,18 +374,24 @@ function Heading(props) {
 
 export default Heading
 ```
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 <!-- .slide: data-background="#087CB8" -->
 ## [**10m**] BREAK
 
 Take a 10 minute break and visualize the workd as components.
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 # Lab
 
 Work through the React Fundamentals tutorial.
 
 https://github.com/Tech-at-DU/React-Fundamentals
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ## Wrap Up
 
 - What did you see in the tutorial?
@@ -303,11 +399,15 @@ https://github.com/Tech-at-DU/React-Fundamentals
 - What do you think of Components?
 - What problems did you encounter?
 - How did you solve them?
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ### After Class
 
 - [Assignment 6 React Fundamentals](Assignments/Assignment-6-react-fundamentals.md)
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ## Additional Resources
 
 1. https://en.wikipedia.org/wiki/Killer_application
@@ -334,10 +434,15 @@ https://github.com/Tech-at-DU/React-Fundamentals
 | 0:20 | 2:45 | Admin |
 
 -->
-</script></section></div>
+
+          </textarea>
+        </section>
+      </div>
     </div>
 
     <script src="./dist/reveal.js"></script>
+
+    <script src="./mermaid/dist/mermaid.min.js"></script>
 
     <script src="./plugin/markdown/markdown.js"></script>
     <script src="./plugin/highlight/highlight.js"></script>
@@ -365,6 +470,10 @@ https://github.com/Tech-at-DU/React-Fundamentals
         history: true,
         center: true,
         transition: 'default', // none/fade/slide/convex/concave/zoom
+        slideNumber: true,
+        highlight: {
+          highlightOnLoad: false
+        },
         plugins: [
           RevealMarkdown,
           RevealHighlight,
@@ -377,12 +486,29 @@ https://github.com/Tech-at-DU/React-Fundamentals
       // options from URL query string
       var queryOptions = Reveal().getQueryHash() || {};
 
-      var options = extend(defaultOptions, {"controls":true,"progress":true,"autoPlayMedia":false,"slideNumber":"c/t","showSlideNumber":"all","controlsTutorial":true,"controlsLayout":"edges","transition":"slide","transitionSpeed":"medium","minScale":0.5,"maxScale":3}, queryOptions);
+      var options = extend(defaultOptions, {"controls":true,"progress":true,"autoPlayMedia":false,"slideNumber":"c/t","showSlideNumber":"all","controlsTutorial":true,"controlsLayout":"edges","transition":"slide","transitionSpeed":"medium","minScale":0.5,"maxScale":3,"_":["Lessons/"],"static":"Slides"}, queryOptions);
     </script>
 
 
     <script>
       Reveal.initialize(options);
+      Reveal.addEventListener('ready', function (event) {
+        const blocks = Reveal.getRevealElement().querySelectorAll('pre code:not(.mermaid)');
+        const hlp = Reveal.getPlugin('highlight');
+        blocks.forEach(hlp.highlightBlock);
+      });
+    </script>
+
+    <script>
+      const mermaidOptions = extend({ startOnLoad: false }, {});
+      mermaid.startOnLoad = false;
+      mermaid.initialize(mermaidOptions);
+      const cb = function (event) {
+        mermaid.init(mermaidOptions, '.stack.present > .present pre code.mermaid');
+        mermaid.init(mermaidOptions, '.slides > .present:not(.stack) pre code.mermaid');
+      }
+      Reveal.addEventListener('ready', cb);
+      Reveal.addEventListener('slidetransitionend', cb);
     </script>
   </body>
 </html>
