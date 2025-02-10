@@ -304,7 +304,9 @@ Examine the config file discuss it with another student. What do you think it wi
 
 <!-- > -->
 
-You need to change the name here (`index.js`) to the name and path of the JS file that you link to in your inde.html! For example: 
+You need to change the name here (`index.js`) to the name and path of the JS file that you link to in your inde.html!
+
+For example, the entry point below, assumes that your app starts with `index.js` and the files are in a folder named: `src`. 
 
 ```JS
 ...

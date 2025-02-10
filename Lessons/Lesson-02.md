@@ -98,42 +98,46 @@ You will set up ESLint with a Style guide used by professionals.
 
 https://eslint.org/docs/user-guide/getting-started
 
-<!-- > -->
-
-1️⃣ **Setup npm**
-
-```
+### 0. **init npm**
+Create a package.json:
+```bash
 npm init -y
 ```
 
-
-2️⃣ **Install ESLint** 
-
-```
-npm install eslint -g
-```
-
-3️⃣ **Setup a config file**
-
-```
-npx eslint --init
+### 1. **Install ESLint**
+First, install ESLint if you haven't already:
+```bash
+npm install --save-dev eslint
 ```
 
-Use the answers below as you follow the setup process. 
+### 2. **Install the Airbnb Style Guide**
+Use `install-peerdeps` to install the Airbnb configuration along with its required peer dependencies:
+```bash
+npx install-peerdeps --dev eslint-config-airbnb
+```
 
-<!-- > -->
+This command will install `eslint-config-airbnb` and all its required peer dependencies, such as `eslint-plugin-import`, `eslint-plugin-react`, and others.
 
-**Choose these options:**
+### 3. **Manually Configure ESLint**
+If `npx eslint --init` does not handle the Airbnb configuration automatically, you can add it manually to your ESLint configuration file.
 
-- How would you like to use ESLint? To check syntax, find problems, and enforce code style
-- What type of modules does your project use? None of these
-- Which framework does your project use? None of these
-- Does your project use TypeScript? No
-- Where does your project run? Browser
-- How would you like to define a style for your project? Use a popular style guide
-- Which style guide do you want to follow? Airbnb: https://github.com/airbnb/javascript 
-- What format do you want your config file to be in? JavaScript
-- Would you like to install them now with npm? Yes
+1. Open or create the `.eslintrc` file in your project root.
+2. Add the Airbnb style guide under the `extends` property. For example:
+   ```json
+   {
+     "extends": ["airbnb"]
+   }
+   ```
+
+### 4. **Lint Your Code**
+Run ESLint to verify everything is working:
+```bash
+npx eslint .
+```
+
+### **Additional Tips**
+- If you're using a specific framework like React, ensure you include the necessary plugins, which should already be installed with `eslint-config-airbnb`.
+- If you prefer a specific configuration format (e.g., `.eslintrc.js` or `.eslintrc.yml`), adjust accordingly.
 
 <!-- > -->
 
@@ -312,6 +316,35 @@ console.log(obj.a, obj.b) // 11, 22
 https://javascript.info/destructuring-assignment
 
 <!-- > -->
+
+## Challenge Problems
+
+### Challenge 1
+
+The tutorial works but isn't written well. Notice that the array that holds the list of brick objects. Look closely. Each of these objects stores the x and y position as 0 and 0. This doesn't make any sense!
+
+Now look at the draw the `drawBricks` fucntion. This is called every "frame" as the canvas is updated. Here the x and y properties are set. They are constantly calculated and set to the same value! 
+
+More effecient would be to set the initial values to the correct x and y positions when the array is created, and not update the values in `drawBricks`. 
+
+### Challenge 2
+
+Remember that `makeBo(x, y, width, height, color)` function? It might be useful in the Break Game! Implement it there! 
+
+### Challenge 3 
+
+The game is very predictable! Notice that the ball always starts at the same angle every time! You can make vary this by using a random number! Here are a couple things to keep in mind. 
+
+- Use `Math.random()` to generate a random number between 0 and 1. You can multiply this by another number to scale it to a range you like. For example `Math.random() * 10` would give a random number between 0 and 10.
+- `dx` and `dy` set the speed and direction of the ball. The default values are 2 and -2.
+- `dx` can be any number between 2 and -2.
+- `dy` should always be negative, since the ball needs to start moving up the screen!
+
+**Advanced!** The speed is a vector. If the ball is moving 2 on the x and 2 on the y the total distance moved is 2.83. Remember Pythagoras! Look up hypotenuse. 
+
+To calculate the distance the ball should move at any angle, you can: 
+- Generate an angle in randians, something like: `angle = Math.random() * Math.PI * 2`
+- Use sine and cosine to get the `dx` and `dy` values something like: `Math.sin(angle) * speed` and `Math.cos(angle) * speed` where speed is the speed of the ball. In the original code the ball speed is 2. 
 
 ## Homework
 
