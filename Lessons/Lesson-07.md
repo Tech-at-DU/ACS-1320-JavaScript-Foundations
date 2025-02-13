@@ -57,7 +57,7 @@ Discuss.
 
 <!-- > -->
 
-React is a popular library/framework for making Single Page Applications.
+React is a popular library for making Single Page Applications.
 
 ☝️ ⚛️ 🌏
 
