@@ -29,13 +29,13 @@ By the end of the class you should be able to:
 
 <!-- > -->
 
-A single application is a Single webpage that acts like a full web application in your browser.
+A single application is a **Single webpage** that acts like a full **web application** in your browser.
 
 ☝️ 🌏
 
 <!-- > -->
 
-Single Page Applications are web pages that act like multipage static sites but are built from a single HTML file. 
+Single Page Applications are web pages that act like **multipage** static sites but are built from a single HTML file. 
 
 ☝️ ➡️ 📄 📄 📄
 
