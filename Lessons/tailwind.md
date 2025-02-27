@@ -35,22 +35,23 @@ Tailwind scans your **HTML, JSX, or template files** for class names and generat
 
 To get started, create a working folder. This example will set up Tailwind with a simple HTML file.  
 
-📌 **Check the official docs** → [Tailwind Installation](https://tailwindcss.com/docs/installation)  
+📌 **Check the official docs** → [Tailwind Installation]([https://tailwindcss.com/docs/installation](https://tailwindcss.com/docs/installation/tailwind-cli))  
 
-### 1️⃣ Install Tailwind  
+Create a new folder where you will be working. This new folder will use Tailwind with a simple HTML page as a starting example. 
 
-Run the following in your project folder:  
+### 1️⃣ Install Tailwind
+
+Initialize npm in your project folder:  
 
 ```sh
 npm init -y
-``` 
-
-```sh
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
 ```
 
-(The `-p` flag generates a `postcss.config.js` file.)  
+Install TailwindCSS:
+
+```sh
+npm install tailwindcss @tailwindcss/cli
+``` 
 
 ---
 
