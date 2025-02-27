@@ -55,20 +55,9 @@ npm install tailwindcss @tailwindcss/cli
 
 ---
 
-### 2️⃣ Configure Tailwind  
+### 2️⃣ Setup your project folder  
 
-Edit **`tailwind.config.js`** to specify where Tailwind should look for class names:  
-
-```js
-/** @type {import('tailwindcss').Config} */
-export default {
-  content: ["./src/**/*.{html,js}"],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-};
-```
+Create a `src` folder. 
 
 ---
 
@@ -77,12 +66,26 @@ export default {
 Create **`src/input.css`** and add:  
 
 ```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 ```
 
-These import Tailwind’s default styles.
+Add an html file `src/index.html` and add: 
+
+```html
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+</head>
+<body>
+  <h1 class="text-3xl font-bold underline">
+    Hello world!
+  </h1>
+</body>
+</html>
+```
 
 ---
 
@@ -91,12 +94,12 @@ These import Tailwind’s default styles.
 Run the following to watch for changes and generate a CSS file:  
 
 ```sh
-npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
+npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch
 ```
 
 This will:
 - **Read** `src/input.css`  
-- **Generate** `dist/output.css`  
+- **Generate** `src/output.css`  
 - **Recompile automatically** when you save changes  
 
 📌 **If using Live Server in VS Code**, enable **"Full Reload"** in settings to reload CSS properly.
