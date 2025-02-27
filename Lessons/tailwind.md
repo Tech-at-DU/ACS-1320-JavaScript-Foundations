@@ -6,8 +6,8 @@ You should all give it a try and test it out—you may grow to like it!
 
 Tailwind uses **atomic (or utility) classes**, meaning each class applies a single style property. For example:
 
-- `rounded` → Rounds all corners
-- `p-4` → Adds 4 units of padding  
+- `class="rounded"` → Rounds all corners
+- `class="p-4"` → Adds 4 units of padding  
 
 Instead of writing a **monolithic class** that sets multiple properties, Tailwind lets you **compose styles using utility classes**.  
 
@@ -40,6 +40,10 @@ To get started, create a working folder. This example will set up Tailwind with 
 ### 1️⃣ Install Tailwind  
 
 Run the following in your project folder:  
+
+```sh
+npm init -y
+```
 
 ```sh
 npm create tailwind@latest
