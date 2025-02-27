@@ -199,28 +199,32 @@ This is **responsive** and works without extra CSS.
 
 ## 🚀 TailwindCSS with React  
 
-Tailwind works great with **React**.  
+Tailwind works great with **React**. I had a lot of trouble getting Tailwind v4 to work with standard React projects. Hopefully this will change in the future. For this example you will use Tailwind v3. 
 
 ### **1️⃣ Install Tailwind in a React Project**  
 
+In an existing React project install tailwindcss@3
+
 ```sh
-npx create-react-app my-app
-cd my-app
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
+npm install -D tailwindcss@3
+npx tailwindcss init
 ```
 
 ### **2️⃣ Configure `tailwind.config.js`**
 
+Add the following to tailwind.config.js, which wuld have been created in the previous step. 
+
 ```js
 /** @type {import('tailwindcss').Config} */
-export default {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+module.exports = {
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],
   theme: {
     extend: {},
   },
   plugins: [],
-};
+}
 ```
 
 ### **3️⃣ Set Up Tailwind in `src/index.css`**  
