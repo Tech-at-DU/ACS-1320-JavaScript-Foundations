@@ -43,15 +43,7 @@ Run the following in your project folder:
 
 ```sh
 npm init -y
-```
-
-```sh
-npm create tailwind@latest
-```
-
-This new command **sets up Tailwind automatically**, including PostCSS and a minimal configuration.  
-
-Or, manually install it:  
+``` 
 
 ```sh
 npm install -D tailwindcss postcss autoprefixer
