@@ -29,26 +29,26 @@ By the end of the course will be able to:
 
 ## Schedule
 
-**Course Dates:** Spring A 2024 1/21/24 to 3/7/24
+**Course Dates:** Spring A 2026 1/20/26 to 3/6/26
 
-**Class Times:** Tuesday and Thursday 1:00 PM to 3:45 PM
+**Class Times:** Monday and Wednesday 1:00 PM to 3:45 PM
 
 | Class | Date | Topics | Assignment |
 |:-----:|:-----|:-------|:-----------|
-|  1 | Tue, Jan 21 | [JavaScript Basics] | [Break Out: Tutorial] |
-|  2 | Thr, Jan 23 | [JavaScript Professional Best Practice] | [Break Out: ESLint] |
-|  3 | Tue, Jan 28 | [JavaScript OOP] | [Break Out: OOP] |
-|  4 | Thr, Jan 30 | [OOP and Classes Lab] | - |
-|  5 | Tue, Feb  4 | [JS OOP Inheritence] | [Break Out: OOP Inheritance] |
-|  6 | Thr, Feb  6 | [Bundling JS] | [Break out: Bundling JavaScript] |
-|  7 | Tue, Feb 11 | [breakout-typescript] | [breakout-typescript] |
-|  8 | Thr, Feb 13 | [Single Page Applications] | [React: Fundamentals Tutorial] |
-|  9 | Tue, Feb 18 | [Component Architecture] | [Final Project: Getting started] |
-| 10 | Thr, Feb 20 | [Components and State] | - |
-| 11 | Tue, Feb 25 | [Forms and user input] | - |
-| 12 | Thr, Feb 27 | [Building and Publishing] | - |
-| 13 | Tue, Mar  4 | [Tailwind] | - |
-| 14 | Thr, Mar  6 | [Final Assessment: Test your Knowledge] |  |
+|  1 | Wed, Jan 21 | JS Modules.        | [Shopkeeper Part 1] |
+|  2 | Mon, Jan 26 | JS Event Listeners | [Shopkeeper Part 2] |
+|  3 | Wed, Jan 28 |    | [Shopkeeper Part 3] |
+|  4 | Mon, Feb  2 |    | [Shopkeeper Part 4] |
+|  5 | Wed, Feb  4 |    | [Shopkeeper Part 5] |
+|  6 | Mon, Feb  9 |    | [Shopkeeper Part 6] |
+|  7 | Wed, Feb 11 | TypeScript | [Shopkeeper TypeScript] |
+|  8 | Mon, Feb 16 | Presidents Day No Class | [React: Fundamentals Tutorial] |
+|  9 | Wed, Feb 18 | [Component Architecture] | [Final Project: Getting started] |
+| 10 | Mon, Feb 23 | [Components and State] | - |
+| 11 | Wed, Feb 25 | [Forms and user input] | - |
+| 12 | Mon, Mar  2 | [Building and Publishing] | - |
+| 13 | Wed, Mar  4 | [Tailwind] | - |
+
 
 <!-- Lesson 1 -->
 [JavaScript Basics]: Lessons/Lesson-01.md
