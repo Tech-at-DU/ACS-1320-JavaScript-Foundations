@@ -61,6 +61,8 @@ tsconfig.json
 Modify webpack.config.js
 
 ```JS
+const path = require('path');
+
 module.exports = {
   entry: './src/main.ts',
   module: {
