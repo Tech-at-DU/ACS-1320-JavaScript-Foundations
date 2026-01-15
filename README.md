@@ -49,6 +49,14 @@ By the end of the course will be able to:
 | 12 | Mon, Mar  2 | [Building and Publishing] | - |
 | 13 | Wed, Mar  4 | [Tailwind] | - |
 
+[Shopkeeper Part 1]: ./Assignments/shopkeeper-part-1.md
+[Shopkeeper Part 2]: ./Assignments/shopkeeper-part-2.md
+[Shopkeeper Part 3]: ./Assignments/shopkeeper-part-3.md
+[Shopkeeper Part 4]: ./Assignments/shopkeeper-part-4.md
+[Shopkeeper Part 5]: ./Assignments/shopkeeper-part-5.md
+[Shopkeeper Part 6]: ./Assignments/shopkeeper-part-6.md
+
+
 
 <!-- Lesson 1 -->
 [JavaScript Basics]: Lessons/Lesson-01.md
