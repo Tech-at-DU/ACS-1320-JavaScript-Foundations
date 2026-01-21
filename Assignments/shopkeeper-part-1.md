@@ -28,10 +28,7 @@ All game data lives in one object called state.
 
 It works like this:
 
-User clicks a button
-→ an action is sent
-→ state is updated
-→ the page re-renders
+> User clicks a button → an action is sent → state is updated → the page re-renders
 
 You will see this pattern repeated over and over.
 
