@@ -70,10 +70,10 @@ Look at this line in index.html:
 <script type="module" src="src/main.js"></script>
 ```
 
-type="module" tells the browser:
-	•	This file can use import / export
-	•	Each file has its own scope
-	•	Imports must use a real path like `./state.js` (including the ./)
+`type="module"` tells the browser:
+	• This file can use import / export
+	• Each file has its own scope
+	• Imports must use a real path like `./state.js` (including the ./)
 
 **Example from this project**
 
