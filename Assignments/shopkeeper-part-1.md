@@ -54,8 +54,8 @@ shopkeeper/
 
 In this project, each `.js` file is treated like a separate script with its own _scope_. That means:
 	
-	- Variables and functions in one file are not automatically available in another file.
-	- If you want to use something from another file, you must **`export`** it from that file and 
+- Variables and functions in one file are not automatically available in another file.
+- If you want to use something from another file, you must **`export`** it from that file and 
 	
 **`import`** it where you need it.
 
@@ -98,12 +98,12 @@ That line means: “Bring in the exported function named `makeInitialState` from
 
 Common module mistakes (that cause errors)
 	
-	- Forgetting `type="module"` → imports won’t work at all
-	- Forgetting `./` in a path:
-	- ✅ `./state.js`
-	- ❌ `state.js`
-	- Misspelling the imported name (must match the export exactly)
-	- Opening the file in a way that blocks modules (some setups require a local server)
+- Forgetting `type="module"` → imports won’t work at all
+- Forgetting `./` in a path:
+- ✅ `./state.js`
+- ❌ `state.js`
+- Misspelling the imported name (must match the export exactly)
+- Opening the file in a way that blocks modules (some setups require a local server)
 
 If something breaks, always check the browser console first. Module errors show up there clearly.
 
