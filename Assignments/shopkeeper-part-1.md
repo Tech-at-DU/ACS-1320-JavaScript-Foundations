@@ -55,8 +55,8 @@ shopkeeper/
 ## Quick explanation: JavaScript modules
 
 In this project, each `.js` file is treated like a separate script with its own _scope_. That means:
-	-	Variables and functions in one file are not automatically available in another file.
-	-	If you want to use something from another file, you must **`export`** it from that file and **`import`** it where you need it.
+	- Variables and functions in one file are not automatically available in another file.
+	- If you want to use something from another file, you must **`export`** it from that file and **`import`** it where you need it.
 
 **Why we use modules**
 
@@ -71,9 +71,9 @@ Look at this line in index.html:
 ```
 
 `type="module"` tells the browser:
-	• This file can use import / export
-	• Each file has its own scope
-	• Imports must use a real path like `./state.js` (including the ./)
+	- This file can use import / export
+	- Each file has its own scope
+	- Imports must use a real path like `./state.js` (including the ./)
 
 **Example from this project**
 
