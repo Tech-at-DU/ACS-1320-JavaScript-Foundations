@@ -13,6 +13,7 @@ Each day:
 This is a turn-based game where clicking a button advances the day.
 
 The goal is to practice JavaScript fundamentals:
+	
 	- objects
 	- functions
 	- conditionals
