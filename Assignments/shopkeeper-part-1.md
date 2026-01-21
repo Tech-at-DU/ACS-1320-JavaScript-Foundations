@@ -14,12 +14,12 @@ This is a turn-based game where clicking a button advances the day.
 
 The goal is to practice JavaScript fundamentals:
 	
-	- objects
-	- functions
-	- conditionals
-	- arrays
-	- events
-	- updating the DOM
+- objects
+- functions
+- conditionals
+- arrays
+- events
+- updating the DOM
 
 How the program works (important)
 
