@@ -54,7 +54,7 @@ shopkeeper/
 
 ## Quick explanation: JavaScript modules
 
-In this project, each .js file is treated like a separate script with its own scope. That means:
+In this project, each `.js` file is treated like a separate script with its own _scope_. That means:
 	-	Variables and functions in one file are not automatically available in another file.
 	-	If you want to use something from another file, you must **`export`** it from that file and **`import`** it where you need it.
 
@@ -73,7 +73,7 @@ Look at this line in index.html:
 type="module" tells the browser:
 	•	This file can use import / export
 	•	Each file has its own scope
-	•	Imports must use a real path like ./state.js (including the ./)
+	•	Imports must use a real path like `./state.js` (including the ./)
 
 **Example from this project**
 
@@ -85,7 +85,7 @@ export function makeInitialState() {
 }
 ```
 
-The word export makes makeInitialState available to other files.
+The word `export` makes `makeInitialState` available to other files.
 
 In `src/main.js`:
 
@@ -93,7 +93,7 @@ In `src/main.js`:
 import { makeInitialState } from "./state.js";
 ```
 
-That line means: “Bring in the exported function named makeInitialState from `state.js`.”
+That line means: “Bring in the exported function named `makeInitialState` from the file `state.js`.”
 
 Common module mistakes (that cause errors)
 	-	Forgetting `type="module"` → imports won’t work at all
