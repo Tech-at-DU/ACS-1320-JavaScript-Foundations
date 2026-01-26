@@ -689,7 +689,7 @@ document.getElementById("open-shop").addEventListener("click", () => {
 
 Edit `render.js`. 
 
-Updated `redner(state)`, add `renderStatus(state);`
+Updated `render(state)`, add `renderStatus(state);`
 ```js
 export function render(state) {
   renderStatus(state); // add this line
