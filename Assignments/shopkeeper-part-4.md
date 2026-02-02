@@ -27,11 +27,11 @@ export const PRODUCTS = [
 ### ✅ Checkpoint
 
 What you created
-	•	An array of objects
-	•	A single place to define product info
+  - An array of objects
+  - A single place to define product info
 
 What you should see
-	•	Nothing changes yet. This file will be used in later steps.
+  - Nothing changes yet. This file will be used in later steps.
 
 
 ## STEP 2 — Replace the hard-coded wholesale cost logic
@@ -99,14 +99,14 @@ That’s it. The rest of "ORDER_STOCK" stays the same.
 ### ✅ Checkpoint
 
 What you covered
-	•	Using `find()` to locate an object by id
-	•	Replacing hard-coded conditionals with a data lookup
+  - Using `find()` to locate an object by id
+  - Replacing hard-coded conditionals with a data lookup
 
 What you should see
-	•	Ordering still works exactly as before
+  - Ordering still works exactly as before
 
 Common bug
-	•	`find()` can return undefined. If you skip if (!product), your code will crash.
+  - `find()` can return undefined. If you skip if (!product), your code will crash.
 
 ## STEP 3 — Render inventory using PRODUCTS + a loop
 
@@ -153,8 +153,8 @@ function renderInventory(state) {
 
 Important change: we no longer use ids like price-coffee.
 We now use:
-	•	`class="price-input"`
-	•	`data-item="coffee"`
+  - `class="price-input"`
+  - `data-item="coffee"`
 
 That’s what makes it scalable.
 
@@ -162,14 +162,14 @@ That’s what makes it scalable.
 ### ✅ Checkpoint
 
 What you covered
-	•	Building HTML using map() + join("")
-	•	Dynamic property access: state.inventory[p.id]
-	•	Using data-* attributes to store product ids in the DOM
+  - Building HTML using map() + join("")
+  - Dynamic property access: state.inventory[p.id]
+  - Using data-* attributes to store product ids in the DOM
 
 What you should see
-	•	Inventory still displays
-	•	Price inputs still display
-	•	The page looks almost the same, but your code is now generic
+  - Inventory still displays
+  - Price inputs still display
+  - The page looks almost the same, but your code is now generic
 
 
 ## STEP 4 — Update event delegation to use data-item
@@ -304,13 +304,13 @@ prices:    { coffee: 300, bagel: 250, tea: 275 },
 ### ✅ Checkpoint
 
 What you should see
-	•	Tea appears automatically in inventory
-	•	Tea has a price input automatically
-	•	Ordering logic accepts "tea" correctly (because costs come from PRODUCTS)
-	•	The report lists Tea (even if Tea never sells yet)
+  - Tea appears automatically in inventory
+  - Tea has a price input automatically
+  - Ordering logic accepts "tea" correctly (because costs come from PRODUCTS)
+  - The report lists Tea (even if Tea never sells yet)
 
 What’s still hard-coded
-	•	Demand / sales rules inside simulateDay (coffee and bagels only)
+  - Demand / sales rules inside simulateDay (coffee and bagels only)
 
 That’s intentional. This part was about representation + rendering.
 
@@ -389,17 +389,17 @@ If you don’t want to use `renderStatus?.(state)`, just call `renderStatus(stat
 ### ✅ Checkpoint
 
 What you covered
-	•	Making UI match data automatically
-	•	Rendering <select> options from an array
-	•	Avoiding annoying UI resets by preserving selection
+  - Making UI match data automatically
+  - Rendering <select> options from an array
+  - Avoiding annoying UI resets by preserving selection
 
 What you should see
-	•	Tea appears in the order dropdown
-	•	Ordering Tea works
+  - Tea appears in the order dropdown
+  - Ordering Tea works
 
 **Optional** challenges (after Part Four)
 
 These are harder. Do them only after everything above works.
-	•	Challenge A: Generalize demand so Tea can sell too
-	•	Challenge B: Make raccoon steal a random product
-	•	Challenge C: Make promo affect demand as a multiplier instead of +1
+  - Challenge A: Generalize demand so Tea can sell too
+  - Challenge B: Make raccoon steal a random product
+  - Challenge C: Make promo affect demand as a multiplier instead of +1
