@@ -38,7 +38,7 @@ By the end of the course will be able to:
 |  1 | Wed, Jan 21 | JS Modules.        | [Shopkeeper Part 1] |
 |  2 | Mon, Jan 26 | JS Event Listeners | [Shopkeeper Part 2] |
 |  3 | Wed, Jan 28 | [JS Exercises 0]   | [Shopkeeper Part 3] |
-|  4 | Mon, Feb  2 |    | [Shopkeeper Part 4] |
+|  4 | Mon, Feb  2 | [Map, Filter, Reduce Problems] | [Shopkeeper Part 4] |
 |  5 | Wed, Feb  4 |    | [Shopkeeper Part 5] |
 |  6 | Mon, Feb  9 |    | [Shopkeeper Part 6] |
 |  7 | Wed, Feb 11 | TypeScript | [Shopkeeper TypeScript] |
@@ -57,6 +57,8 @@ By the end of the course will be able to:
 [Shopkeeper Part 6]: ./Assignments/shopkeeper-part-6.md
 
 [JS Exercises 0]: https://github.com/Tech-at-DU/js-exercises/blob/main/exercises-0.js
+
+[Map, Filter, Reduce Problems]: https://github.com/Tech-at-DU/map-filter-reduce-challenges
 
 <!-- Lesson 1 -->
 [JavaScript Basics]: Lessons/Lesson-01.md
