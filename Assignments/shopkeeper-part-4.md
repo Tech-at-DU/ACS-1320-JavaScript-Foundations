@@ -106,11 +106,11 @@ What you should see
   - Ordering still works exactly as before
 
 Common bug
-  - `find()` can return undefined. If you skip if (!product), your code will crash.
+  - `find()` can return undefined. If you skip if `(!product)`, your code will crash.
 
 ## STEP 3 — Render inventory using PRODUCTS + a loop
 
-Right now, renderInventory is hard-coded with specific products. That creates copy/paste every time you add a new item.
+Right now, `renderInventory` is hard-coded with specific products. That requires copy/paste every time you add a new item.
 
 We will generate the inventory + price inputs using PRODUCTS.
 
@@ -151,7 +151,7 @@ function renderInventory(state) {
 }
 ```
 
-Important change: we no longer use ids like price-coffee.
+Important change: we no longer use ids like `price-coffee`.
 We now use:
   - `class="price-input"`
   - `data-item="coffee"`
@@ -200,14 +200,14 @@ inventoryEl.addEventListener("change", (e) => {
 ### ✅ Checkpoint
 
 What you covered
-	•	Event delegation using a class selector
-	•	Reading values from dataset
-	•	Generalizing to any number of products
+	- Event delegation using a class selector
+	- Reading values from dataset
+	- Generalizing to any number of products
 
 What you should see
-	•	Changing prices still works
-	•	No focus issues
-	•	No new listeners needed when you add products
+	- Changing prices still works
+	- No focus issues
+	- No new listeners needed when you add products
 
 
 ## STEP 5 — Render the report using PRODUCTS + a loop
@@ -270,12 +270,12 @@ function renderReport(state) {
 ### ✅ Checkpoint
 
 What you covered
-	•	Designing state shapes that scale
-	•	Rendering from data instead of hard-coding HTML
-	•	Using ?? 0 to handle missing items safely
+	- Designing state shapes that scale
+	- Rendering from data instead of hard-coding HTML
+	- Using ?? 0 to handle missing items safely
 
 What you should see
-	•	The report lists every product in PRODUCTS
+	- The report lists every product in PRODUCTS
 
 
 ## STEP 6 — Add a new item (now it’s easy)
@@ -317,7 +317,7 @@ That’s intentional. This part was about representation + rendering.
 
 ## STEP 7 — Fix the order menu (make it data-driven)
 
-Your order <select> is still hard-coded in HTML. That’s why Tea can’t be ordered.
+Your order `<select>` is still hard-coded in HTML. That’s why Tea can’t be ordered.
 
 
 **Update** `index.html`
