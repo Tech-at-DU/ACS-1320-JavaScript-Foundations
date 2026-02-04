@@ -60,7 +60,9 @@ In PRODUCTS, add a baseDemand value.
 
 Example (you choose the numbers):
 
+```js
 { id: "coffee", name: "Coffee", wholesaleCents: 150, baseDemand: 120 }
+```
 
 This number represents typical daily demand before modifiers.
 
