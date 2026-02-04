@@ -39,7 +39,7 @@ By the end of the course will be able to:
 |  2 | Mon, Jan 26 | JS Event Listeners | [Shopkeeper Part 2] |
 |  3 | Wed, Jan 28 | [JS Exercises 0]   | [Shopkeeper Part 3] |
 |  4 | Mon, Feb  2 | [Map, Filter, Reduce Problems] | [Shopkeeper Part 4] |
-|  5 | Wed, Feb  4 |    | [Shopkeeper Part 5] |
+|  5 | Wed, Feb  4 | [Callback Problems] | [Shopkeeper Part 5] |
 |  6 | Mon, Feb  9 |    | [Shopkeeper Part 6] |
 |  7 | Wed, Feb 11 | TypeScript | [Shopkeeper TypeScript] |
 |  8 | Mon, Feb 16 | Presidents Day No Class | [React: Fundamentals Tutorial] |
@@ -59,6 +59,7 @@ By the end of the course will be able to:
 [JS Exercises 0]: https://github.com/Tech-at-DU/js-exercises/blob/main/exercises-0.js
 
 [Map, Filter, Reduce Problems]: https://github.com/Tech-at-DU/map-filter-reduce-challenges
+[Callback Problems]: https://github.com/Tech-at-DU/callback-exercise
 
 <!-- Lesson 1 -->
 [JavaScript Basics]: Lessons/Lesson-01.md
