@@ -130,9 +130,9 @@ This randomness should affect demand, not bypass the system.
 Important clarification (read carefully)
 
 This step uses two separate ideas:
-	1.	Chance — how often something happens
+  1. Chance — how often something happens
 (“10% of days are terrible”)
-	2.	Effect — what happens when it does
+  2. Effect — what happens when it does
 (“sales drop to 70% of normal”)
 
 These are not the same thing.
