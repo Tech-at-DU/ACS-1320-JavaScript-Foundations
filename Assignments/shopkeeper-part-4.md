@@ -7,9 +7,9 @@ Goal
 Make the game support any number of products without copy/paste.
 
 In this part, you will refactor three areas:
-	1.	Wholesale costs (ordering)
-	2.	Inventory + price inputs (rendering)
-	3.	Daily report (rendering)
+  1. Wholesale costs (ordering)
+  2. Inventory + price inputs (rendering)
+  3. Daily report (rendering)
 
 Not included yet: generalizing demand and events.
 
