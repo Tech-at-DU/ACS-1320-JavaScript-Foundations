@@ -9,9 +9,9 @@ Right now, Shopkeeper works correctly — but it still feels mechanical.
 Numbers change, but nothing feels uncertain or dynamic. Once a player finds a “good” setup, the game plays itself.
 
 In this part, you will make the game feel more like a simulation by introducing:
-	•	Scale — larger sales volumes and cash flow
-	•	Uncertainty — days that go better or worse than expected
-	•	Pressure — events that force adaptation instead of optimization
+  - Scale — larger sales volumes and cash flow
+  - Uncertainty — days that go better or worse than expected
+  - Pressure — events that force adaptation instead of optimization
 
 You must complete Step A and Step B.
 Then choose one option from Step C.
@@ -29,9 +29,9 @@ The problem
 Selling 0–5 items per day is too small.
 
 At that scale:
-	•	Modifiers like “+1 sale” barely matter
-	•	Randomness feels cosmetic
-	•	Events feel weak or pointless
+  - Modifiers like “+1 sale” barely matter
+  - Randomness feels cosmetic
+  - Events feel weak or pointless
 
 This makes the game easy to solve and boring to play.
 
@@ -47,9 +47,9 @@ It means making percentage-based changes meaningful.
 ⸻
 
 Constraints
-	•	Do not add new buttons or controls
-	•	Do not rewrite the core game loop
-	•	Stop using “+1 item” style modifiers
+  - Do not add new buttons or controls
+  - Do not rewrite the core game loop
+  - Stop using “+1 item” style modifiers
 
 ⸻
 
@@ -72,17 +72,17 @@ Different products should have different base demand.
 At this scale, modifiers must work as percent changes, not flat additions.
 
 Instead of:
-	•	“+1 item”
-	•	“−1 item”
+  - “+1 item”
+  - “−1 item”
 
 Think in terms of:
-	•	“+25% demand”
-	•	“−15% demand”
+  - “+25% demand”
+  - “−15% demand”
 
 Example modifier effects (conceptual, not exact requirements):
-	•	Promotion → demand × 1.25
-	•	Very clean shop → demand × 1.15
-	•	Dirty shop → demand × 0.85
+  - Promotion → demand × 1.25
+  - Very clean shop → demand × 1.15
+  - Dirty shop → demand × 0.85
 
 You will combine these into a final multiplier and apply it to baseDemand.
 
@@ -91,16 +91,16 @@ You will combine these into a final multiplier and apply it to baseDemand.
 Deliverable
 
 Add a short comment or README note explaining:
-	•	Your base demand numbers
-	•	Your demand multipliers
-	•	Why you chose those values
+  - Your base demand numbers
+  - Your demand multipliers
+  - Why you chose those values
 
 ⸻
 
 Success looks like
-	•	Sales numbers feel large enough to swing meaningfully
-	•	A 10–20% change is visible and impactful
-	•	Inventory and ordering decisions matter more
+  - Sales numbers feel large enough to swing meaningfully
+  - A 10–20% change is visible and impactful
+  - Inventory and ordering decisions matter more
 
 ⸻
 
@@ -119,9 +119,9 @@ That’s not how simulations — or games — behave.
 Your task
 
 Add day-level randomness so that:
-	•	Some days are better than expected
-	•	Some days are worse
-	•	Outcomes vary even when the player makes good decisions
+  - Some days are better than expected
+  - Some days are worse
+  - Outcomes vary even when the player makes good decisions
 
 This randomness should affect demand, not bypass the system.
 
@@ -140,9 +140,9 @@ These are not the same thing.
 ⸻
 
 Constraints
-	•	Roll randomness once per day, not per product
-	•	The result must be explained in the log
-	•	Demand must still be clamped by inventory
+  - Roll randomness once per day, not per product
+  - The result must be explained in the log
+  - Demand must still be clamped by inventory
 
 If the player cannot tell why sales changed, it feels like a bug.
 
@@ -168,8 +168,8 @@ Example interpretation:
 
 Model 2 — Noise (simpler)
 Instead of named day types:
-	•	Generate a random multiplier between 0.85 and 1.15
-	•	Multiply demand by that value
+  - Generate a random multiplier between 0.85 and 1.15
+  - Multiply demand by that value
 
 This creates smaller but constant variation.
 
@@ -178,17 +178,17 @@ This creates smaller but constant variation.
 Deliverable
 
 Your log must show why demand changed, for example:
-	•	“Slow day — fewer customers than usual.”
-	•	“Great day — lunch rush was huge.”
-	•	“Demand was about 12% lower than average today.”
+  - “Slow day — fewer customers than usual.”
+  - “Great day — lunch rush was huge.”
+  - “Demand was about 12% lower than average today.”
 
 ⸻
 
 Common mistakes to avoid
-	•	Treating “10% chance” as “+10% demand”
-	•	Adding randomness after inventory is clamped
-	•	Rolling randomness separately for each product
-	•	Hiding randomness from the player
+  - Treating “10% chance” as “+10% demand”
+  - Adding randomness after inventory is clamped
+  - Rolling randomness separately for each product
+  - Hiding randomness from the player
 
 ⸻
 
@@ -204,14 +204,14 @@ They don’t meaningfully interact with the rest of the system.
 Your task (choose one approach)
 
 C1. Make events data-driven
-	•	Store events in an array of objects
-	•	Randomly select one
-	•	Each event returns a structured effect, not direct mutations
+  - Store events in an array of objects
+  - Randomly select one
+  - Each event returns a structured effect, not direct mutations
 
 Example effects:
-	•	demand multiplier
-	•	cleanliness change
-	•	temporary status
+  - demand multiplier
+  - cleanliness change
+  - temporary status
 
 ⸻
 
@@ -219,8 +219,8 @@ C2. Add event chains
 Events can affect future days.
 
 Examples:
-	•	“Bad weather” → lower demand tomorrow
-	•	“Local festival” → demand boost for 2 days
+  - “Bad weather” → lower demand tomorrow
+  - “Local festival” → demand boost for 2 days
 
 This introduces delayed consequences.
 
@@ -230,28 +230,28 @@ C3. Add player-respondable events
 Some events require a choice.
 
 Example:
-	•	“Health inspector arrives”
-	•	Pay $10 bribe
-	•	Lose reputation
-	•	Close shop for the day
+  - “Health inspector arrives”
+  - Pay $10 bribe
+  - Lose reputation
+  - Close shop for the day
 
 Each option must have a clear cost.
 
 ⸻
 
 Constraints
-	•	Events should not “do everything” themselves
-	•	Events produce effects; the simulation applies them
-	•	Every event must be explained in the log
+  - Events should not “do everything” themselves
+  - Events produce effects; the simulation applies them
+  - Every event must be explained in the log
 
 ⸻
 
 Part Five Submission
 
 You must submit:
-	•	Your updated PRODUCTS config (with baseDemand)
-	•	Log output showing randomness and events
-	•	A short paragraph answering:
+  - Your updated PRODUCTS config (with baseDemand)
+  - Log output showing randomness and events
+  - A short paragraph answering:
 
 What change made the game feel more alive, and why?
 
@@ -260,9 +260,9 @@ What change made the game feel more alive, and why?
 Instructor note (implicit but important)
 
 If a student’s game:
-	•	still feels predictable
-	•	hides randomness
-	•	or uses giant hard-coded numbers to “force” excitement
+  - still feels predictable
+  - hides randomness
+  - or uses giant hard-coded numbers to “force” excitement
 
 they did not actually solve the problem.
 
