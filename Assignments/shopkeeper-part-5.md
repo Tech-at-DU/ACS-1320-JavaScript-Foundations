@@ -20,11 +20,9 @@ Do not rewrite the architecture.
 Do not add new UI controls yet.
 You are changing how the existing system behaves.
 
-⸻
+## Step A — Scale the numbers (required)
 
-Step A — Scale the numbers (required)
-
-The problem
+**The problem** 
 
 Selling 0–5 items per day is too small.
 
@@ -35,30 +33,24 @@ At that scale:
 
 This makes the game easy to solve and boring to play.
 
-⸻
-
-Your task
+**Your task**
 
 Rescale the simulation so that a normal day might sell 50–200 units, depending on the product.
 
 This does not mean making the game more realistic.
 It means making percentage-based changes meaningful.
 
-⸻
-
-Constraints
+**Constraints**
   - Do not add new buttons or controls
   - Do not rewrite the core game loop
-  - Stop using “+1 item” style modifiers
+  - Stop using “+1 item” style modifiers. Instead use a multiplier, for example: `* 1.2` is like +20%.
 
-⸻
-
-Required changes
+**Required changes**
 
 1. Add base demand to each product
-In PRODUCTS, add a baseDemand value.
+In `PRODUCTS`, add a `baseDemand` value. This determines the amount of that product that might be sold on any day. 
 
-Example (you choose the numbers):
+**Example (you choose the numbers):**
 
 ```js
 { id: "coffee", name: "Coffee", wholesaleCents: 150, baseDemand: 120 }
@@ -67,8 +59,6 @@ Example (you choose the numbers):
 This number represents typical daily demand before modifiers.
 
 Different products should have different base demand.
-
-⸻
 
 2. Switch from additive to multiplicative modifiers
 At this scale, modifiers must work as percent changes, not flat additions.
@@ -88,16 +78,41 @@ Example modifier effects (conceptual, not exact requirements):
 
 You will combine these into a final multiplier and apply it to baseDemand.
 
-⸻
+Here is some pseudo code that outlines a solution. This would be used to refactor `simulateDay(state)` in `economy.js`.
 
-Deliverable
+```
+FOR each product
+    SET base sales = product.baseDemand
+
+    SET daily sales = base sales
+
+    APPLY daily randomness
+        daily sales *= random factor
+
+    APPLY cleanliness
+        IF shop is dirty
+            daily sales *= cleanliness penalty
+        ELSE IF shop is very clean
+            daily sales *= cleanliness bonus
+
+    APPLY promotions
+        IF promo active
+            daily sales *= promo multiplier
+
+    ROUND daily sales to whole number
+
+    LIMIT daily sales by available inventory
+
+    SUBTRACT sales from inventory
+    ADD sales * price to cash
+```
+
+**Deliverable**
 
 Add a short comment or README note explaining:
   - Your base demand numbers
   - Your demand multipliers
   - Why you chose those values
-
-⸻
 
 Success looks like
   - Sales numbers feel large enough to swing meaningfully
