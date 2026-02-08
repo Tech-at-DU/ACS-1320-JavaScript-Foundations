@@ -211,16 +211,14 @@ Common mistakes to avoid
   - Rolling randomness separately for each product
   - Hiding randomness from the player
 
-Step C — Expand events (choose one)
+## Step C — Expand events (choose one)
 
-The problem
+**The problem**
 
 Right now, events feel inconsistent and underpowered.
 They don’t meaningfully interact with the rest of the system.
 
-⸻
-
-Your task (choose one approach)
+**Your task** (choose one approach)
 
 C1. Make events data-driven
   - Store events in an array of objects
@@ -232,7 +230,22 @@ Example effects:
   - cleanliness change
   - temporary status
 
-⸻
+```
+DEFINE list of events
+    each event has:
+        name
+        chance
+        effect description
+        effect data
+
+ROLL random number
+
+FOR each event
+    IF roll matches event chance
+        APPLY event effect
+        LOG event name
+        STOP checking further events
+```
 
 C2. Add event chains
 Events can affect future days.
@@ -243,7 +256,18 @@ Examples:
 
 This introduces delayed consequences.
 
-⸻
+```
+WHEN event happens
+    SET state.effectDaysLeft = N
+    SET state.effectMultiplier
+
+AT start of each day
+    IF effectDaysLeft > 0
+        APPLY effect
+        effectDaysLeft -= 1
+    ELSE
+        CLEAR effect
+```
 
 C3. Add player-respondable events
 Some events require a choice.
@@ -256,16 +280,27 @@ Example:
 
 Each option must have a clear cost.
 
-⸻
+```
+WHEN special event occurs
+    PAUSE simulation
+
+    SHOW choices to player
+        choice A: cost money
+        choice B: reduce demand
+        choice C: close shop
+
+    WAIT for player decision
+
+    APPLY consequences
+    RESUME simulation
+```
 
 Constraints
   - Events should not “do everything” themselves
   - Events produce effects; the simulation applies them
   - Every event must be explained in the log
 
-⸻
-
-Part Five Submission
+## Part Five Submission
 
 You must submit:
   - Your updated PRODUCTS config (with baseDemand)
@@ -273,16 +308,3 @@ You must submit:
   - A short paragraph answering:
 
 What change made the game feel more alive, and why?
-
-⸻
-
-Instructor note (implicit but important)
-
-If a student’s game:
-  - still feels predictable
-  - hides randomness
-  - or uses giant hard-coded numbers to “force” excitement
-
-they did not actually solve the problem.
-
-This part is about systems thinking, not feature count.
