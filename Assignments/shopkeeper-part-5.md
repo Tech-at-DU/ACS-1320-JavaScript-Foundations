@@ -50,7 +50,7 @@ It means making percentage-based changes meaningful.
 1. Add base demand to each product
 In `PRODUCTS`, add a `baseDemand` value. This determines the amount of that product that might be sold on any day. 
 
-**Example (you choose the numbers):**
+**Example** (you choose the numbers):
 
 ```js
 { id: "coffee", name: "Coffee", wholesaleCents: 150, baseDemand: 120 }
@@ -119,11 +119,9 @@ Success looks like
   - A 10–20% change is visible and impactful
   - Inventory and ordering decisions matter more
 
-⸻
+## Step B — Add more chance (required)
 
-Step B — Add more chance (required)
-
-The problem
+**The problem**
 
 Right now, players can compute the “best” strategy and repeat it forever.
 
@@ -131,9 +129,7 @@ If prices and cleanliness don’t change, results don’t change.
 
 That’s not how simulations — or games — behave.
 
-⸻
-
-Your task
+**Your task**
 
 Add day-level randomness so that:
   - Some days are better than expected
@@ -142,9 +138,7 @@ Add day-level randomness so that:
 
 This randomness should affect demand, not bypass the system.
 
-⸻
-
-Important clarification (read carefully)
+**Important clarification** (read carefully)
 
 This step uses two separate ideas:
   1. Chance — how often something happens
@@ -154,8 +148,6 @@ This step uses two separate ideas:
 
 These are not the same thing.
 
-⸻
-
 Constraints
   - Roll randomness once per day, not per product
   - The result must be explained in the log
@@ -163,9 +155,7 @@ Constraints
 
 If the player cannot tell why sales changed, it feels like a bug.
 
-⸻
-
-Suggested models (choose one)
+**Suggested models** (choose one)
 
 Model 1 — Day type table (recommended)
 Each day, roll once to determine the type of day:
@@ -176,12 +166,10 @@ Chance	Day type	Effect on demand
 55%	Normal day	demand × 1.00
 15%	Great day	demand × 1.25 (25% higher)
 
-Example interpretation:
+**Example interpretation:**
 
 “10% chance” means how often the day occurs
 “×0.70” means demand is reduced to 70% on that day
-
-⸻
 
 Model 2 — Noise (simpler)
 Instead of named day types:
@@ -190,24 +178,38 @@ Instead of named day types:
 
 This creates smaller but constant variation.
 
-⸻
+Here is a psuedo code description of solution: 
 
-Deliverable
+```
+AT start of day
+    ROLL random number between 0 and 1
+
+    IF roll is in terrible range
+        SET day multiplier to low value
+        LOG "Terrible day"
+    ELSE IF roll is in slow range
+        SET day multiplier to slightly low
+        LOG "Slow day"
+    ELSE IF roll is normal
+        SET day multiplier to 1.0
+        LOG "Normal day"
+    ELSE
+        SET day multiplier to high value
+        LOG "Great day"
+```
+
+**Deliverable**
 
 Your log must show why demand changed, for example:
   - “Slow day — fewer customers than usual.”
   - “Great day — lunch rush was huge.”
   - “Demand was about 12% lower than average today.”
 
-⸻
-
 Common mistakes to avoid
   - Treating “10% chance” as “+10% demand”
   - Adding randomness after inventory is clamped
   - Rolling randomness separately for each product
   - Hiding randomness from the player
-
-⸻
 
 Step C — Expand events (choose one)
 
