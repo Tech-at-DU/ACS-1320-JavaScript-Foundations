@@ -52,6 +52,8 @@ In `PRODUCTS`, add a `baseDemand` value. This determines the amount of that prod
 
 **Example** (you choose the numbers):
 
+In: products.js
+
 ```js
 { id: "coffee", name: "Coffee", wholesaleCents: 150, baseDemand: 120 }
 ```
