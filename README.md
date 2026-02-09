@@ -35,7 +35,7 @@ By the end of the course will be able to:
 
 | Class | Date | Topics | Assignment |
 |:-----:|:-----|:-------|:-----------|
-|  1 | Wed, Jan 21 | JS Modules.        | [Shopkeeper Part 1] |
+|  1 | Wed, Jan 21 | JS Modules         | [Shopkeeper Part 1] |
 |  2 | Mon, Jan 26 | JS Event Listeners | [Shopkeeper Part 2] |
 |  3 | Wed, Jan 28 |    | [Shopkeeper Part 3] |
 |  4 | Mon, Feb  2 |    | [Shopkeeper Part 4] |
