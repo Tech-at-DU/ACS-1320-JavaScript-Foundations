@@ -7,18 +7,19 @@ You are building a small shop simulation game using JavaScript.
 Each day:
   -	You can clean your shop
   -	You can order more items
-	-	You can change prices
-	-	You can open the shop and see what sells
+	- You can change prices
+	- You can open the shop and see what sells
 
 This is a turn-based game where clicking a button advances the day.
 
 The goal is to practice JavaScript fundamentals:
-	-	objects
-	-	functions
-	-	conditionals
-	-	arrays
-	-	events
-	-	updating the DOM
+	
+- objects
+- functions
+- conditionals
+- arrays
+- events
+- updating the DOM
 
 How the program works (important)
 
@@ -28,10 +29,7 @@ All game data lives in one object called state.
 
 It works like this:
 
-User clicks a button
-→ an action is sent
-→ state is updated
-→ the page re-renders
+> User clicks a button → an action is sent → state is updated → the page re-renders
 
 You will see this pattern repeated over and over.
 
@@ -54,9 +52,12 @@ shopkeeper/
 
 ## Quick explanation: JavaScript modules
 
-In this project, each .js file is treated like a separate script with its own scope. That means:
-	-	Variables and functions in one file are not automatically available in another file.
-	-	If you want to use something from another file, you must **`export`** it from that file and **`import`** it where you need it.
+In this project, each `.js` file is treated like a separate script with its own _scope_. That means:
+	
+- Variables and functions in one file are not automatically available in another file.
+- If you want to use something from another file, you must **`export`** it from that file and 
+	
+**`import`** it where you need it.
 
 **Why we use modules**
 
@@ -70,10 +71,10 @@ Look at this line in index.html:
 <script type="module" src="src/main.js"></script>
 ```
 
-type="module" tells the browser:
-	•	This file can use import / export
-	•	Each file has its own scope
-	•	Imports must use a real path like ./state.js (including the ./)
+`type="module"` tells the browser:
+	- This file can use import / export
+	- Each file has its own scope
+	- Imports must use a real path like `./state.js` (including the ./)
 
 **Example from this project**
 
@@ -85,7 +86,7 @@ export function makeInitialState() {
 }
 ```
 
-The word export makes makeInitialState available to other files.
+The word `export` makes `makeInitialState` available to other files.
 
 In `src/main.js`:
 
@@ -93,23 +94,25 @@ In `src/main.js`:
 import { makeInitialState } from "./state.js";
 ```
 
-That line means: “Bring in the exported function named makeInitialState from `state.js`.”
+That line means: “Bring in the exported function named `makeInitialState` from the file `state.js`.”
 
 Common module mistakes (that cause errors)
-	-	Forgetting `type="module"` → imports won’t work at all
-	-	Forgetting `./` in a path:
-	-	✅ `./state.js`
-	-	❌ `state.js`
-	-	Misspelling the imported name (must match the export exactly)
-	-	Opening the file in a way that blocks modules (some setups require a local server)
+	
+- Forgetting `type="module"` → imports won’t work at all
+- Forgetting `./` in a path:
+- ✅ `./state.js`
+- ❌ `state.js`
+- Misspelling the imported name (must match the export exactly)
+- Opening the file in a way that blocks modules (some setups require a local server)
 
 If something breaks, always check the browser console first. Module errors show up there clearly.
 
 ## STEP 1 - setup files
 
 **Goal**: Open `index.html` in your browser and see:
-	-	Day number
-	-	Cash amount
+	
+	- Day number
+	- Cash amount
 
 `index.html`
 
@@ -197,32 +200,36 @@ render(state);
 ### ✅ Checkpoint
 
 In this step, you set up the basic structure of the program and proved that  JavaScript is successfully:
-	-	Loading as a module (`type="module"`)
-	-	Importing functions from other files
-	-	Creating a state object that holds all game data
-	-	Rendering values from that state into the HTML
+	
+	- Loading as a module (`type="module"`)
+	- Importing functions from other files
+	- Creating a state object that holds all game data
+	- Rendering values from that state into the HTML
 
 You also established the most important rule of this project: The state object stores game data, and the page only displays it.
 
 At this point:
-	-	Nothing is interactive
-	-	No buttons
-	-	The game is not “running” yet
+	
+	- Nothing is interactive
+	- No buttons
+	- The game is not “running” yet
 
 That’s okay. Right now, your goal is visibility, not interaction.
 
 What you should see at this point
 
 When you open `index.html` in your browser, you should see:
-	-	The title "Shopkeeper"
-	-	The text:
-    -	Day: 1
-    -	Cash: $25.00
+	
+	- The title "Shopkeeper"
+	- The text:
+    - Day: 1
+    - Cash: $25.00
 
 If you do not see these:
-	-	Check that `main.js` is loading
-	-	Check that `render(state)` is being called
-	-	**Check the browser console for errors**
+	
+	- Check that `main.js` is loading
+	- Check that `render(state)` is being called
+	- **Check the browser console for errors**
 
 If you change values in `makeInitialState()` (for example, set day: 5), you should see the page update after refreshing.
 This confirms that rendering is driven by state.
@@ -325,10 +332,11 @@ function renderLog(state) {
 ### Quick explanation: Event listeners
 
 JavaScript can “listen” for things that happen in the browser, like:
-	-	a button click
-	-	typing in an input box
-	-	changing a dropdown
-	-	submitting a form
+	
+	- a button click
+	- typing in an input box
+	- changing a dropdown
+	- submitting a form
 
 An event listener is how you tell the browser:
 
@@ -382,21 +390,24 @@ because `getElementById("open-shop")` would return null.
 If you replace HTML using innerHTML, you destroy old elements and create new ones.
 
 That means:
-	-	the old elements (with listeners) are gone
-	-	the new elements do not have listeners attached
+	
+	- the old elements (with listeners) are gone
+	- the new elements do not have listeners attached
 
 That’s why your price input listeners break in STEP 3. It’s a common issue and later you’ll learn two standard solutions:
-	-	event delegation
-	-	or not re-rendering the input area while editing
+	
+	- event delegation
+	- or not re-rendering the input area while editing
 
 For now, it’s enough to know why it happens.
 
 **“Sanity check” you can add (fast debugging habit)**
 
 If an event listener doesn’t work, do this:
-	1.	Open DevTools → Console
-	2.	Look for red errors
-	3.	If there’s no error, add a temporary console.log(...) inside the event listener:
+	
+	1. Open DevTools → Console
+	2. Look for red errors
+	3. If there’s no error, add a temporary console.log(...) inside the event listener:
 
 ```js
 document.getElementById("clean").addEventListener("click", () => {
@@ -414,10 +425,11 @@ What you covered in this step
 In this step, you made the game interactive for the first time.
 
 You introduced several critical ideas:
-	-	Actions: plain objects that describe what happened
-	-	dispatch: a function that sends actions into the system
-	-	update (reducer): a function that takes state + action and returns new state
-	-	event listeners that connect buttons to actions
+	
+	- Actions: plain objects that describe what happened
+	- dispatch: a function that sends actions into the system
+	- update (reducer): a function that takes state + action and returns new state
+	- event listeners that connect buttons to actions
 
 This step is the core pattern you will repeat for the entire project:
 
@@ -426,9 +438,10 @@ click → dispatch(action) → update(state, action) → render(state)
 ```
 
 You also learned:
-	-	How to copy state safely using structuredClone
-	-	How to modify numbers inside objects
-	-	How to clamp values so they stay in a valid range
+	
+	- How to copy state safely using structuredClone
+	- How to modify numbers inside objects
+	- How to clamp values so they stay in a valid range
 
 Importantly, you did not touch the DOM inside the reducer.
 The reducer only changes data. Rendering is handled elsewhere (`render(state)` function).
@@ -436,34 +449,38 @@ The reducer only changes data. Rendering is handled elsewhere (`render(state)` f
 What you should see if you test now
 
 You should now be able to:
-	-	Click Next Day
-	-	The day number increases by 1
-	-	A message appears in the log
-	-	Click Clean Shop
-	-	Cleanliness increases (up to a maximum of 100, you won't see this)
+	
+	- Click Next Day
+	- The day number increases by 1
+	- A message appears in the log
+	- Click Clean Shop
+	- Cleanliness increases (up to a maximum of 100, you won't see this)
     - **CHALLENGE**: display the cleaniness value in the log message. Do this by editing the log message added in the reducer for the "CLEAN" action.
-	-	A message appears in the log
+	- A message appears in the log
 
 Nothing visual changes yet except:
-	-	The day number
-	-	The log entries
+	
+	- The day number
+	- The log entries
 
 That’s expected. Cleanliness exists in state, but you are not displaying it yet.
 
 If clicking buttons does nothing:
-	-	Check that dispatch is being called
-	-	Check that update is imported correctly
-	-	**Check the browser console for errors**
+	
+	- Check that dispatch is being called
+	- Check that update is imported correctly
+	- **Check the browser console for errors**
 
 Add Inventory Display
 
 What you covered in this step
 
 In this step, you expanded rendering beyond a single value and started:
-	-	Reading nested data from state (`state.inventory`)
-	-	Rendering multiple related values to the page
-	-	Using `.map()` to turn arrays into HTML
-	-	Keeping rendering logic separate from game logic
+	
+	- Reading nested data from state (`state.inventory`)
+	- Rendering multiple related values to the page
+	- Using `.map()` to turn arrays into HTML
+	- Keeping rendering logic separate from game logic
 
 You also introduced a log panel, which is extremely important for debugging and understanding what the game is doing.
 
@@ -476,16 +493,18 @@ If players can’t see it, they can’t reason about it.
 What you should see if you test now
 
 You should now see:
-	-	An Inventory section showing:
-    -	Coffee `count`
-    -	Bagel `count`
-  -	A Log section showing:
-    -	“Welcome to your new shop!”
-    -	Messages from clicking buttons
+	
+- An Inventory section showing:
+    - Coffee `count`
+    - Bagel `count`
+- A Log section showing:
+	- “Welcome to your new shop!”
+	- Messages from clicking buttons
 
 When you click:
-	-	Next Day → a new log entry appears
-	-	Clean Shop → a new log entry appears
+	
+	- Next Day → a new log entry appears
+	- Clean Shop → a new log entry appears
 
 Inventory numbers do not change yet.
 That’s correct — you haven’t written any code that modifies inventory.
@@ -553,10 +572,11 @@ document.getElementById("price-bagel").addEventListener("change", e => {
 In this step, you connected form inputs to your game state.
 
 You learned how to:
-	-	Read values from `<input>` elements
-	-	Convert input strings into numbers
-	-	Dispatch actions in response to input changes
-	-	Update part of state without advancing the game
+
+	- Read values from `<input>` elements
+	- Convert input strings into numbers
+	- Dispatch actions in response to input changes
+	- Update part of state without advancing the game
 
 This is an important distinction:
 
@@ -565,25 +585,28 @@ Changing prices does not consume a day.
 Prices are part of setup, not gameplay progression.
 
 You also practiced:
-	-	Passing extra data inside actions
-	-	Updating only one field in a larger object
-	-	Treating inputs as views of state, not sources of truth
+	
+	- Passing extra data inside actions
+	- Updating only one field in a larger object
+	- Treating inputs as views of state, not sources of truth
 
 What you should see if you test after this step
 
 You should now be able to:
-	-	Change the coffee or bagel price
-	-	See no immediate visual change
-	-	Open the browser console and verify:
-	-	`state.prices.coffee` and `state.prices.bagel` update correctly
+	
+	- Change the coffee or bagel price
+	- See no immediate visual change
+	- Open the browser console and verify:
+	- `state.prices.coffee` and `state.prices.bagel` update correctly
 
 This might feel anticlimactic — that’s normal.
 
 Prices only matter when the shop opens, which comes next.
 
 If changing inputs causes errors:
-	-	Make sure you used `Number(e.target.value)`
-	-	Check that your action object matches what the reducer expects
+	
+	- Make sure you used `Number(e.target.value)`
+	- Check that your action object matches what the reducer expects
 
 **Note!** There is a problem here. `renderInventory(state)` overwrites the DOM with new input elements. When the DOM overwites an element, even if it has the same id name, listeners attached to the element are not attached to the newly created elements. 
 
@@ -666,7 +689,7 @@ document.getElementById("open-shop").addEventListener("click", () => {
 
 Edit `render.js`. 
 
-Updated `redner(state)`, add `renderStatus(state);`
+Updated `render(state)`, add `renderStatus(state);`
 ```js
 export function render(state) {
   renderStatus(state); // add this line
@@ -693,47 +716,54 @@ function renderStatus(state) {
 This is the step where the project becomes a game.
 
 You introduced the idea of a simulation step:
-	-	The game looks at current state (prices, inventory)
-	-	It calculates what sells
-	-	It updates inventory and cash
-	-	It generates a report of what happened
+	
+	- The game looks at current state (prices, inventory)
+	- It calculates what sells
+	- It updates inventory and cash
+	- It generates a report of what happened
 
 Key ideas introduced here:
-	-	Separating calculation logic (simulateDay) from control logic ("OPEN_SHOP")
-	-	Mutating state only inside the reducer flow
-	-	Using `Math.min()` to prevent negative inventory
-	-	Storing results in lastReport instead of logging everything immediately
+	
+	- Separating calculation logic (simulateDay) from control logic ("OPEN_SHOP")
+	- Mutating state only inside the reducer flow
+	- Using `Math.min()` to prevent negative inventory
+	- Storing results in lastReport instead of logging everything immediately
 
 This is the first time:
-	-	Inventory goes down
-	-	Cash goes up
-	-	Player choices actually matter
+	
+	- Inventory goes down
+	- Cash goes up
+	- Player choices actually matter
 
 What you should see if you test at this step
 
 You should now be able to:
-	1.	Click Open Shop
-	2.	See:
-    -	The day number increase
-    -	Inventory counts decrease
-    -	Cash increase
-    -	A log message saying you opened the shop
+	
+1. Click Open Shop
+2. See:
+	- The day number increase
+	- Inventory counts decrease
+	- Cash increase
+	- A log message saying you opened the shop
 
 If prices are low:
-	-	More items sell
-	-	Cash increases more
+	
+	- More items sell
+	- Cash increases more
 
 If prices are high:
-	-	Fewer items sell
-	-	Cash increases less
+	
+	- Fewer items sell
+	- Cash increases less
 
 If inventory reaches zero:
-	-	Items stop selling
-	-	Cash stops increasing
+	- Items stop selling
+	- Cash stops increasing
 
 At this stage:
-	-	Cleanliness does not affect sales yet
-	-	Random events do not exist yet
-	-	The report is stored but not fully displayed yet
+	
+	- Cleanliness does not affect sales yet
+	- Random events do not exist yet
+	- The report is stored but not fully displayed yet
 
 That’s intentional. You now have a working core loop, which everything else will build on.
