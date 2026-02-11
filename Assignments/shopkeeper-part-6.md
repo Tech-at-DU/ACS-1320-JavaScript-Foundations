@@ -9,7 +9,23 @@ Make the game deeper and more playable by extending:
 - economy systems (pressure + tradeoffs)
 - usability and clarity
 
-Choose two major challenges + one UI/usability upgrade.
+Try as many of the challenges below as you can! 
+
+## Add Styles 
+
+Start with some general styles. Choose a `font-family`, and set that as the base font on the body element. This allows all other elements to inherit this font. Adjust the `line-height`. Adding or removing space between lines will make your pages easier to read. 
+
+Set the `color` (text) and `background-color`.
+
+Use CSS to style your shop. Think about how the shop is used, and what is the most important information. Style these things so that standout and easily identified. 
+
+Use: 
+- `font-size`
+- `font-weight`
+- `color`
+- `line-height`
+
+Think about the layout. If you followed the tutorial closely, the content is organized in `<section>` elements. Use this as a startng point for your layout. Imagine that each section might be arranged in columns or a grid. 
 
 ## Major Challenge 1 — Expand purchasing and economy
 
