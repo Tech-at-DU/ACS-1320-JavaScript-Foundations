@@ -27,6 +27,9 @@ Use:
 
 Think about the layout. If you followed the tutorial closely, the content is organized in `<section>` elements. Use this as a startng point for your layout. Imagine that each section might be arranged in columns or a grid. 
 
+use:
+- `display: grid` and/or `display: flex`
+
 ## Major Challenge 1 — Expand purchasing and economy
 
 Pick one direction:
