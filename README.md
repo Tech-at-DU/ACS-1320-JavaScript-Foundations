@@ -47,7 +47,7 @@ By the end of the course will be able to:
 | 10 | Mon, Feb 23 | [Components and State] | - |
 | 11 | Wed, Feb 25 | [Forms and user input] | - |
 | 12 | Mon, Mar  2 | [Building and Publishing] | - |
-| 13 | Wed, Mar  4 | [Tailwind] | - |
+| 13 | Wed, Mar  4 | [AI Practice] | - |
 
 [Shopkeeper Part 1]: ./Assignments/shopkeeper-part-1.md
 [Shopkeeper Part 2]: ./Assignments/shopkeeper-part-2.md
@@ -55,6 +55,8 @@ By the end of the course will be able to:
 [Shopkeeper Part 4]: ./Assignments/shopkeeper-part-4.md
 [Shopkeeper Part 5]: ./Assignments/shopkeeper-part-5.md
 [Shopkeeper Part 6]: ./Assignments/shopkeeper-part-6.md
+
+[AI Practice]: ./Lessons/Lesson-AI-Practice.md 
 
 [JS Exercises 0]: https://github.com/Tech-at-DU/js-exercises/blob/main/exercises-0.js
 
