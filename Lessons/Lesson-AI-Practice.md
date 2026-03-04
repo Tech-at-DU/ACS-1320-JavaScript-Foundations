@@ -137,6 +137,8 @@ Rules:
 Start with an easy state/object question.
 ```
 
+NOTE! I had been prompting ChatGPT with questions about the Shopkeeper project, so my session was primed with this information. To get better and more relevant questions you may need to prime your AI with some of the Shopkeeper code BEFORE using the prompt above!
+
 ---
 
 # Prompt D — Reasoning Mode
